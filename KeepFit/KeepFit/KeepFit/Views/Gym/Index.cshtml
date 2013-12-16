@@ -18,7 +18,10 @@
 {
     <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
     <script>
-        var myMap;
+        var myMap,
+            myPlacemark,
+            circle,
+            objects;
 
         // Дождёмся загрузки API и готовности DOM.
         ymaps.ready(init);
@@ -35,37 +38,144 @@
             myMap.controls
                 .add('zoomControl', { left: 5, top: 5 });
 
-            document.getElementById('destroyButton').onclick = function () {
-                // Для уничтожения используется метод destroy.
-                myMap.destroy();
-            };
+            objects = ymaps.geoQuery([
+                {
+                    type: 'Point',
+                    coordinates: [53.87, 27.47],
+                    properties: {
+                        iconContent: 'Метка'
+                    }
+                },
+                {
+                    type: 'Point',
+                    coordinates: [53.86, 27.62]
+                },
+                {
+                    type: 'Point',
+                    coordinates: [53.85, 27.47]
+                }
+            ]).addToMap(myMap);
 
+            
 
-            // Поиск координат центра Нижнего Новгорода.
-            ymaps.geocode('Нижний Новгород', {
-                /**
-                 * Опции запроса
-         */
-                // boundedBy: myMap.getBounds(), // Сортировка результатов от центра окна карты
-                // strictBounds: true, // Вместе с опцией boundedBy будет искать строго внутри области, указанной в boundedBy
-                results: 1 // Если нужен только один результат, экономим трафик пользователей
-            }).then(function (res) {
-                // Выбираем первый результат геокодирования.
-                var firstGeoObject = res.geoObjects.get(0),
-                    // Координаты геообъекта.
-                    coords = firstGeoObject.geometry.getCoordinates(),
-                    // Область видимости геообъекта.
-                    bounds = firstGeoObject.properties.get('boundedBy');
+            myMap.events.add('click', mapClick);
 
-                // Добавляем первый найденный геообъект на карту.
-                myMap.geoObjects.add(firstGeoObject);
-                // Масштабируем карту на область видимости геообъекта.
-                myMap.setBounds(bounds, {
-                    checkZoomRange: true // проверяем наличие тайлов на данном масштабе.
+            function getAllAddresses() {
+                var objectsInsideCircle = objects.searchInside(circle),
+                    html = "";
+                objectsInsideCircle.each(function (v) {
+                    html += v.geometry.getCoordinates() + " | ";
                 });
-            });
+                $('#address').text(html);
+            }
 
+            function mapClick(e) {
+                var coords = e.get('coords');
+
+                // Если метка уже создана – просто передвигаем ее
+                if (myPlacemark) {
+                    myPlacemark.geometry.setCoordinates(coords);
+                }
+                    // Если нет – создаем.
+                else {
+                    myPlacemark = createPlacemark(coords);
+                    myMap.geoObjects.add(myPlacemark);
+                    // Слушаем событие окончания перетаскивания на метке.
+                    myPlacemark.events.add('dragend', function () {
+                        getAddress(myPlacemark.geometry.getCoordinates());
+                    });
+                }
+                getAddress(coords);
+            }
+            
+            function dragCircle(e) {
+                // Объекты, попадающие в круг, будут становиться красными.
+                var objectsInsideCircle = objects.searchInside(circle);
+                objectsInsideCircle.setOptions('preset', 'twirl#redIcon');
+                // Оставшиеся объекты - синими.
+                objects.remove(objectsInsideCircle).setOptions('preset', 'twirl#blueIcon');
+            }
+            
+            function createPlacemark(coords) {
+                return new ymaps.Placemark(coords, {
+                    iconContent: 'поиск...'
+                }, {
+                    preset: 'twirl#violetStretchyIcon',
+                    draggable: true
+                });
+            }
+
+            // Определяем адрес по координатам (обратное геокодирование)
+
+            function getAddress(coords) {
+                myPlacemark.properties.set('iconContent', 'поиск...');
+                ymaps.geocode(coords).then(function (res) {
+                    var firstGeoObject = res.geoObjects.get(0);
+
+                    myPlacemark.properties
+                        .set({
+                            iconContent: firstGeoObject.properties.get('name'),
+                            balloonContent: firstGeoObject.properties.get('text')
+                        });
+                    $('.currentAddress').val(firstGeoObject.properties.get('text'));
+
+                    var c = res.metaData.geocoder.request;
+                    $('.currentAddressPosition').val(c);
+                });
+            }
+
+            function findLocation(name, circleRadius) {
+                // Поиск координат центра Нижнего Новгорода.
+                ymaps.geocode(name, {
+                    /**
+                     * Опции запроса
+             */
+                    // boundedBy: myMap.getBounds(), // Сортировка результатов от центра окна карты
+                    // strictBounds: true, // Вместе с опцией boundedBy будет искать строго внутри области, указанной в boundedBy
+                    results: 1 // Если нужен только один результат, экономим трафик пользователей
+                }).then(function (res) {
+                    // Выбираем первый результат геокодирования.
+                    var firstGeoObject = res.geoObjects.get(0),
+                        // Координаты геообъекта.
+                        coords = firstGeoObject.geometry.getCoordinates(),
+                        // Область видимости геообъекта.
+                        bounds = firstGeoObject.properties.get('boundedBy');
+
+
+                    circle = new ymaps.Circle([coords, circleRadius || 1000], null, { draggable: true });
+
+                    circle.events.add('drag', dragCircle);
+
+
+                    circle.events.add('click', mapClick);
+
+                    myMap.geoObjects.add(circle);
+
+                    dragCircle();
+
+                    // Добавляем первый найденный геообъект на карту.
+                    myMap.geoObjects.add(firstGeoObject);
+                    // Масштабируем карту на область видимости геообъекта.
+                    myMap.setBounds(bounds, {
+                        checkZoomRange: true // проверяем наличие тайлов на данном масштабе.
+                    });
+                });
+            }
+
+            $('.findAddress').bind('click', function () {
+                findLocation($('#addressToAdd').val());
+            });
+            $('.getAllAddresses').bind('click', function () {
+                getAllAddresses();
+            });
+            $('.addAddress').bind('click', function () {
+                findLocation($('#livingAddress').val());
+            });
         }
+        
+        $(function() {
+            var spinner = $("#spinner").spinner();
+        });
     </script>
 
     @*<link href="~/Assets/css/demo.css" rel="stylesheet" />
@@ -144,8 +254,10 @@
 
 @section RightContent
 {
+    <input class="currentAddress" type="text" style="width: 700px;">
+    <input class="currentAddressPosition" type="text" style="width: 700px;">
+
     <div id="map" style="width: 700px; height: 500px"></div>
-    <input type="button" id="destroyButton" value="Удалить карту" />
 
     <div id="content">
         <div id="latlng" class="line">click the map</div>
@@ -158,4 +270,17 @@
 {
     <input id="addressToAdd" type="text" style="width: 300px;">
     <a class="findAddress button addMarker" href="javascript:void(0);">Add marker</a>
+
+
+
+    <a class="getAllAddresses button" href="javascript:void(0);">Get All Addresses</a>
+    
+    
+    <input id="livingAddress" type="text" style="width: 300px;">
+    
+    <input id="spinner" name="value">
+
+    <a class="addAddress button" href="javascript:void(0);">Add address</a>
+    
+
 }
