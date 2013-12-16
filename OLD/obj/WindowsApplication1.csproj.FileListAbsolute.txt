@@ -1,0 +1,34 @@
+C:\Users\Monstre\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Monstre\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+C:\Users\Monstre\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+C:\Users\Monstre\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+C:\Users\Monstre\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Monstre\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Monstre\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Monstre\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\Etudes\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\Etudes\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\Etudes\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\Etudes\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\Etudes\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\Etudes\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\Etudes\Диплом\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\Etudes\Диплом\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\Etudes\backup\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\Etudes\backup\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\Etudes\backup\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\Etudes\backup\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\Etudes\backup\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\Etudes\backup\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\Etudes\backup\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\Etudes\backup\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\Etudes\Диплом\backup\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\Etudes\Диплом\backup\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\Etudes\Диплом\backup\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\Etudes\Диплом\backup\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\Etudes\Диплом\backup\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\Etudes\Диплом\backup\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\Etudes\Диплом\backup\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\Etudes\Диплом\backup\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\Etudes\Диплом\backup\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+D:\Etudes\Диплом\backup\WindowsApplication1\WindowsApplication1\bin\Debug\pitanie_.mdb

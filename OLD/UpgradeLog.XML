@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ZdorovoePitanie">
+</Property><Property Name="Solution File" Value="E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\ZdorovoePitanie.sln">
+</Property><Property Name="User Options File" Value="E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\ZdorovoePitanie.suo">
+</Property><Property Name="Date" Value="7 июня 2010 г.">
+</Property><Property Name="Time" Value="7:31">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ZdorovoePitanie.sln" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\ZdorovoePitanie.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ZdorovoePitanie.suo" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\ZdorovoePitanie.suo">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="ZdorovoePitanie.csproj" Description="Project file successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\ZdorovoePitanie.csproj">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="ZdorovoePitanie.csproj.user" Description="Project user file successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\ZdorovoePitanie.csproj.user">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Diets.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Diets.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Diets.Designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Diets.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Raschet.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Raschet.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Raschet.Designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Raschet.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Menu.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Menu.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Menu.Designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Menu.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Add.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Add.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Add.Designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Add.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="NewProdukt.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\NewProdukt.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="NewProdukt.Designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\NewProdukt.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="DVesa.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\DVesa.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="DVesa.Designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\DVesa.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="DSootn.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\DSootn.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Search.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Search.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Search.Designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Search.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Program.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Properties\Settings.Designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Start.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Start.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Start.Designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Start.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Upr.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Upr.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Upr.designer.cs" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Upr.designer.cs">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="app.config" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\app.config">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="ClassDiagram1.cd" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\ClassDiagram1.cd">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Properties\Settings.settings" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Yellow Book.ico" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Yellow Book.ico">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Diets.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Diets.resx">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Raschet.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Raschet.resx">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Menu.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Menu.resx">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Add.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Add.resx">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="NewProdukt.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\NewProdukt.resx">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="DVesa.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\DVesa.resx">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="DSootn.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\DSootn.resx">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Search.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Search.resx">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Properties\Resources.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Start.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Start.resx">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="Upr.resx" Description="File successfully backed up as E:\Documents and Settings\User\Рабочий стол\new\Диплом + access\Backup\Upr.resx">
+</Event><Event ErrorLevel="1" Project="ZdorovoePitanie" Source="ZdorovoePitanie.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="ZdorovoePitanie.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ZdorovoePitanie" Source="ZdorovoePitanie.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ZdorovoePitanie.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ZdorovoePitanie.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ZdorovoePitanie" Source="ZdorovoePitanie.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

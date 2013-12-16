@@ -1,0 +1,174 @@
+E:\vid\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+E:\vid\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+E:\vid\Диплом\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+E:\vid\Диплом\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+E:\vid\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+E:\vid\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+E:\vid\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+E:\vid\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+E:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+E:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+E:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+E:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+E:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+E:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+E:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+E:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\pitanie_.mdb
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form4.resources
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form2.resources
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form3.resources
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form5.resources
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\ZedGraph.xml
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\de\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\es\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\fr\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\hu\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\it\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\ja\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\pt\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\ru\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\sk\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\sv\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\tr\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\zh-cn\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\zh-tw\ZedGraph.resources.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form6.resources
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\PieChart.dll
+D:\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form7.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\pitanie_.mdb
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\Microsoft.Office.Interop.Word.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\PieChart.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\office.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\ZedGraph.xml
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\Microsoft.Office.Interop.Word.xml
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\office.xml
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\de\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\es\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\fr\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\hu\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\it\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\ja\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\pt\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\ru\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\sk\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\sv\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\tr\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\zh-cn\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\zh-tw\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form2.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form3.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form4.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form5.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form6.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form7.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form8.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form9.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\bin\Debug\Interop.MSDASC.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\Interop.MSDASC.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.ResolveComReference.cache
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом\WindowsApplication1\obj\Debug\WindowsApplication1.Form10.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\WindowsApplication1.exe.config
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\Interop.MSDASC.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.csproj.ResolveComReference.cache
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.exe
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.pdb
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\WindowsApplication1.exe
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\WindowsApplication1.pdb
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\Microsoft.Office.Interop.Word.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\PieChart.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\office.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\ZedGraph.xml
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\Microsoft.Office.Interop.Word.xml
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\office.xml
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\de\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\es\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\fr\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\hu\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\it\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\ja\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\pt\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\ru\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\sk\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\sv\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\tr\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\zh-cn\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\zh-tw\ZedGraph.resources.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\bin\Debug\Interop.MSDASC.dll
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\ResolveAssemblyReference.cache
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.Raschet.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.Start.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.Menu.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.Add.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.NewProdukt.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.DVesa.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.DSootn.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.Search.resources
+D:\Диплом\Гуштын Жанна Геннадьевна\Диплом + access\obj\Debug\WindowsApplication1.Diets.resources
+G:\Диплом + access\bin\Debug\WindowsApplication1.exe.config
+G:\Диплом + access\obj\Debug\Interop.MSDASC.dll
+G:\Диплом + access\obj\Debug\WindowsApplication1.csproj.ResolveComReference.cache
+G:\Диплом + access\obj\Debug\WindowsApplication1.exe
+G:\Диплом + access\obj\Debug\WindowsApplication1.pdb
+G:\Диплом + access\bin\Debug\WindowsApplication1.exe
+G:\Диплом + access\bin\Debug\WindowsApplication1.pdb
+G:\Диплом + access\bin\Debug\Microsoft.Office.Interop.Word.dll
+G:\Диплом + access\bin\Debug\PieChart.dll
+G:\Диплом + access\bin\Debug\Microsoft.Vbe.Interop.dll
+G:\Диплом + access\bin\Debug\office.dll
+G:\Диплом + access\bin\Debug\ZedGraph.xml
+G:\Диплом + access\bin\Debug\Microsoft.Office.Interop.Word.xml
+G:\Диплом + access\bin\Debug\office.xml
+G:\Диплом + access\bin\Debug\de\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\es\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\fr\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\hu\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\it\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\ja\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\pt\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\ru\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\sk\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\sv\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\tr\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\zh-cn\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\zh-tw\ZedGraph.resources.dll
+G:\Диплом + access\bin\Debug\Interop.MSDASC.dll
+G:\Диплом + access\obj\Debug\ResolveAssemblyReference.cache
+G:\Диплом + access\obj\Debug\WindowsApplication1.Diets.resources
+G:\Диплом + access\obj\Debug\WindowsApplication1.Raschet.resources
+G:\Диплом + access\obj\Debug\WindowsApplication1.Menu.resources
+G:\Диплом + access\obj\Debug\WindowsApplication1.Add.resources
+G:\Диплом + access\obj\Debug\WindowsApplication1.NewProdukt.resources
+G:\Диплом + access\obj\Debug\WindowsApplication1.DVesa.resources
+G:\Диплом + access\obj\Debug\WindowsApplication1.DSootn.resources
+G:\Диплом + access\obj\Debug\WindowsApplication1.Search.resources
+G:\Диплом + access\obj\Debug\WindowsApplication1.Properties.Resources.resources
+G:\Диплом + access\obj\Debug\WindowsApplication1.Start.resources
+G:\Диплом + access\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\Диплом + access\bin\Debug\WindowsApplication1.exe.config
+D:\Диплом + access\obj\Debug\Interop.MSDASC.dll
+D:\Диплом + access\obj\Debug\WindowsApplication1.csproj.ResolveComReference.cache
+D:\Диплом + access\obj\Debug\WindowsApplication1.exe
+D:\Диплом + access\obj\Debug\WindowsApplication1.pdb

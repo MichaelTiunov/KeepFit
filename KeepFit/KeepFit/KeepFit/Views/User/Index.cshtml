@@ -1,0 +1,34 @@
+﻿@using System.Web.Mvc.Html
+@model KeepFit.Models.UserModel
+
+@section Banner
+{
+    <div class="container">
+        <div class="row">
+            @using (Html.BeginForm("Calculate", "User"))
+            {
+                <div class="userData">
+                    <div>
+                        @Html.LabelFor(m => m.Growth)
+                    </div>
+                    @Html.TextBoxFor(m => m.Growth)
+                </div>
+                <div class="userData">
+                    <div>
+                        @Html.LabelFor(m => m.Weight)
+                    </div>
+                    @Html.TextBoxFor(m => m.Weight)
+                </div>
+                <div class="userData">
+                    <div>
+                        @Html.LabelFor(m => m.Age)
+                    </div>
+                    @Html.TextBoxFor(m => m.Age)
+                </div>
+                <div class="userData">
+                    <input type="submit" name="btnSubmit" id="SubmitButton" value="Submit" />
+                </div>
+            }
+        </div>
+    </div>
+}

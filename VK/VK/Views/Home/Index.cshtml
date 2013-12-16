@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                To learn more about ASP.NET MVC visit
+                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
+                If you have any questions about ASP.NET MVC visit
+                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
+            </p>
+        </div>
+    </section>
+}
+
+<input id="tokeninput-demo" type="text" style="display: none;">
+
+<button class="findRecepts">Find</button>
+
+@section scripts
+{
+    <script>
+        $(function () {
+            $("#tokeninput-demo").tokenInput('@Url.Action("GetIngredients")', {
+                theme: "facebook",
+                onResult: function (results) {
+                    $.each(results, function (index, value) {
+                        value.name = value.name;
+                    });
+                    return results;
+                }
+            });
+
+            $('.findRecepts').bind('click', function () {
+                var ingredients = $("#tokeninput-demo").val().split(',');
+
+                $.ajax('@Url.Action("FindRecept")', {
+                    type: 'POST',
+                    data: { ingredients: JSON.stringify(ingredients) }
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,7 @@
+D:\Work\BB\VK\KeepFit.Model\bin\Debug\KeepFit.Model.dll
+D:\Work\BB\VK\KeepFit.Model\bin\Debug\KeepFit.Model.pdb
+D:\Work\BB\VK\KeepFit.Model\obj\Debug\KeepFit.Model.dll
+D:\Work\BB\VK\KeepFit.Model\obj\Debug\KeepFit.Model.pdb
+d:\Work\BB\VK\KeepFit.Model\obj\Debug\KeepFit.Model.csprojResolveAssemblyReference.cache
+d:\Work\BB\VK\KeepFit.Model\bin\Debug\Newtonsoft.Json.dll
+d:\Work\BB\VK\KeepFit.Model\bin\Debug\Newtonsoft.Json.xml

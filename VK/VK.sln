@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VK", "VK\VK.csproj", "{94C829DC-2046-4008-AC29-E848401399B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VK.Tests", "VK.Tests\VK.Tests.csproj", "{45B5872C-F328-4F9F-B416-FD941E0A660C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Model", "KeepFit.Model\KeepFit.Model.csproj", "{F7EC1167-8053-43E6-AF0C-752C81A57976}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94C829DC-2046-4008-AC29-E848401399B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C829DC-2046-4008-AC29-E848401399B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94C829DC-2046-4008-AC29-E848401399B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94C829DC-2046-4008-AC29-E848401399B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B5872C-F328-4F9F-B416-FD941E0A660C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B5872C-F328-4F9F-B416-FD941E0A660C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B5872C-F328-4F9F-B416-FD941E0A660C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B5872C-F328-4F9F-B416-FD941E0A660C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7EC1167-8053-43E6-AF0C-752C81A57976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7EC1167-8053-43E6-AF0C-752C81A57976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7EC1167-8053-43E6-AF0C-752C81A57976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7EC1167-8053-43E6-AF0C-752C81A57976}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
