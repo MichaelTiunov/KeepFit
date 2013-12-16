@@ -7,6 +7,7 @@
     <meta name="keywords" content="" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Oleo+Script:400" rel="stylesheet" type="text/css" />
+    @RenderSection("styles", false)
     <script src="~/Assets/js/jquery.min.js"></script>
     <script src="~/Assets/js/config.js"></script>
     <script src="~/Assets/js/skel.min.js"></script>
@@ -26,11 +27,10 @@
         <div class="container">
             <div class="row">
                 <div class="8u skel-cell-important">
-
                     <!-- Content -->
                     <div id="content">
                         <article class="last">
-                            @RenderSection("RightContent")
+                            @RenderSection("RightContent", false)
                         </article>
                     </div>
 
@@ -38,7 +38,7 @@
                 <div class="4u">
                     <!-- Sidebar -->
                     <div id="sidebar">
-                        @RenderSection("RightSidebar")
+                        @RenderSection("RightSidebar", false)
                     </div>
 
                 </div>

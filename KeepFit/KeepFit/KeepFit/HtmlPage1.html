@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Map Demo</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta name="author" content="Bob Cravens" />
+	
+    <link href="Assets/css/demo.css" rel="stylesheet" />
+    <link href="Assets/css/index.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.8.2.js"></script>
+    <script src="Scripts/jquery-ui-1.8.24.js"></script>
+    <script src="Assets/js/jquery.color.js"></script>
+    <script src="Assets/js/demo.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA2YoFViLEevsBGTVGJ4Hhm63wfHP1hWA&sensor=true"></script>
+    <script src="Assets/js/jquery.gmap3.js"></script>
+    <script src="Assets/js/index.js"></script>
+</head>
+<body>
+	<div class="demo">
+		<a href="http://blog.bobcravens.com/2010/06/06/AGoogleMapsVersion3JQueryPlugin.aspx" class="demo">Blog Post</a>
+	</div>
+    <div id="content">
+        <div id="map_canvas" class="line"></div>
+        <div id="latlng" class="line">click the map</div>
+        <div id="address" class="line">click the map</div>
+        <div>
+			Enter an address: 
+			<input id="addressToAdd" type="text" value="Vilas Zoo, Madison, WI" />
+			<input id="addMarker" type="button" value="Add Marker" />
+		</div>
+    </div>
+</body>
+</html>

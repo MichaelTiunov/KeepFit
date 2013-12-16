@@ -1,0 +1,161 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_LayoutRightSideBar.cshtml";
+}
+@section styles
+{
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        #map-canvas {
+            height: 500px;
+            width: 800px;
+        }
+    </style>
+}
+@section scripts
+{
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+    <script>
+        var myMap;
+
+        // Дождёмся загрузки API и готовности DOM.
+        ymaps.ready(init);
+
+        function init() {
+            // Создание экземпляра карты и его привязка к контейнеру с
+            // заданным id ("map").
+            myMap = new ymaps.Map('map', {
+                // При инициализации карты обязательно нужно указать
+                // её центр и коэффициент масштабирования.
+                center: [53.9, 27.56], // Москва
+                zoom: 10
+            });
+            myMap.controls
+                .add('zoomControl', { left: 5, top: 5 });
+
+            document.getElementById('destroyButton').onclick = function () {
+                // Для уничтожения используется метод destroy.
+                myMap.destroy();
+            };
+
+
+            // Поиск координат центра Нижнего Новгорода.
+            ymaps.geocode('Нижний Новгород', {
+                /**
+                 * Опции запроса
+         */
+                // boundedBy: myMap.getBounds(), // Сортировка результатов от центра окна карты
+                // strictBounds: true, // Вместе с опцией boundedBy будет искать строго внутри области, указанной в boundedBy
+                results: 1 // Если нужен только один результат, экономим трафик пользователей
+            }).then(function (res) {
+                // Выбираем первый результат геокодирования.
+                var firstGeoObject = res.geoObjects.get(0),
+                    // Координаты геообъекта.
+                    coords = firstGeoObject.geometry.getCoordinates(),
+                    // Область видимости геообъекта.
+                    bounds = firstGeoObject.properties.get('boundedBy');
+
+                // Добавляем первый найденный геообъект на карту.
+                myMap.geoObjects.add(firstGeoObject);
+                // Масштабируем карту на область видимости геообъекта.
+                myMap.setBounds(bounds, {
+                    checkZoomRange: true // проверяем наличие тайлов на данном масштабе.
+                });
+            });
+
+        }
+    </script>
+
+    @*<link href="~/Assets/css/demo.css" rel="stylesheet" />
+    <link href="~/Assets/css/index.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-ui-1.8.24.js"></script>
+    <script src="~/Assets/js/jquery.color.js"></script>
+    <script src="~/Assets/js/demo.js"></script>
+    <script src="~/Assets/js/jquery.gmap3.js"></script>
+    <script src="~/Assets/js/index.js"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA2YoFViLEevsBGTVGJ4Hhm63wfHP1hWA&sensor=true"></script>*@
+    @* <script type="text/javascript">
+        var geocoder;
+        var map;
+        function success(position) {
+
+            var mapcanvas = document.createElement('div');
+            mapcanvas.id = 'map-canvas';
+            mapcanvas.style.height = '400px';
+            mapcanvas.style.width = '560px';
+
+            document.querySelector('article').appendChild(mapcanvas);
+
+            var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            var myOptions = {
+                zoom: 15,
+                center: latlng,
+                mapTypeControl: false,
+                navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            geocoder = new google.maps.Geocoder();
+            map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                title: "You are here! (at least within a " + position.coords.accuracy + " meter radius)"
+            });
+        }
+        function codeAddress() {
+            var address = document.getElementById("address").value;
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
+        }
+        function error(msg) {
+            var s = document.querySelector('#demo');
+            s.innerHTML = typeof msg == 'string' ? msg : "failed";
+            s.className = 'fail';
+
+            // console.log(arguments);
+        }
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success, error);
+        } else {
+            error('not supported');
+        }
+
+        $(function () {
+            $('.findAddress').bind('click', function () {
+                codeAddress();
+            });
+        });
+    </script>*@
+}
+
+@section RightContent
+{
+    <div id="map" style="width: 700px; height: 500px"></div>
+    <input type="button" id="destroyButton" value="Удалить карту" />
+
+    <div id="content">
+        <div id="latlng" class="line">click the map</div>
+        <div id="address" class="line">click the map</div>
+        <div id="map_canvas" class="line"></div>
+    </div>
+}
+
+@section RightSidebar
+{
+    <input id="addressToAdd" type="text" style="width: 300px;">
+    <a class="findAddress button addMarker" href="javascript:void(0);">Add marker</a>
+}
