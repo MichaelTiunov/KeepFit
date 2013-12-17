@@ -162,3 +162,10 @@ d:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\bin\Debug\zh-Hant\System.Spati
 d:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\obj\Debug\KeepFit.Tests.csprojResolveAssemblyReference.cache
 d:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\obj\Debug\KeepFit.Tests.dll
 d:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\obj\Debug\KeepFit.Tests.pdb
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\bin\Debug\KeepFit.Core.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\bin\Debug\KeepFit.Core.Domain.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\bin\Debug\KeepFit.Core.pdb
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Tests\bin\Debug\KeepFit.Core.Domain.pdb

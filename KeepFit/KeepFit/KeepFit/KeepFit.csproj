@@ -40,6 +40,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.3.1.0.0\lib\net20\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.3.1.0.0\lib\net20\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.3.1.0.0\lib\net20\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.3.1.0.0\lib\net20\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.3.1.0.0\lib\net20\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.3.1.0.0\lib\net20\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.3.1.0.0\lib\net20\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -305,6 +326,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KeepFit.Core.Domain\KeepFit.Core.Domain.csproj">
+      <Project>{F65F8D33-885E-4CC1-AFB4-13D35BFCB703}</Project>
+      <Name>KeepFit.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeepFit.Core\KeepFit.Core.csproj">
+      <Project>{17EE51E6-6339-47B6-9711-7C70EEEF1206}</Project>
+      <Name>KeepFit.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

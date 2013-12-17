@@ -168,3 +168,14 @@ d:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\zh-Hant\System.Spatial.resources
 d:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\obj\Debug\KeepFit.csprojResolveAssemblyReference.cache
 d:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\obj\Debug\KeepFit.dll
 d:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\obj\Debug\KeepFit.pdb
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\Microsoft.Practices.ObjectBuilder.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\KeepFit.Core.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\KeepFit.Core.Domain.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\KeepFit.Core.Domain.pdb
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit\bin\KeepFit.Core.pdb
