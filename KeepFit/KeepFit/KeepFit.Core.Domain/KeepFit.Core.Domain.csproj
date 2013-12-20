@@ -43,6 +43,8 @@
     <Compile Include="Entity\EntityBase.cs" />
     <Compile Include="Entity\IAuditable.cs" />
     <Compile Include="Gym\Gym.cs" />
+    <Compile Include="Gym\Mappers\GymMapper.cs" />
+    <Compile Include="Mappers\IMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

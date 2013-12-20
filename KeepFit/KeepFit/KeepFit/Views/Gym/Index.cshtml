@@ -1,4 +1,4 @@
-﻿@model dynamic
+﻿@model KeepFit.Models.GymModel
 
 @{
     ViewBag.Title = "title";
@@ -21,248 +21,212 @@
         var myMap,
             myPlacemark,
             circle,
-            objects;
+            objects=[],
+            cafe, metro,
+            gyms = [],
+            gyms = @Html.Raw(Json.Encode(Model.Gyms));
 
-        // Дождёмся загрузки API и готовности DOM.
-        ymaps.ready(init);
+            // Дождёмся загрузки API и готовности DOM.
+            ymaps.ready(init);
 
-        function init() {
-            // Создание экземпляра карты и его привязка к контейнеру с
-            // заданным id ("map").
-            myMap = new ymaps.Map('map', {
-                // При инициализации карты обязательно нужно указать
-                // её центр и коэффициент масштабирования.
-                center: [53.9, 27.56], // Москва
-                zoom: 10
-            });
-            myMap.controls
-                .add('zoomControl', { left: 5, top: 5 });
-
-            objects = ymaps.geoQuery([
-                {
-                    type: 'Point',
-                    coordinates: [53.87, 27.47],
-                    properties: {
-                        iconContent: 'Метка'
-                    }
-                },
-                {
-                    type: 'Point',
-                    coordinates: [53.86, 27.62]
-                },
-                {
-                    type: 'Point',
-                    coordinates: [53.85, 27.47]
-                }
-            ]).addToMap(myMap);
-
-            
-
-            myMap.events.add('click', mapClick);
-
-            function getAllAddresses() {
-                var objectsInsideCircle = objects.searchInside(circle),
-                    html = "";
-                objectsInsideCircle.each(function (v) {
-                    html += v.geometry.getCoordinates() + " | ";
+            function init() {
+                // Создание экземпляра карты и его привязка к контейнеру с
+                // заданным id ("map").
+                myMap = new ymaps.Map('map', {
+                    // При инициализации карты обязательно нужно указать
+                    // её центр и коэффициент масштабирования.
+                    center: [53.9, 27.56], // Москва
+                    zoom: 12
                 });
-                $('#address').text(html);
-            }
+                myMap.controls
+                    .add('zoomControl', { left: 5, top: 5 });
 
-            function mapClick(e) {
-                var coords = e.get('coords');
-
-                // Если метка уже создана – просто передвигаем ее
-                if (myPlacemark) {
-                    myPlacemark.geometry.setCoordinates(coords);
-                }
-                    // Если нет – создаем.
-                else {
-                    myPlacemark = createPlacemark(coords);
-                    myMap.geoObjects.add(myPlacemark);
-                    // Слушаем событие окончания перетаскивания на метке.
-                    myPlacemark.events.add('dragend', function () {
-                        getAddress(myPlacemark.geometry.getCoordinates());
+                $.each(gyms, function(index, value) {
+                    var gym = new ymaps.Placemark([value.Latitude, value.Longitude], {
+                        // Свойства.
+                        // Содержимое иконки, балуна и хинта.
+                        iconContent: value.Name,
+                        balloonContent: value.Name,
+                        hintContent: 'Стандартный значок метки'
+                    }, {
+                        // Опции.
+                        // Стандартная фиолетовая иконка.
+                        preset: 'twirl#violetStretchyIcon'
                     });
-                }
-                getAddress(coords);
-            }
-            
-            function dragCircle(e) {
-                // Объекты, попадающие в круг, будут становиться красными.
-                var objectsInsideCircle = objects.searchInside(circle);
-                objectsInsideCircle.setOptions('preset', 'twirl#redIcon');
-                // Оставшиеся объекты - синими.
-                objects.remove(objectsInsideCircle).setOptions('preset', 'twirl#blueIcon');
-            }
-            
-            function createPlacemark(coords) {
-                return new ymaps.Placemark(coords, {
-                    iconContent: 'поиск...'
-                }, {
-                    preset: 'twirl#violetStretchyIcon',
-                    draggable: true
+                    myMap.geoObjects
+                     .add(gym);
+                    gyms.push(gym);
                 });
-            }
 
-            // Определяем адрес по координатам (обратное геокодирование)
+                myMap.events.add('click', mapClick);
+                
+                function findClosestObjects () {
+                    // Найдем в выборке кафе, ближайшее к найденной станции метро,
+                    // и откроем его балун.
+                    
 
-            function getAddress(coords) {
-                myPlacemark.properties.set('iconContent', 'поиск...');
-                ymaps.geocode(coords).then(function (res) {
-                    var firstGeoObject = res.geoObjects.get(0);
-
-                    myPlacemark.properties
-                        .set({
-                            iconContent: firstGeoObject.properties.get('name'),
-                            balloonContent: firstGeoObject.properties.get('text')
-                        });
-                    $('.currentAddress').val(firstGeoObject.properties.get('text'));
-
-                    var c = res.metaData.geocoder.request;
-                    $('.currentAddressPosition').val(c);
-                });
-            }
-
-            function findLocation(name, circleRadius) {
-                // Поиск координат центра Нижнего Новгорода.
-                ymaps.geocode(name, {
-                    /**
-                     * Опции запроса
-             */
-                    // boundedBy: myMap.getBounds(), // Сортировка результатов от центра окна карты
-                    // strictBounds: true, // Вместе с опцией boundedBy будет искать строго внутри области, указанной в boundedBy
-                    results: 1 // Если нужен только один результат, экономим трафик пользователей
-                }).then(function (res) {
-                    // Выбираем первый результат геокодирования.
-                    var firstGeoObject = res.geoObjects.get(0),
-                        // Координаты геообъекта.
-                        coords = firstGeoObject.geometry.getCoordinates(),
-                        // Область видимости геообъекта.
-                        bounds = firstGeoObject.properties.get('boundedBy');
-
-
-                    circle = new ymaps.Circle([coords, circleRadius || 1000], null, { draggable: true });
-
-                    circle.events.add('drag', dragCircle);
-
-
-                    circle.events.add('click', mapClick);
-
-                    myMap.geoObjects.add(circle);
-
-                    dragCircle();
-
-                    // Добавляем первый найденный геообъект на карту.
-                    myMap.geoObjects.add(firstGeoObject);
-                    // Масштабируем карту на область видимости геообъекта.
-                    myMap.setBounds(bounds, {
-                        checkZoomRange: true // проверяем наличие тайлов на данном масштабе.
-                    });
-                });
-            }
-
-            $('.findAddress').bind('click', function () {
-                findLocation($('#addressToAdd').val());
-            });
-            $('.getAllAddresses').bind('click', function () {
-                getAllAddresses();
-            });
-            $('.addAddress').bind('click', function () {
-                findLocation($('#livingAddress').val());
-            });
-        }
+                    cafe.getClosestTo(metro.get(0)).balloon.open();
         
-        $(function() {
-            var spinner = $("#spinner").spinner();
-        });
+                    // Будем открывать балун кафе, который ближе всего к месту клика
+                    myMap.events.add('click', function (event) {
+                        cafe.getClosestTo(event.get('coordPosition')).balloon.open();
+                    });
+                }
+                
+                function getAllAddresses() {
+                    var objectsInsideCircle = ymaps.geoQuery(myMap.geoObjects).searchInside(circle),
+                        html = "";
+                    objectsInsideCircle.each(function(v) {
+                        html += v.geometry.getCoordinates() + " | ";
+                    });
+                    $('#address').text(html);
+                }
+
+                function mapClick(e) {
+                    var coords = e.get('coords');
+
+                    // Если метка уже создана – просто передвигаем ее
+                    if (myPlacemark) {
+                        myPlacemark.geometry.setCoordinates(coords);
+                    }
+                        // Если нет – создаем.
+                    else {
+                        myPlacemark = createPlacemark(coords);
+                        myMap.geoObjects.add(myPlacemark);
+                        // Слушаем событие окончания перетаскивания на метке.
+                        myPlacemark.events.add('dragend', function() {
+                            getAddress(myPlacemark.geometry.getCoordinates());
+                        });
+                    }
+                    getAddress(coords);
+                }
+
+                function findGyms(e) {
+                    // Объекты, попадающие в круг, будут становиться красными.
+                    var gymPosition = ymaps.geoQuery(myMap.geoObjects);
+                    var objectsInsideCircle = gymPosition.searchInside(e);
+                    objectsInsideCircle.setOptions('preset', 'twirl#redIcon');
+                    // Оставшиеся объекты - синими.
+                    gymPosition.remove(objectsInsideCircle).setOptions('preset', 'twirl#blueIcon');
+
+                    gymPosition.getClosestTo(e).balloon.open();
+                }
+
+                function createPlacemark(coords) {
+                    return new ymaps.Placemark(coords, {
+                        iconContent: 'поиск...'
+                    }, {
+                        preset: 'twirl#violetStretchyIcon',
+                        draggable: true
+                    });
+                }
+
+                // Определяем адрес по координатам (обратное геокодирование)
+
+                function getAddress(coords) {
+                    myPlacemark.properties.set('iconContent', 'поиск...');
+                    ymaps.geocode(coords).then(function(res) {
+                        var firstGeoObject = res.geoObjects.get(0);
+
+                        myPlacemark.properties
+                            .set({
+                                iconContent: firstGeoObject.properties.get('name'),
+                                balloonContent: firstGeoObject.properties.get('text')
+                            });
+                        $('.currentAddress').val(firstGeoObject.properties.get('text'));
+
+                        var lat = res.metaData.geocoder.request.split(',')[0],
+                            long = res.metaData.geocoder.request.split(',')[1];
+                        $('.currentAddressPositionLat').val(lat);
+                        $('.currentAddressPositionLong').val(long);
+                    });
+                }
+
+                function findLocation(name, circleRadius) {
+                    // Поиск координат центра Нижнего Новгорода.
+                    ymaps.geocode(name, {
+                        /**
+                         * Опции запроса
+                 */
+                        // boundedBy: myMap.getBounds(), // Сортировка результатов от центра окна карты
+                        // strictBounds: true, // Вместе с опцией boundedBy будет искать строго внутри области, указанной в boundedBy
+                        results: 1 // Если нужен только один результат, экономим трафик пользователей
+                    }).then(function(res) {
+                        // Выбираем первый результат геокодирования.
+                        var firstGeoObject = res.geoObjects.get(0),
+                            // Координаты геообъекта.
+                            coords = firstGeoObject.geometry.getCoordinates(),
+                            // Область видимости геообъекта.
+                            bounds = firstGeoObject.properties.get('boundedBy');
+
+                        myMap.geoObjects.each(function(i) {
+                            if (i.geometry.getType() === 'Circle' && i.geometry.getRadius() === circleRadius)
+                                myMap.geoObjects.remove(i);
+                        });
+
+                        circle = new ymaps.Circle([coords, circleRadius || 1000], null, { draggable: true });
+
+                        //circle.events.add('drag', dragCircle);
+
+                        circle.events.add('click', mapClick);
+
+                        myMap.geoObjects.add(circle);
+
+                        findGyms(circle);
+
+                        // Добавляем первый найденный геообъект на карту.
+                        myMap.geoObjects.add(firstGeoObject);
+                        // Масштабируем карту на область видимости геообъекта.
+                        myMap.setBounds(bounds, {
+                            checkZoomRange: true // проверяем наличие тайлов на данном масштабе.
+                        });
+                    });
+                }
+
+                $('.findAddress').bind('click', function() {
+                    findLocation($('#addressToAdd').val(),$("#spinner").val());
+                });
+                $('.getAllAddresses').bind('click', function() {
+                    getAllAddresses();
+                });
+                $('.addAddress').bind('click', function() {
+                    findLocation($('#livingAddress').val(),$("#spinner").val());
+                });
+            }
+
+            $(function() {
+                var spinner = $("#spinner").spinner();
+
+                $('.addGymToMap').bind('click', function () {
+                    var gym = {
+                        name: $('.gymName').val(),
+                        latitude: $('.currentAddressPositionLat').val(),
+                        longitude: $('.currentAddressPositionLong').val()
+                    };
+                    $.ajax('@Url.Action("AddGym")', {
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        type: 'POST',
+                        data: JSON.stringify(gym)
+                    });
+                });
+            });
     </script>
 
-    @*<link href="~/Assets/css/demo.css" rel="stylesheet" />
-    <link href="~/Assets/css/index.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-ui-1.8.24.js"></script>
-    <script src="~/Assets/js/jquery.color.js"></script>
-    <script src="~/Assets/js/demo.js"></script>
-    <script src="~/Assets/js/jquery.gmap3.js"></script>
-    <script src="~/Assets/js/index.js"></script>
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA2YoFViLEevsBGTVGJ4Hhm63wfHP1hWA&sensor=true"></script>*@
-    @* <script type="text/javascript">
-        var geocoder;
-        var map;
-        function success(position) {
-
-            var mapcanvas = document.createElement('div');
-            mapcanvas.id = 'map-canvas';
-            mapcanvas.style.height = '400px';
-            mapcanvas.style.width = '560px';
-
-            document.querySelector('article').appendChild(mapcanvas);
-
-            var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            var myOptions = {
-                zoom: 15,
-                center: latlng,
-                mapTypeControl: false,
-                navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            geocoder = new google.maps.Geocoder();
-            map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
-
-            var marker = new google.maps.Marker({
-                position: latlng,
-                map: map,
-                title: "You are here! (at least within a " + position.coords.accuracy + " meter radius)"
-            });
-        }
-        function codeAddress() {
-            var address = document.getElementById("address").value;
-            geocoder.geocode({ 'address': address }, function (results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: results[0].geometry.location
-                    });
-                } else {
-                    alert("Geocode was not successful for the following reason: " + status);
-                }
-            });
-        }
-        function error(msg) {
-            var s = document.querySelector('#demo');
-            s.innerHTML = typeof msg == 'string' ? msg : "failed";
-            s.className = 'fail';
-
-            // console.log(arguments);
-        }
-
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(success, error);
-        } else {
-            error('not supported');
-        }
-
-        $(function () {
-            $('.findAddress').bind('click', function () {
-                codeAddress();
-            });
-        });
-    </script>*@
 }
 
 @section RightContent
 {
     <input class="currentAddress" type="text" style="width: 700px;">
-    <input class="currentAddressPosition" type="text" style="width: 700px;">
+    <input class="currentAddressPositionLat" type="text" style="width: 300px;">
+    <input class="currentAddressPositionLong" type="text" style="width: 300px;">
 
     <div id="map" style="width: 700px; height: 500px"></div>
 
     <div id="content">
-        <div id="latlng" class="line">click the map</div>
-        <div id="address" class="line">click the map</div>
-        <div id="map_canvas" class="line"></div>
+        <input type="text" class="gymName" style="width: 200px;" />
+        <a class="button addGymToMap" href="javascript:void(0);">Add Gym</a>
     </div>
 }
 
@@ -271,16 +235,11 @@
     <input id="addressToAdd" type="text" style="width: 300px;">
     <a class="findAddress button addMarker" href="javascript:void(0);">Add marker</a>
 
-
-
     <a class="getAllAddresses button" href="javascript:void(0);">Get All Addresses</a>
-    
-    
+
     <input id="livingAddress" type="text" style="width: 300px;">
-    
+
     <input id="spinner" name="value">
 
     <a class="addAddress button" href="javascript:void(0);">Add address</a>
-    
-
 }

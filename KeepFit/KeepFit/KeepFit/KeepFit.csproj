@@ -214,6 +214,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BodyStatistic.cs" />
+    <Compile Include="Models\GymModel.cs" />
     <Compile Include="Models\Significate.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -245,6 +246,7 @@
     <Content Include="Assets\js\config.js" />
     <Content Include="Assets\js\demo.js" />
     <Content Include="Assets\js\fullcalendar.js" />
+    <Content Include="Assets\js\googlemapsold.js" />
     <Content Include="Assets\js\html5shiv.js" />
     <Content Include="Assets\js\index.js" />
     <Content Include="Assets\js\jquery.color.js" />
@@ -275,7 +277,9 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using KeepFit.Core.Persistence.Gym;
 
 namespace KeepFit.Core.Services.Gym
@@ -23,9 +24,14 @@ namespace KeepFit.Core.Services.Gym
 
         }
 
-        public void AddGym(Domain.Gym.Gym gym)
+        public Domain.Gym.Gym AddGym(Domain.Gym.Gym gym)
         {
-            gymRepository.AddGym(gym);
+            return gymRepository.AddGym(gym);
+        }
+
+        public IEnumerable<Domain.Gym.Gym> GetGyms()
+        {
+            return gymRepository.GetGyms();
         }
     }
 }

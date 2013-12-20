@@ -1,17 +1,25 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using KeepFit.Core.Domain.Gym;
 using KeepFit.Core.Services.Gym;
+using KeepFit.Models;
 
 namespace KeepFit.Controllers
 {
     public class GymController : BaseController
     {
-        readonly GymService service = new GymService();
+        readonly GymService gymService = new GymService();
 
         public ActionResult Index()
         {
-            service.AddGym(new Gym());
-            return View();
+            var model = new GymModel {Gyms = gymService.GetGyms()};
+            return View(model);
+        }
+        [HttpPost]
+        public JsonResult AddGym(string name, string latitude, string longitude)
+        {
+            Gym gym = gymService.AddGym(new Gym { Name = name, Latitude = Convert.ToDouble(latitude), Longitude = Convert.ToDouble(longitude) });
+            return Json(gym);
         }
     }
 }

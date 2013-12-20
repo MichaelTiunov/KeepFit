@@ -64,6 +64,7 @@
     <Compile Include="Persistence\Gym\GymDataAccess.cs" />
     <Compile Include="Persistence\Gym\GymRepository.cs" />
     <Compile Include="Persistence\Gym\IGymRepository.cs" />
+    <Compile Include="Persistence\RepositoryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Gym\GymService.cs" />
     <Compile Include="Services\Gym\IGymService.cs" />
