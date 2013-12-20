@@ -208,6 +208,7 @@
     <Compile Include="Controllers\BodyController.cs" />
     <Compile Include="Controllers\GymController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -215,6 +216,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BodyStatistic.cs" />
     <Compile Include="Models\GymModel.cs" />
+    <Compile Include="Models\ProductsModel.cs" />
     <Compile Include="Models\Significate.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -228,8 +230,24 @@
     <Content Include="Assets\css\ie8.css" />
     <Content Include="Assets\css\images\bg.jpg" />
     <Content Include="Assets\css\images\bgshadow.png" />
+    <Content Include="Assets\css\images\jquery-ui\animated-overlay.gif" />
+    <Content Include="Assets\css\images\jquery-ui\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-icons_222222_256x240.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-icons_228ef1_256x240.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Assets\css\images\jquery-ui\ui-icons_ffffff_256x240.png" />
     <Content Include="Assets\css\images\mobileUI-site-nav-opener-bg.svg" />
     <Content Include="Assets\css\index.css" />
+    <Content Include="Assets\css\jquery-ui-1.10.3.custom.css" />
     <Content Include="Assets\css\main.css" />
     <Content Include="Assets\css\skel-noscript.css" />
     <Content Include="Assets\css\style-1000px.css" />
@@ -249,10 +267,12 @@
     <Content Include="Assets\js\googlemapsold.js" />
     <Content Include="Assets\js\html5shiv.js" />
     <Content Include="Assets\js\index.js" />
+    <Content Include="Assets\js\jquery-ui-1.10.3.custom.js" />
     <Content Include="Assets\js\jquery.color.js" />
     <Content Include="Assets\js\jquery.gmap3.js" />
     <Content Include="Assets\js\jquery.loadTemplate-1.3.2.js" />
     <Content Include="Assets\js\jquery.min.js" />
+    <Content Include="Assets\js\jquery.tokeninput.js" />
     <Content Include="Assets\js\skel-panels.min.js" />
     <Content Include="Assets\js\skel.min.js" />
     <Content Include="favicon.ico" />
@@ -324,6 +344,7 @@
     <Content Include="Views\Shared\MainMenu.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Gym\Index.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

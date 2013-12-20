@@ -45,6 +45,7 @@
     <Compile Include="Gym\Gym.cs" />
     <Compile Include="Gym\Mappers\GymMapper.cs" />
     <Compile Include="Mappers\IMapper.cs" />
+    <Compile Include="Product\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

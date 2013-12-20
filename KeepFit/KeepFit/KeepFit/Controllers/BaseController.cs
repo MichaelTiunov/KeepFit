@@ -3,11 +3,20 @@ using System.Diagnostics;
 using System.Web;
 using System.Web.Mvc;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace KeepFit.Controllers
 {
     public class BaseController : Controller
     {
+        protected static JsonResult JsonNet(object responseBody)
+        {
+            return new JsonNetResult(responseBody, new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            });
+        }
+
         public class JsonNetResult : JsonResult
         {
             public JsonNetResult()
@@ -60,7 +69,7 @@ namespace KeepFit.Controllers
                 HttpResponseBase response = context.HttpContext.Response;
 
                 // set content type 
-                if (!string.IsNullOrEmpty(ContentType))
+                if (!String.IsNullOrEmpty(ContentType))
                 {
                     response.ContentType = ContentType;
                 }
@@ -81,6 +90,5 @@ namespace KeepFit.Controllers
                 }
             }
         }
-
     }
 }
