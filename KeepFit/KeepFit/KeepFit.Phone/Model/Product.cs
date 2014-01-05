@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KeepFit.Core.Domain.Product
+namespace KeepFit.Phone.Model
 {
     public class Product
     {

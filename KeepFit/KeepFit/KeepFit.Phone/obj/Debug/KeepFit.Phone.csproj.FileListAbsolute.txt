@@ -18,3 +18,6 @@ C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Phone\obj\Debug\KeepFit.Phone.csproj
 C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Phone\obj\Debug\KeepFit.Phone.dll
 C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Phone\obj\Debug\KeepFit.Phone.pdb
 C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Phone\obj\Debug\XapCacheFile.xml
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Phone\Bin\Debug\Newtonsoft.Json.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Phone\Bin\Debug\Newtonsoft.Json.xml
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Phone\obj\Debug\KeepFit.Phone.csprojResolveAssemblyReference.cache
