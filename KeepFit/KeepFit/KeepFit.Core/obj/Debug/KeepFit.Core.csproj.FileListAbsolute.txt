@@ -12,3 +12,17 @@ D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.E
 D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
 D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
 D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\KeepFit.Core.Domain.pdb
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\KeepFit.Core.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\KeepFit.Core.pdb
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\KeepFit.Core.Domain.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\KeepFit.Core.Domain.pdb
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.csprojResolveAssemblyReference.cache
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.dll
+C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.pdb
