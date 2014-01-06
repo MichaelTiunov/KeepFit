@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit", "KeepFit\KeepFit.csproj", "{5A0B562A-CB63-413F-871C-BDF7E9CB6D95}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Tests", "KeepFit.Tests\KeepFit.Tests.csproj", "{550B1723-96FB-45B3-B7F3-9303FCC6F1CA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Core", "KeepFit.Core\KeepFit.Core.csproj", "{17EE51E6-6339-47B6-9711-7C70EEEF1206}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Core.Domain", "KeepFit.Core.Domain\KeepFit.Core.Domain.csproj", "{F65F8D33-885E-4CC1-AFB4-13D35BFCB703}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Phone", "KeepFit.Phone\KeepFit.Phone.csproj", "{ACCF1F31-29D8-434D-8DD6-22F6ABE1D363}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Web", "KeepFit.Web\KeepFit.Web.csproj", "{FA177B01-1A36-4E47-9290-50077D9799CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,22 +21,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5A0B562A-CB63-413F-871C-BDF7E9CB6D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A0B562A-CB63-413F-871C-BDF7E9CB6D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A0B562A-CB63-413F-871C-BDF7E9CB6D95}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{5A0B562A-CB63-413F-871C-BDF7E9CB6D95}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{5A0B562A-CB63-413F-871C-BDF7E9CB6D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A0B562A-CB63-413F-871C-BDF7E9CB6D95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A0B562A-CB63-413F-871C-BDF7E9CB6D95}.Release|ARM.ActiveCfg = Release|Any CPU
-		{5A0B562A-CB63-413F-871C-BDF7E9CB6D95}.Release|x86.ActiveCfg = Release|Any CPU
-		{550B1723-96FB-45B3-B7F3-9303FCC6F1CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{550B1723-96FB-45B3-B7F3-9303FCC6F1CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{550B1723-96FB-45B3-B7F3-9303FCC6F1CA}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{550B1723-96FB-45B3-B7F3-9303FCC6F1CA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{550B1723-96FB-45B3-B7F3-9303FCC6F1CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{550B1723-96FB-45B3-B7F3-9303FCC6F1CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{550B1723-96FB-45B3-B7F3-9303FCC6F1CA}.Release|ARM.ActiveCfg = Release|Any CPU
-		{550B1723-96FB-45B3-B7F3-9303FCC6F1CA}.Release|x86.ActiveCfg = Release|Any CPU
 		{17EE51E6-6339-47B6-9711-7C70EEEF1206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{17EE51E6-6339-47B6-9711-7C70EEEF1206}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17EE51E6-6339-47B6-9711-7C70EEEF1206}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -73,6 +55,14 @@ Global
 		{ACCF1F31-29D8-434D-8DD6-22F6ABE1D363}.Release|x86.ActiveCfg = Release|x86
 		{ACCF1F31-29D8-434D-8DD6-22F6ABE1D363}.Release|x86.Build.0 = Release|x86
 		{ACCF1F31-29D8-434D-8DD6-22F6ABE1D363}.Release|x86.Deploy.0 = Release|x86
+		{FA177B01-1A36-4E47-9290-50077D9799CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA177B01-1A36-4E47-9290-50077D9799CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA177B01-1A36-4E47-9290-50077D9799CC}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{FA177B01-1A36-4E47-9290-50077D9799CC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FA177B01-1A36-4E47-9290-50077D9799CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA177B01-1A36-4E47-9290-50077D9799CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA177B01-1A36-4E47-9290-50077D9799CC}.Release|ARM.ActiveCfg = Release|Any CPU
+		{FA177B01-1A36-4E47-9290-50077D9799CC}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,10 +1,9 @@
-D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.dll
-D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.pdb
-D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.csprojResolveAssemblyReference.cache
-D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.dll
-D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.pdb
 C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.dll
 C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.pdb
 C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.csprojResolveAssemblyReference.cache
 C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.dll
 C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.pdb
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.pdb
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.dll
+D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.pdb

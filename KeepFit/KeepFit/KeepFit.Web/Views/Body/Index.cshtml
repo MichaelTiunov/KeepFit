@@ -1,0 +1,133 @@
+﻿@model KeepFit.Web.Models.BodyStatistic
+<link href="~/Assets/css/fullcalendar.css" rel="stylesheet" />
+@{
+    Layout = "~/Views/Shared/_LayoutRightSideBar.cshtml";
+}
+@section RightContent
+{
+    <div id="calendar">
+    </div>
+}
+
+@section RightSidebar
+{
+    <div class="bodyStats">
+        <div>
+            <h3>Track Your Details
+            </h3>
+            <div>
+                <div class="label">
+                    Weight: 
+                </div>
+                <div class="field">
+
+                    <input type="text" class="weight" />
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Growth: 
+                </div>
+                <div class="field">
+                    <input type="text" class="growth" />
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Waistline: 
+                </div>
+                <div class="field">
+                    <input type="text" class="waistline" />
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Chest: 
+                </div>
+                <div class="field">
+                    <input type="text" class="chest" />
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Neck: 
+                </div>
+                <div class="field">
+                    <input type="text" class="neck" />
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Shoulders: 
+                </div>
+                <div class="field">
+                    <input type="text" class="shoulders" />
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Forearms: 
+                </div>
+                <div class="field">
+                    <input type="text" class="forearms" />
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Calves: 
+                </div>
+                <div class="field">
+                    <input type="text" class="calves" />
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    Thighs: 
+                </div>
+                <div class="field">
+                    <input type="text" class="thighs" />
+                </div>
+            </div>
+        </div>
+        <div class="trackButtonHolder">
+            <a href="javascript:void(0)" class="button track">Track!</a>
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script src="~/Assets/js/fullcalendar.js"></script>
+    <script>
+        $(function () {
+
+            $('#nav li.body').addClass('current_page_item');
+            $('#calendar').fullCalendar({});
+
+            $('.bodyStats .trackButtonHolder .track').bind('click', function () {
+                var preparedUserData = prepareUserData();
+                $.ajax('@Url.Action("DailyStatistic")',
+                    {
+                        type: 'POST',
+                        data: JSON.stringify(preparedUserData)
+                    });
+            });
+
+            function prepareUserData() {
+                var parent = $('.bodyStats');
+                var data = {
+                    weight: $('.weight', parent).val(),
+                    growth: $('.growth', parent).val(),
+                    waistline: $('.waistline', parent).val(),
+                    chest: $('.chest', parent).val(),
+                    neck: $('.neck', parent).val(),
+                    shoulders: $('.shoulders', parent).val(),
+                    forearms: $('.forearms', parent).val(),
+                    calves: $('.calves', parent).val(),
+                    thighs: $('.thighs', parent).val(),
+                };
+                return data;
+            };
+        });
+    </script>
+}
