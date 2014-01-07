@@ -11,7 +11,7 @@ namespace KeepFit.Phone.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        const string apiUrl = @"http://www.keepfit.ihb.by/api/Products";
+        const string apiUrl = @"http://www.keepfit.ihb.by/api/Gyms";
         public MainViewModel()
         {
             this.Items = new ObservableCollection<ItemViewModel>();
@@ -82,16 +82,16 @@ namespace KeepFit.Phone.ViewModels
                 this.Items.Clear();
                 if (e.Result != null)
                 {
-                    var products = JsonConvert.DeserializeObject<Product[]>(e.Result);
+                    var gyms = JsonConvert.DeserializeObject<Gym[]>(e.Result);
                     int id = 0;
-                    foreach (Product product in products)
+                    foreach (Gym gym in gyms)
                     {
                         this.Items.Add(new ItemViewModel()
                         {
                             ID = (id++).ToString(),
-                            LineOne = product.Category,
-                            LineTwo = product.Name,
-                            LineThree = product.Price.ToString(CultureInfo.InvariantCulture)
+                            LineOne = gym.Name,
+                            LineTwo = gym.Latitude.ToString(),
+                            LineThree = gym.Longitude.ToString()
                         });
                     }
                     this.IsDataLoaded = true;

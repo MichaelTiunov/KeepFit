@@ -1,8 +1,8 @@
-C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.dll
-C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.pdb
-C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.dll
-C:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.pdb
 D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.dll
 D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.pdb
 D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.dll
 D:\Work\GIT\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.pdb
+c:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.dll
+c:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.pdb
+c:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.dll
+c:\Projects\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.pdb
