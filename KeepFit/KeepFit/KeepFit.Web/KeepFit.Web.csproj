@@ -246,6 +246,7 @@
     <Content Include="Assets\css\font\fontawesome-webfont.ttf" />
     <Content Include="Assets\css\font\fontawesome-webfont.woff" />
     <Content Include="Assets\css\font\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\KeepFit.pubxml" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
