@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
     mc:Ignorable="d"
     d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -21,10 +22,10 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Book Store" Style="{StaticResource PhoneTextTitle1Style}"/>
-            <TextBlock Text="Current Catalog" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle2Style}"/>
         </StackPanel>
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:LongListSelector x:Name="MainLongListSelector" Margin="0,0,-12,0" ItemsSource="{Binding Items}" SelectionChanged="MainLongListSelector_SelectionChanged">
+            <maps:Map x:Name="map" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible"/>
+            <!--<phone:LongListSelector x:Name="MainLongListSelector" Margin="0,0,-12,0" ItemsSource="{Binding Items}" SelectionChanged="MainLongListSelector_SelectionChanged">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
                       <StackPanel Margin="0,0,0,17">
@@ -33,7 +34,7 @@
                       </StackPanel>
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>
-            </phone:LongListSelector>
+            </phone:LongListSelector>-->
         </Grid>
     </Grid>
 </phone:PhoneApplicationPage>
