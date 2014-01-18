@@ -120,14 +120,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <DesignData Include="SampleData\MainViewModelSampleData.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </DesignData>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -156,6 +156,7 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\can-stock-photo_csp6518359.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
@@ -166,6 +167,27 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\sl4-windowsphone71\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\Rx-Core.2.0.21114\lib\SL4-WindowsPhone71\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\Rx-Interfaces.2.0.21114\lib\SL4-WindowsPhone71\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\Rx-Linq.2.0.21114\lib\SL4-WindowsPhone71\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\Rx-PlatformServices.2.0.21114\lib\SL4-WindowsPhone71\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading">
+      <HintPath>..\packages\Rx-XAML.2.0.21114\lib\SL4-WindowsPhone71\System.Reactive.Windows.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="Yandex.Maps">
+      <HintPath>..\packages\Yandex.Maps.1.02.4721.1342\lib\sl4-wp71\Yandex.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Zlib">
+      <HintPath>..\packages\Yandex.Maps.1.02.4721.1342\lib\sl4-wp71\Zlib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

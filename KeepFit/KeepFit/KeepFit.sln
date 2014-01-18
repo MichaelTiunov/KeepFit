@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Phone", "KeepFit.Ph
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Web", "KeepFit.Web\KeepFit.Web.csproj", "{FA177B01-1A36-4E47-9290-50077D9799CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.WP", "KeepFit.WP\KeepFit.WP.csproj", "{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,24 @@ Global
 		{FA177B01-1A36-4E47-9290-50077D9799CC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA177B01-1A36-4E47-9290-50077D9799CC}.Release|ARM.ActiveCfg = Release|Any CPU
 		{FA177B01-1A36-4E47-9290-50077D9799CC}.Release|x86.ActiveCfg = Release|Any CPU
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Debug|ARM.ActiveCfg = Debug|ARM
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Debug|ARM.Build.0 = Debug|ARM
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Debug|ARM.Deploy.0 = Debug|ARM
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Debug|x86.ActiveCfg = Debug|x86
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Debug|x86.Build.0 = Debug|x86
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Debug|x86.Deploy.0 = Debug|x86
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Release|ARM.ActiveCfg = Release|ARM
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Release|ARM.Build.0 = Release|ARM
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Release|ARM.Deploy.0 = Release|ARM
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Release|x86.ActiveCfg = Release|x86
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Release|x86.Build.0 = Release|x86
+		{4CDCFD71-01FD-45B2-96CD-38C288E19DBD}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

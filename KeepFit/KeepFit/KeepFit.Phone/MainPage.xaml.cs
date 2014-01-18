@@ -31,30 +31,10 @@ namespace KeepFit.Phone
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
-        void gcw_PositionChanged(object sender,
-GeoPositionChangedEventArgs<GeoCoordinate> e)
-        {
-            Debug.WriteLine("New position:" + e.Position.Location.Latitude + "," +
-        e.Position.Location.Longitude);
-
-            map.Center = e.Position.Location;
-            map.Heading = e.Position.Location.Course;
-        }
-        void gcw_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
-        {
-            Debug.WriteLine("New status: " + e.Status);
-
-            if (e.Status == GeoPositionStatus.Ready)
-            {
-                map.Center = gcw.Position.Location;
-            }
-        }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             gcw = new GeoCoordinateWatcher(GeoPositionAccuracy.High);
-            gcw.PositionChanged += gcw_PositionChanged;
-            gcw.StatusChanged += gcw_StatusChanged;
 
             gcw.Start();
 
