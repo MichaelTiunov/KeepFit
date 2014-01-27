@@ -11,21 +11,21 @@ namespace KeepFit.WP.Model
         public event PropertyChangedEventHandler PropertyChanged;
         public event PropertyChangingEventHandler PropertyChanging;
 
-        private int workoutId;
+        private int id;
         private DateTime workoutDateTime;
         private string workoutName;
 
         [Column(IsPrimaryKey = true, IsDbGenerated = true, DbType = "INT NOT NULL Identity", CanBeNull = false, AutoSync = AutoSync.OnInsert)]
-        public int WorkoutId
+        public int Id
         {
-            get { return workoutId; }
+            get { return id; }
             set
             {
-                if (workoutId != value)
+                if (id != value)
                 {
-                    NotifyPropertyChanging("WorkoutId");
-                    workoutId = value;
-                    NotifyPropertyChanged("WorkoutId");
+                    NotifyPropertyChanging("Id");
+                    id = value;
+                    NotifyPropertyChanged("Id");
                 }
             }
         }
@@ -69,7 +69,7 @@ namespace KeepFit.WP.Model
         // Define the entity set for the collection side of the relationship.
         private EntitySet<Sets> sets;
 
-        [Association(Storage = "sets", OtherKey = "_categoryId", ThisKey = "WorkoutId")]
+        [Association(Storage = "sets", OtherKey = "WorkoutId", ThisKey = "Id")]
         public EntitySet<Sets> ToDos
         {
             get { return this.sets; }

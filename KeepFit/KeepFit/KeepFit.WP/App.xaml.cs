@@ -23,8 +23,8 @@ namespace KeepFit.WP
     public partial class App : Application
     {
         // The static ViewModel, to be used across the application.
-        private static  ExcercisesViewModel viewModel;
-        public static ExcercisesViewModel ViewModel
+        private static  WorkoutViewModel viewModel;
+        public static WorkoutViewModel ViewModel
         {
             get { return viewModel; }
         }
@@ -70,28 +70,19 @@ namespace KeepFit.WP
             }
 
             // Specify the local database connection string.
-            string DBConnectionString = "Data Source=isostore:/ToDo.sdf";
+            const string dbConnectionString = "Data Source=isostore:/KeepFit.sdf";
 
             // Create the database if it does not exist.
-            using (KeepFitDataContext db = new KeepFitDataContext(DBConnectionString))
+            using (var db = new KeepFitDataContext(dbConnectionString))
             {
                 if (db.DatabaseExists() == false)
                 {
-                    // Create the local database.
                     db.CreateDatabase();
-
-                    // Prepopulate the categories.
-                    db.ExcercisesCategories.InsertOnSubmit(new ExcerciseCategory { Name = "Home" });
-                    db.ExcercisesCategories.InsertOnSubmit(new ExcerciseCategory { Name = "Work" });
-                    db.ExcercisesCategories.InsertOnSubmit(new ExcerciseCategory { Name = "Hobbies" });
-
-                    // Save categories to the database.
-                    db.SubmitChanges();
                 }
             }
 
             // Create the ViewModel object.
-            viewModel = new ExcercisesViewModel(DBConnectionString);
+            viewModel = new WorkoutViewModel(dbConnectionString);
 
             // Query the local database and load observable collections.
             viewModel.LoadCollectionsFromDatabase();

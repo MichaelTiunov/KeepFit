@@ -1,19 +1,17 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using KeepFit.WP.Model;
 
 namespace KeepFit.WP.ViewModel
 {
-    public class ExcercisesViewModel : INotifyPropertyChanged
+    public class WorkoutViewModel : INotifyPropertyChanged
     {
         private readonly KeepFitDataContext keepFitContext;
 
-
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ExcercisesViewModel(string toDoDbConnectionString)
+        public WorkoutViewModel(string toDoDbConnectionString)
         {
             keepFitContext = new KeepFitDataContext(toDoDbConnectionString);
         }
@@ -30,8 +28,8 @@ namespace KeepFit.WP.ViewModel
         }
 
         // A list of all categories, used by the add task page.
-        private List<ExcerciseCategory> allCategories;
-        public List<ExcerciseCategory> AllCategories
+        private ObservableCollection<ExcerciseCategory> allCategories;
+        public ObservableCollection<ExcerciseCategory> AllCategories
         {
             get { return allCategories; }
             set
@@ -40,6 +38,18 @@ namespace KeepFit.WP.ViewModel
                 NotifyPropertyChanged("AllCategories");
             }
         }
+
+        private ObservableCollection<Workout> allWorkouts;
+
+        public ObservableCollection<Workout> AllWorkouts
+        {
+            get { return allWorkouts; }
+            set
+            {
+                allWorkouts = value;
+                NotifyPropertyChanged("AllWorkouts");
+            }
+        } 
 
         public void SaveChanges()
         {
@@ -62,7 +72,7 @@ namespace KeepFit.WP.ViewModel
                                      select category;
 
             // Load a list of all categories.
-            AllCategories = excercisesCategoriesInDb.ToList();
+            AllCategories = new ObservableCollection<ExcerciseCategory>(excercisesCategoriesInDb);
 
         }
 
@@ -86,6 +96,13 @@ namespace KeepFit.WP.ViewModel
             AllCategories.Add(category);
         }
 
+        public void AddWorkoutItem(Workout workout)
+        {
+            keepFitContext.Workouts.InsertOnSubmit(workout);
+            keepFitContext.SubmitChanges();
+            AllWorkouts.Add(workout);
+        }
+
         // Remove a to-do task item from the database and collections.
         public void DeleteExcerciseItem(Excercise excerciseForDelete)
         {
@@ -97,6 +114,20 @@ namespace KeepFit.WP.ViewModel
             keepFitContext.Excercises.DeleteOnSubmit(excerciseForDelete);
 
             // Save changes to the database.
+            keepFitContext.SubmitChanges();
+        }
+
+        public void DeleteExcerciseCategoryItem(ExcerciseCategory category)
+        {
+            AllCategories.Remove(category);
+            keepFitContext.ExcercisesCategories.DeleteOnSubmit(category);
+            keepFitContext.SubmitChanges();
+        }
+
+        public void DeleteWorkoutItem(Workout workout)
+        {
+            AllWorkouts.Remove(workout);
+            keepFitContext.Workouts.DeleteOnSubmit(workout);
             keepFitContext.SubmitChanges();
         }
 

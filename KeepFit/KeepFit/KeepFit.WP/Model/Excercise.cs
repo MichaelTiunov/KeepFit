@@ -71,7 +71,7 @@ namespace KeepFit.WP.Model
         private EntityRef<ExcerciseCategory> excerciseCategory;
 
         // Association, to describe the relationship between this key and that "storage" table
-        [Association(Storage = "category", ThisKey = "categoryId", OtherKey = "Id", IsForeignKey = true)]
+        [Association(Storage = "excerciseCategory", ThisKey = "categoryId", OtherKey = "Id", IsForeignKey = true)]
         public ExcerciseCategory Category
         {
             get { return excerciseCategory.Entity; }

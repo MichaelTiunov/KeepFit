@@ -41,7 +41,7 @@ namespace KeepFit.WP.Model
         private EntityRef<Workout> workout;
 
         // Association, to describe the relationship between this key and that "storage" table
-        [Association(Storage = "workout", ThisKey = "workoutId", OtherKey = "SetsId", IsForeignKey = true)]
+        [Association(Storage = "workout", ThisKey = "SetsId", OtherKey = "Id", IsForeignKey = true)]
         public Workout Workout
         {
             get { return workout.Entity; }
@@ -52,7 +52,7 @@ namespace KeepFit.WP.Model
 
                 if (value != null)
                 {
-                    WorkoutId = value.WorkoutId;
+                    WorkoutId = value.Id;
                 }
 
                 NotifyPropertyChanging("Workout");

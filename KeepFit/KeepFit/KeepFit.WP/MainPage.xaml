@@ -14,8 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <phone:PhoneApplicationPage.Resources>
-        <DataTemplate x:Key="ExcerciseListBoxTemplate">
-
+        <DataTemplate x:Key="CategoriesListBoxTemplate">
             <Grid HorizontalAlignment="Stretch" Width="420">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100" />
@@ -23,25 +22,77 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="100" />
                 </Grid.ColumnDefinitions>
-
                 <TextBlock 
-                    Text="{Binding ItemName}" 
+                    Text="{Binding Name}" 
                     FontSize="{StaticResource PhoneFontSizeLarge}" 
                     Grid.Column="1" Grid.ColumnSpan="2" 
                     VerticalAlignment="Top" Margin="-36, 12, 0, 0"/>
-
                 <Button                                
                     Grid.Column="3"
                     x:Name="deleteTaskButton"
                     BorderThickness="0"                                                                  
                     Margin="0, -18, 0, 0"
-                    Click="deleteTaskButton_Click">
+                    Click="deleteCategoryButton_Click">
 
                     <Image 
                     Source="/Images/appbar.delete.rest.png"
                     Height="75"
                     Width="75"/>
 
+                </Button>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="ExcercisesListBoxTemplate">
+            <Grid HorizontalAlignment="Stretch" Width="420">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <TextBlock 
+                    Text="{Binding ExcerciseName}" 
+                    FontSize="{StaticResource PhoneFontSizeLarge}" 
+                    Grid.Column="1" Grid.ColumnSpan="2" 
+                    VerticalAlignment="Top" Margin="-36, 12, 0, 0"/>
+
+                <Button                                
+                    Grid.Column="3"
+                    x:Name="deleteExcerciseButton"
+                    BorderThickness="0"                                                                  
+                    Margin="0, -18, 0, 0"
+                    Click="deleteExcerciseButton_Click">
+
+                    <Image 
+                    Source="/Images/appbar.delete.rest.png"
+                    Height="75"
+                    Width="75"/>
+                </Button>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="WorkoutsListBoxTemplate">
+            <Grid HorizontalAlignment="Stretch" Width="420">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <TextBlock 
+                    Text="{Binding WorkoutName}" 
+                    FontSize="{StaticResource PhoneFontSizeLarge}" 
+                    Grid.Column="1" Grid.ColumnSpan="2" 
+                    VerticalAlignment="Top" Margin="-36, 12, 0, 0"/>
+                <Button                                
+                    Grid.Column="3"
+                    x:Name="deleteWorkoutButton"
+                    BorderThickness="0"                                                                  
+                    Margin="0, -18, 0, 0"
+                    Click="DeleteWorkoutButtonClick">
+                    <Image 
+                    Source="/Images/appbar.delete.rest.png"
+                    Height="75"
+                    Width="75"/>
                 </Button>
             </Grid>
         </DataTemplate>
@@ -64,33 +115,23 @@
 
         <!--ContentPanel - place additional content here.-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:Panorama x:Name="ExcercisesPanorama">
-                <phone:PanoramaItem Header="Excercises">
-                        <ListBox 
+            <phone:Panorama x:Name="ExcercisesPanorama" SelectionChanged="ExcercisesPanorama_OnSelectionChanged">
+                <phone:PanoramaItem Header="Category">
+                    <ListBox 
+                        x:Name="AllCategories" 
+                        ItemsSource="{Binding AllCategories}" 
+                        Margin="12, 0, 12, 0" Width="440" 
+                        ItemTemplate="{StaticResource CategoriesListBoxTemplate}" />
+
+                </phone:PanoramaItem>
+                <phone:PanoramaItem Header="Excercise">
+                    <ListBox 
                         x:Name="AllExcercises" 
                         ItemsSource="{Binding AllExcercises}" 
                         Margin="12, 0, 12, 0" Width="440" 
-                        ItemTemplate="{StaticResource ExcerciseListBoxTemplate}" />
-                </phone:PanoramaItem>
-                <phone:PanoramaItem Header="Categories">
-                    <ListBox 
-                        x:Name="AllCategories" 
-                        ItemsSource="{Binding ExcercisesCategories}" 
-                        Margin="12, 0, 12, 0" Width="440" 
-                        ItemTemplate="{StaticResource ExcerciseListBoxTemplate}" />
+                        ItemTemplate="{StaticResource ExcercisesListBoxTemplate}" />
                 </phone:PanoramaItem>
             </phone:Panorama>
         </Grid>
     </Grid>
-
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-
-            <shell:ApplicationBarIconButton 
-                IconUri="/Images/appbar.add.rest.png" 
-                Text="add" 
-                x:Name="newAppBarButton" 
-                Click="newTaskAppBarButton_Click"/>
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>
