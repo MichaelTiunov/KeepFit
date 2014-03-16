@@ -4,9 +4,11 @@
     ViewBag.Title = "Home Page";
 }
 
-@{
-    foreach (var user in Model)
-    {
-        <div>@user.UserName</div>
-    }
+@section Banner
+{
+    @Html.Partial("Sections/_Banner")
+}
+
+@section Features{
+    @Html.Partial("Sections/_Features")
 }

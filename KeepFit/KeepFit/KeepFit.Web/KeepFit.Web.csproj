@@ -202,6 +202,22 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\font\fontawesome-webfont.svg" />
+    <Content Include="Assets\css\ie7.css" />
+    <Content Include="Assets\css\ie8.css" />
+    <Content Include="Assets\css\images\bg.jpg" />
+    <Content Include="Assets\css\images\bgshadow.png" />
+    <Content Include="Assets\css\images\mobileUI-site-nav-opener-bg.svg" />
+    <Content Include="Assets\css\skel-noscript.css" />
+    <Content Include="Assets\css\style-1000px.css" />
+    <Content Include="Assets\css\style-desktop.css" />
+    <Content Include="Assets\css\style-mobile.css" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\js\config.js" />
+    <Content Include="Assets\js\html5shiv.js" />
+    <Content Include="Assets\js\jquery.min.js" />
+    <Content Include="Assets\js\skel-panels.min.js" />
+    <Content Include="Assets\js\skel.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -227,6 +243,10 @@
       <DependentUpon>KeepFitContext.edmx</DependentUpon>
       <LastGenOutput>KeepFitContext.cs</LastGenOutput>
     </Content>
+    <Content Include="Assets\css\font\fontawesome-webfont.eot" />
+    <Content Include="Assets\css\font\fontawesome-webfont.ttf" />
+    <Content Include="Assets\css\font\fontawesome-webfont.woff" />
+    <Content Include="Assets\css\font\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -238,6 +258,14 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\web\calendar-eightysix-v1.0.1.js" />
+    <Content Include="Scripts\web\easyResponsiveTabs.js" />
+    <Content Include="Scripts\web\jquery-hover-effect.js" />
+    <Content Include="Scripts\web\jquery-v1.7.1.js" />
+    <Content Include="Scripts\web\jquery.min.js" />
+    <Content Include="Scripts\web\mootools-1.2.4-core.js" />
+    <Content Include="Scripts\web\mootools-1.2.4.2-more.js" />
+    <Content Include="Scripts\web\responsive-nav.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -264,6 +292,8 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\Sections\_Banner.cshtml" />
+    <Content Include="Views\Shared\Sections\_Features.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
