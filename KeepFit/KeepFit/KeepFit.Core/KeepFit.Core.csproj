@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,12 +54,21 @@
     <Compile Include="Migrations\201403171844285_init.Designer.cs">
       <DependentUpon>201403171844285_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201403171933563_Improve.cs" />
+    <Compile Include="Migrations\201403171933563_Improve.Designer.cs">
+      <DependentUpon>201403171933563_Improve.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
     <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\COnnectionStringManager.cs" />
     <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\EntityState.cs" />
+    <Compile Include="Models\ExtendedContext.cs" />
+    <Compile Include="Models\IDatabaseContext.cs" />
     <Compile Include="Models\IEntityState.cs" />
+    <Compile Include="Models\IIdentityAuditProvider.cs" />
     <Compile Include="Models\IKeepFitContext.cs" />
     <Compile Include="Models\Individual.cs" />
     <Compile Include="Models\IndividualRole.cs" />
@@ -86,6 +96,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201403171844285_init.resx">
       <DependentUpon>201403171844285_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403171933563_Improve.resx">
+      <DependentUpon>201403171933563_Improve.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

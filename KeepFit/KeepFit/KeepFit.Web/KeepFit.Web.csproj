@@ -40,6 +40,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
     <Reference Include="SimpleInjector">
       <HintPath>..\packages\SimpleInjector.2.5.0\lib\net45\SimpleInjector.dll</HintPath>
     </Reference>
@@ -184,7 +190,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IdentityService.cs" />
     <Compile Include="Models\IIdentityService.cs" />
-    <Compile Include="Models\IKeepFitContext.cs" />
     <Compile Include="Models\KeepFitIdentity.cs" />
     <Compile Include="Models\KeepFitPrincipal.cs" />
     <Compile Include="Models\RoleType.cs" />
@@ -287,6 +292,10 @@
     <ProjectReference Include="..\KeepFit.Core.Domain\KeepFit.Core.Domain.csproj">
       <Project>{f65f8d33-885e-4cc1-afb4-13d35bfcb703}</Project>
       <Name>KeepFit.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeepFit.Core\KeepFit.Core.csproj">
+      <Project>{094006E8-9020-4DBF-877F-875BB52CECE3}</Project>
+      <Name>KeepFit.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

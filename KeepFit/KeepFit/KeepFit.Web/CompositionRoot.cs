@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using System.Web.Mvc;
-using KeepFit.Web.Models;
+using KeepFit.Core.Models;
 using SimpleInjector;
 using SimpleInjector.Integration.Web.Mvc;
 
@@ -20,8 +20,8 @@ namespace KeepFit.Web
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());
             container.RegisterMvcAttributeFilterProvider();
 
-            
 
+            //container.Register<IKeepFitContext>(() => new KeepFitContext(container.GetInstance<IIdentityAuditProvider>()));
             //container.Register<IDaikinContext, DaikinContext>();
             //TODO: REMOVEME
             //container.Register<IKeepFitContext>(() => new KeepFitContext());

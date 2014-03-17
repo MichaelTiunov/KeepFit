@@ -2,7 +2,7 @@
 
 namespace KeepFit.Core.Models
 {
-    public interface IKeepFitContext
+    public interface IKeepFitContext : IDatabaseContext
     {
         DbSet<Blog> Blogs { get; set; }
         DbSet<Post> Posts { get; set; }

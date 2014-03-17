@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KeepFit.Web.Models
+namespace KeepFit.Core.Models
 {
-    public interface IKeepFitContext
+    public enum EntityState
     {
+        Added,
+        Unchanged,
+        Modified,
+        Deleted
     }
 }
