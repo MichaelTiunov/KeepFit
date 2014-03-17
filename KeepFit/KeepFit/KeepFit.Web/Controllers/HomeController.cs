@@ -1,22 +1,19 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using KeepFit.Web.Models;
 
 namespace KeepFit.Web.Controllers
 {
-    [Authorize]
     public class HomeController : BaseController
     {
-        KeepFitContext context = new KeepFitContext();
-
         public HomeController()
         {
         }
 
         public ActionResult Index()
         {
-            var users = context.Users.Where(x => x.UserId == 1).ToList();
-            return View(users);
+            return View();
         }
 
         public ActionResult About()

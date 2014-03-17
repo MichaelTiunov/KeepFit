@@ -19,6 +19,11 @@ namespace KeepFit.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            SetDependencyResolver();
+        }
+        private static void SetDependencyResolver()
+        {
+            DependencyResolver.SetResolver(CompositionRoot.GetDependencyResolver());
         }
         protected void Application_PostAuthenticateRequest(object sender, EventArgs args)
         {

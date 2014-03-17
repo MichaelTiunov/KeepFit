@@ -40,6 +40,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SimpleInjector">
+      <HintPath>..\packages\SimpleInjector.2.5.0\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Diagnostics">
+      <HintPath>..\packages\SimpleInjector.2.5.0\lib\net45\SimpleInjector.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.2.5.0\lib\net40\SimpleInjector.Integration.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.Web.Mvc">
+      <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.2.5.0\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -160,6 +172,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="CompositionRoot.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -171,33 +184,10 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IdentityService.cs" />
     <Compile Include="Models\IIdentityService.cs" />
-    <Compile Include="Models\KeepFitContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KeepFitContext.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\KeepFitContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KeepFitContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\KeepFitContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KeepFitContext.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\IKeepFitContext.cs" />
     <Compile Include="Models\KeepFitIdentity.cs" />
     <Compile Include="Models\KeepFitPrincipal.cs" />
-    <Compile Include="Models\Role.cs">
-      <DependentUpon>KeepFitContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\RoleType.cs" />
-    <Compile Include="Models\User.cs">
-      <DependentUpon>KeepFitContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UsersInRole.cs">
-      <DependentUpon>KeepFitContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -226,27 +216,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\KeepFitContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>KeepFitContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\KeepFitContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>KeepFitContext.edmx</DependentUpon>
-      <LastGenOutput>KeepFitContext.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\KeepFitContext.edmx.diagram">
-      <DependentUpon>KeepFitContext.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\KeepFitContext.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>KeepFitContext.edmx</DependentUpon>
-      <LastGenOutput>KeepFitContext.cs</LastGenOutput>
-    </Content>
     <Content Include="Assets\css\font\fontawesome-webfont.eot" />
     <Content Include="Assets\css\font\fontawesome-webfont.ttf" />
     <Content Include="Assets\css\font\fontawesome-webfont.woff" />
     <Content Include="Assets\css\font\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\KeepFit.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -308,6 +282,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KeepFit.Core.Domain\KeepFit.Core.Domain.csproj">
+      <Project>{f65f8d33-885e-4cc1-afb4-13d35bfcb703}</Project>
+      <Name>KeepFit.Core.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

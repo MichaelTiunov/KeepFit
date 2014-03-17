@@ -17,18 +17,6 @@ namespace KeepFit.Web.Controllers
     [Authorize]
     public class AccountController : BaseController
     {
-        private readonly KeepFitContext context;
-        
-        public AccountController()
-            : this(new KeepFitContext())
-        {
-        }
-
-        public AccountController(KeepFitContext keepFitContext) : base()
-        {
-            context = keepFitContext;
-        }
-
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
@@ -46,17 +34,17 @@ namespace KeepFit.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = context.Users.FirstOrDefault(x => x.UserName == model.UserName && x.Password == model.Password);  //UserManager.FindAsync(model.UserName, model.Password);
-                if (user != null)
-                {
-                    SetupPrincipal(user, RoleType.Admin ,"keepFit", model.RememberMe);
-                    SetRole(RoleType.Admin, model.RememberMe);
-                    RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Invalid username or password.");
-                }
+                //var user = context.Users.FirstOrDefault(x => x.UserName == model.UserName && x.Password == model.Password);  //UserManager.FindAsync(model.UserName, model.Password);
+                //if (user != null)
+                //{
+                //    SetupPrincipal(user, RoleType.Admin ,"keepFit", model.RememberMe);
+                //    SetRole(RoleType.Admin, model.RememberMe);
+                //    RedirectToAction("Index", "Home");
+                //}
+                //else
+                //{
+                //    ModelState.AddModelError("", "Invalid username or password.");
+                //}
             }
 
             // If we got this far, something failed, redisplay form
@@ -69,36 +57,36 @@ namespace KeepFit.Web.Controllers
 
             KeepFitIdentity.SetRole(role);
 
-            AuthenticateUser(principal, rememberMe);
+            //AuthenticateUser(principal, rememberMe);
         }
 
-        private void SetupPrincipal(User user, RoleType role, string securityToken, bool rememberMe = false, bool isPasswordExpired = false)
-        {
-            IPrincipal principal = new KeepFitPrincipal(user.UserId, user.UserId, user.UserName, user.UserName, user.UserName, role, securityToken, isPasswordExpired, rememberMe);
+        //private void SetupPrincipal(User user, RoleType role, string securityToken, bool rememberMe = false, bool isPasswordExpired = false)
+        //{
+        //    IPrincipal principal = new KeepFitPrincipal(user.UserId, user.UserId, user.UserName, user.UserName, user.UserName, role, securityToken, isPasswordExpired, rememberMe);
 
-            AuthenticateUser(principal, rememberMe);
-        }
-        private void AuthenticateUser(IPrincipal principal, bool rememberMe = false)
-        {
-            Thread.CurrentPrincipal = HttpContext.User = principal;
+        //    AuthenticateUser(principal, rememberMe);
+        //}
+        //private void AuthenticateUser(IPrincipal principal, bool rememberMe = false)
+        //{
+        //    Thread.CurrentPrincipal = HttpContext.User = principal;
 
-            // Save the principal into the Forms Authentication Ticket
-            var userData = new StringBuilder();
-            using (var writer = new StringWriter(userData))
-            {
-                var serializer = new XmlSerializer(typeof(KeepFitPrincipal));
-                serializer.Serialize(writer, Thread.CurrentPrincipal);
-            }
+        //    // Save the principal into the Forms Authentication Ticket
+        //    var userData = new StringBuilder();
+        //    using (var writer = new StringWriter(userData))
+        //    {
+        //        var serializer = new XmlSerializer(typeof(KeepFitPrincipal));
+        //        serializer.Serialize(writer, Thread.CurrentPrincipal);
+        //    }
 
-            var timeout = rememberMe ?
-                DateTime.Now.AddDays(1)
-                : DateTime.Now.AddMinutes(30);
+        //    var timeout = rememberMe ?
+        //        DateTime.Now.AddDays(1)
+        //        : DateTime.Now.AddMinutes(30);
 
-            var ticket = new FormsAuthenticationTicket(
-                1, principal.Identity.Name, DateTime.Now, timeout, rememberMe, userData.ToString());
+        //    var ticket = new FormsAuthenticationTicket(
+        //        1, principal.Identity.Name, DateTime.Now, timeout, rememberMe, userData.ToString());
 
-            HttpContext.Response.Cookies.Add(new HttpCookie(FormsAuthentication.FormsCookieName, FormsAuthentication.Encrypt(ticket)));
-        }
+        //    HttpContext.Response.Cookies.Add(new HttpCookie(FormsAuthentication.FormsCookieName, FormsAuthentication.Encrypt(ticket)));
+        //}
 
         //
         // GET: /Account/Register
