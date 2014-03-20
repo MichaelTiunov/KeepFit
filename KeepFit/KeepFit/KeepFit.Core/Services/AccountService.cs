@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using KeepFit.Core.Extensions;
 using KeepFit.Core.Models;
@@ -18,6 +19,11 @@ namespace KeepFit.Core.Services
         public User GetUserByUserName(string userName)
         {
             return keepFitContext.Users.FirstOrDefault(x => x.Username == userName);
+        }
+
+        public bool IsUsernameExists(string userName)
+        {
+            throw new NotImplementedException();
         }
 
         public CheckCredentialsResultType CheckCredintials(User user, string password)
@@ -59,6 +65,10 @@ namespace KeepFit.Core.Services
             return CheckCredentialsResultType.Ok;
         }
 
+        public User CreateUser(User newUser, string firstname, string lastname, string password, IEnumerable<RoleType> roles)
+        {
+            throw new NotImplementedException();
+        }
     }
     public enum CheckCredentialsResultType
     {

@@ -183,7 +183,6 @@
     <Compile Include="Models\IIdentityService.cs" />
     <Compile Include="Models\KeepFitIdentity.cs" />
     <Compile Include="Models\KeepFitPrincipal.cs" />
-    <Compile Include="Models\RoleType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

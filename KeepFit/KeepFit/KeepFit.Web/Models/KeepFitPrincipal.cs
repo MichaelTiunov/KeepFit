@@ -6,6 +6,7 @@ using System.Web;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
+using KeepFit.Core.Models;
 
 namespace KeepFit.Web.Models
 {

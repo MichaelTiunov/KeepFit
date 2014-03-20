@@ -106,7 +106,17 @@ namespace KeepFit.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (!accountService.IsUsernameExists(model.UserName))
+                {
+                    accountService.CreateUser(new User
+                    {
+                        Username = model.UserName
+                    }, model.FirstName, model.LastName, model.Password, model.RoleTypes);
 
+                    return RedirectToAction("Login");
+                }
+
+                ModelState.AddModelError("", "Don't play w/ it, plz ;-)");
             }
 
             // If we got this far, something failed, redisplay form
