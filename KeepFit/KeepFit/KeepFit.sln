@@ -5,11 +5,11 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Core.Domain", "KeepFit.Core.Domain\KeepFit.Core.Domain.csproj", "{F65F8D33-885E-4CC1-AFB4-13D35BFCB703}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Web", "KeepFit.Web\KeepFit.Web.csproj", "{5404DA62-B087-4D4C-9D36-10215A4494C8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Core", "KeepFit.Core\KeepFit.Core.csproj", "{094006E8-9020-4DBF-877F-875BB52CECE3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Console", "KeepFit.Console\KeepFit.Console.csproj", "{70A6F317-1EE1-4A2C-815D-89212D9ECF3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Web", "KeepFit.Web\KeepFit.Web.csproj", "{B5FE89E9-3E29-4201-B105-D35717717F5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +29,6 @@ Global
 		{F65F8D33-885E-4CC1-AFB4-13D35BFCB703}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F65F8D33-885E-4CC1-AFB4-13D35BFCB703}.Release|ARM.ActiveCfg = Release|Any CPU
 		{F65F8D33-885E-4CC1-AFB4-13D35BFCB703}.Release|x86.ActiveCfg = Release|Any CPU
-		{5404DA62-B087-4D4C-9D36-10215A4494C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5404DA62-B087-4D4C-9D36-10215A4494C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5404DA62-B087-4D4C-9D36-10215A4494C8}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{5404DA62-B087-4D4C-9D36-10215A4494C8}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{5404DA62-B087-4D4C-9D36-10215A4494C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5404DA62-B087-4D4C-9D36-10215A4494C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5404DA62-B087-4D4C-9D36-10215A4494C8}.Release|ARM.ActiveCfg = Release|Any CPU
-		{5404DA62-B087-4D4C-9D36-10215A4494C8}.Release|x86.ActiveCfg = Release|Any CPU
 		{094006E8-9020-4DBF-877F-875BB52CECE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{094006E8-9020-4DBF-877F-875BB52CECE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{094006E8-9020-4DBF-877F-875BB52CECE3}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -53,11 +45,19 @@ Global
 		{70A6F317-1EE1-4A2C-815D-89212D9ECF3C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{70A6F317-1EE1-4A2C-815D-89212D9ECF3C}.Release|ARM.ActiveCfg = Release|Any CPU
 		{70A6F317-1EE1-4A2C-815D-89212D9ECF3C}.Release|x86.ActiveCfg = Release|Any CPU
+		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Validation.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal

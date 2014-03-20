@@ -1,6 +1,8 @@
 ﻿using System.Reflection;
 using System.Web.Mvc;
 using KeepFit.Core.Models;
+using KeepFit.Core.Services;
+using KeepFit.Web.Models;
 using SimpleInjector;
 using SimpleInjector.Integration.Web.Mvc;
 
@@ -24,8 +26,10 @@ namespace KeepFit.Web
             //container.Register<IKeepFitContext>(() => new KeepFitContext(container.GetInstance<IIdentityAuditProvider>()));
             //container.Register<IDaikinContext, DaikinContext>();
             //TODO: REMOVEME
-            //container.Register<IKeepFitContext>(() => new KeepFitContext());
-
+            container.Register<IKeepFitContext>(() => new KeepFitContext());
+            container.Register<IAccountService, AccountService>();
+            container.Register<ISecurityService, SecurityService>();
+            container.Register<IIdentityService, IdentityService>();
 
             //Verifies everything is registered correclty
             //TODO: Investigate possible effect (constructor calls?)

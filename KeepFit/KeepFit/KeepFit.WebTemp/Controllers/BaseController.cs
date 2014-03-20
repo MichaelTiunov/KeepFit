@@ -1,18 +1,14 @@
 ﻿using System.Web.Mvc;
-using KeepFit.Core.Services;
 using KeepFit.Web.Models;
 
 namespace KeepFit.Web.Controllers
 {
     public class BaseController : Controller
     {
-        private readonly IIdentityService identityService;
-        protected readonly IAccountService accountService;
+        private readonly IIdentityService identityService = new IdentityService();
 
-        public BaseController(IAccountService accountService,IIdentityService identityService)
+        public BaseController()
         {
-            this.accountService = accountService;
-            this.identityService = identityService;
         }
 
         protected virtual new KeepFitPrincipal User

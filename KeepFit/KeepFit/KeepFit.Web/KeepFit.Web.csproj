@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5404DA62-B087-4D4C-9D36-10215A4494C8}</ProjectGuid>
+    <ProjectGuid>{B5FE89E9-3E29-4201-B105-D35717717F5E}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -40,12 +40,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
-      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
     <Reference Include="SimpleInjector">
       <HintPath>..\packages\SimpleInjector.2.5.0\lib\net45\SimpleInjector.dll</HintPath>
     </Reference>
@@ -61,8 +55,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -187,7 +179,6 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CustomPrincipalSerializeModel.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IdentityService.cs" />
     <Compile Include="Models\IIdentityService.cs" />
     <Compile Include="Models\KeepFitIdentity.cs" />
@@ -197,22 +188,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\css\font\fontawesome-webfont.svg" />
-    <Content Include="Assets\css\ie7.css" />
-    <Content Include="Assets\css\ie8.css" />
-    <Content Include="Assets\css\images\bg.jpg" />
-    <Content Include="Assets\css\images\bgshadow.png" />
-    <Content Include="Assets\css\images\mobileUI-site-nav-opener-bg.svg" />
-    <Content Include="Assets\css\skel-noscript.css" />
-    <Content Include="Assets\css\style-1000px.css" />
-    <Content Include="Assets\css\style-desktop.css" />
-    <Content Include="Assets\css\style-mobile.css" />
-    <Content Include="Assets\css\style.css" />
-    <Content Include="Assets\js\config.js" />
-    <Content Include="Assets\js\html5shiv.js" />
-    <Content Include="Assets\js\jquery.min.js" />
-    <Content Include="Assets\js\skel-panels.min.js" />
-    <Content Include="Assets\js\skel.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -221,11 +196,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Assets\css\font\fontawesome-webfont.eot" />
-    <Content Include="Assets\css\font\fontawesome-webfont.ttf" />
-    <Content Include="Assets\css\font\fontawesome-webfont.woff" />
-    <Content Include="Assets\css\font\FontAwesome.otf" />
-    <None Include="Properties\PublishProfiles\KeepFit.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -237,14 +207,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\web\calendar-eightysix-v1.0.1.js" />
-    <Content Include="Scripts\web\easyResponsiveTabs.js" />
-    <Content Include="Scripts\web\jquery-hover-effect.js" />
-    <Content Include="Scripts\web\jquery-v1.7.1.js" />
-    <Content Include="Scripts\web\jquery.min.js" />
-    <Content Include="Scripts\web\mootools-1.2.4-core.js" />
-    <Content Include="Scripts\web\mootools-1.2.4.2-more.js" />
-    <Content Include="Scripts\web\responsive-nav.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -271,8 +233,6 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\Sections\_Banner.cshtml" />
-    <Content Include="Views\Shared\Sections\_Features.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -286,13 +246,6 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KeepFit.Core.Domain\KeepFit.Core.Domain.csproj">
-      <Project>{f65f8d33-885e-4cc1-afb4-13d35bfcb703}</Project>
-      <Name>KeepFit.Core.Domain</Name>
-    </ProjectReference>
     <ProjectReference Include="..\KeepFit.Core\KeepFit.Core.csproj">
       <Project>{094006E8-9020-4DBF-877F-875BB52CECE3}</Project>
       <Name>KeepFit.Core</Name>
@@ -314,7 +267,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>3942</DevelopmentServerPort>
+          <DevelopmentServerPort>22834</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:58291/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
