@@ -98,6 +98,7 @@
     <Compile Include="Services\IAccountService.cs" />
     <Compile Include="Services\ISecurityService.cs" />
     <Compile Include="Services\SecurityService.cs" />
+    <Compile Include="Utils\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

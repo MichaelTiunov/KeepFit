@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Security.Principal;
 using System.Text;
@@ -111,7 +112,7 @@ namespace KeepFit.Web.Controllers
                     accountService.CreateUser(new User
                     {
                         Username = model.UserName
-                    }, model.FirstName, model.LastName, model.Password, model.RoleTypes);
+                    }, model.FirstName, model.LastName, model.Password, new List<RoleType> { RoleType.User });
 
                     return RedirectToAction("Login");
                 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using KeepFit.Core.Extensions;
 using KeepFit.Core.Models;
+using KeepFit.Core.Utils;
 
 namespace KeepFit.Core.Services
 {
@@ -23,7 +24,7 @@ namespace KeepFit.Core.Services
 
         public bool IsUsernameExists(string userName)
         {
-            throw new NotImplementedException();
+            return keepFitContext.Users.Any(u => u.Username == userName);
         }
 
         public CheckCredentialsResultType CheckCredintials(User user, string password)
@@ -67,7 +68,34 @@ namespace KeepFit.Core.Services
 
         public User CreateUser(User newUser, string firstname, string lastname, string password, IEnumerable<RoleType> roles)
         {
-            throw new NotImplementedException();
+            if (!password.IsNullOrEmpty())
+            {
+                string passwordSalt;
+                newUser.PasswordChanges = new[]
+                {
+                    new PasswordChange
+                    {
+                        ChangeDateTime = DateTime.UtcNow,
+                        NewPassword = securityService.GeneratePasswordHash(password, out passwordSalt),
+                        PasswordSalt = passwordSalt
+                    }
+                };
+            }
+            newUser.Individual = new Individual
+            {
+                FirstName = firstname,
+                LastName = lastname,
+                IndividualRoles = roles.Distinct().Select(r => new IndividualRole
+                {
+                    RoleId = (int)r
+                }).ToList()
+            };
+
+            keepFitContext.Users.Add(newUser);
+
+            keepFitContext.SaveChanges();
+
+            return newUser;
         }
     }
     public enum CheckCredentialsResultType
