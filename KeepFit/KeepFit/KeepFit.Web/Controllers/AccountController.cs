@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Security.Principal;
 using System.Text;
 using System.Threading;
@@ -48,7 +49,14 @@ namespace KeepFit.Web.Controllers
                         ModelState.AddModelError("", "Invalid");
                         break;
                     case CheckCredentialsResultType.Ok:
-                        SetupPrincipal(user, RoleType.Admin, "keepfit", model.RememberMe);
+                        var individualRole = user.Individual.IndividualRoles.FirstOrDefault();
+                        if (individualRole != null)
+                        {
+                            var role = (RoleType)individualRole.RoleId;
+                            SetupPrincipal(user, role, "keepfit", model.RememberMe);
+                            SetRole(role, model.RememberMe);
+                            RedirectToAction("Index", "Home");
+                        }
                         break;
                     default:
                         ModelState.AddModelError("", "Error");
@@ -66,6 +74,14 @@ namespace KeepFit.Web.Controllers
             IPrincipal principal = new KeepFitPrincipal(user.IndividualId, user.IndividualId, user.Username, user.Individual.FirstName, user.Individual.LastName, role, securityToken, isPasswordExpired, rememberMe);
 
             AuthenticateUser(principal, rememberMe);
+        }
+        private void SetRole(RoleType role, bool rememberMe = false)
+        {
+            var principal = HttpContext.User;
+
+            KeepFitIdentity.SetRole(role);
+
+            //AuthenticateUser(principal, rememberMe);
         }
         private void AuthenticateUser(IPrincipal principal, bool rememberMe = false)
         {
@@ -125,11 +141,25 @@ namespace KeepFit.Web.Controllers
         }
         //
         // POST: /Account/LogOff
-        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            return RedirectToAction("Index", "Home");
+            FormsAuthentication.SignOut();
+
+            if (Session != null)
+            {
+                Session.Abandon();
+            }
+
+            // clear authentication cookie
+            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, string.Empty);
+            cookie.Expires = DateTime.Now.AddYears(-1);
+            Response.Cookies.Add(cookie);
+
+            FormsAuthentication.RedirectToLoginPage();
+            FormsAuthentication.SignOut();
+
+            return RedirectToAction("Login");
         }
 
         //

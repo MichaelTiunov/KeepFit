@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WebApplication1")]
+[assembly: AssemblyTitle("KeepFit.Web")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WebApplication1")]
+[assembly: AssemblyProduct("KeepFit.Web")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e351cf54-34c5-4e0c-935c-33aae58390ee")]
+[assembly: Guid("fbbddd2f-1c21-4308-a6e7-b813ed5bf6dd")]
 
 // Version information for an assembly consists of the following four values:
 //

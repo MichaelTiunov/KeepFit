@@ -104,12 +104,12 @@ namespace KeepFit.Core.Models
                 var businessEntity = entry.Entity;
                 if (businessEntity.EntityState.HasValue)
                 {
-                    entry.State = (System.Data.Entity.EntityState) ConvertState(businessEntity.EntityState.Value);
+                    entry.State = (System.Data.Entity.EntityState) businessEntity.EntityState.Value;
                     entitiesWithOverriddenState.Add(businessEntity);
                 }
 
-                if (entry.State == (System.Data.Entity.EntityState) EntityState.Added ||
-                    entry.State == (System.Data.Entity.EntityState) EntityState.Modified)
+                if (entry.State == System.Data.Entity.EntityState.Added ||
+                    entry.State == System.Data.Entity.EntityState.Modified)
                 {
                     var auditableEntry =
                         ChangeTracker.Entries<AuditableEntity>().SingleOrDefault(e => object.ReferenceEquals(e.Entity, entry.Entity));
@@ -138,7 +138,7 @@ namespace KeepFit.Core.Models
             auditableEntity.UpdatedDate = now;
             auditableEntity.UpdatedBy = currentUser;
 
-            if (entry.State == (System.Data.Entity.EntityState) EntityState.Added)
+            if (entry.State == System.Data.Entity.EntityState.Added)
             {
                 auditableEntity.CreatedDate = now;
                 auditableEntity.CreatedBy = currentUser;
@@ -148,21 +148,6 @@ namespace KeepFit.Core.Models
                 var dbEntry = entry.GetDatabaseValues();
                 auditableEntity.CreatedDate = dbEntry.GetValue<DateTime>(entry.Property(e => e.CreatedDate).Name);
                 auditableEntity.CreatedBy = dbEntry.GetValue<string>(entry.Property(e => e.CreatedBy).Name);
-            }
-        }
-
-        private static EntityState ConvertState(EntityState state)
-        {
-            switch (state)
-            {
-                case EntityState.Added:
-                    return EntityState.Added;
-                case EntityState.Modified:
-                    return EntityState.Modified;
-                case EntityState.Deleted:
-                    return EntityState.Deleted;
-                default:
-                    return EntityState.Unchanged;
             }
         }
     }
