@@ -63,10 +63,15 @@
     <Compile Include="Migrations\201403171933563_Improve.Designer.cs">
       <DependentUpon>201403171933563_Improve.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201403250511281_BodyComposition.cs" />
+    <Compile Include="Migrations\201403250511281_BodyComposition.Designer.cs">
+      <DependentUpon>201403250511281_BodyComposition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
     <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\BodyComposition.cs" />
     <Compile Include="Models\COnnectionStringManager.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\EntityState.cs" />
@@ -79,6 +84,7 @@
     <Compile Include="Models\IndividualRole.cs" />
     <Compile Include="Models\KeepFitContext.cs" />
     <Compile Include="Models\Mapping\AddressMap.cs" />
+    <Compile Include="Models\Mapping\BodyCompositionMap.cs" />
     <Compile Include="Models\Mapping\CountryMap.cs" />
     <Compile Include="Models\Mapping\IndividualMap.cs" />
     <Compile Include="Models\Mapping\IndividualRoleMap.cs" />
@@ -95,7 +101,9 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AccountService.cs" />
+    <Compile Include="Services\BodyCompositionService.cs" />
     <Compile Include="Services\IAccountService.cs" />
+    <Compile Include="Services\IBodyCompositionService.cs" />
     <Compile Include="Services\ISecurityService.cs" />
     <Compile Include="Services\SecurityService.cs" />
     <Compile Include="Utils\StringExtensions.cs" />
@@ -110,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201403171933563_Improve.resx">
       <DependentUpon>201403171933563_Improve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403250511281_BodyComposition.resx">
+      <DependentUpon>201403250511281_BodyComposition.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

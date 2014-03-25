@@ -15,3 +15,4 @@ E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.csproj.Gener
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.dll
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.pdb
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.csprojResolveAssemblyReference.cache
+E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.BodyComposition.resources

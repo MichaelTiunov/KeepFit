@@ -15,5 +15,7 @@ namespace KeepFit.Core.Models
         DbSet<PasswordChange> PasswordChanges { get; set; }
         DbSet<State> States { get; set; }
         DbSet<Country> Countries { get; set; }
+
+        DbSet<BodyComposition> BodyCompositions { get; set; } 
     }
 }

@@ -30,6 +30,7 @@ namespace KeepFit.Web
             container.Register<IAccountService, AccountService>();
             container.Register<ISecurityService, SecurityService>();
             container.Register<IIdentityService, IdentityService>();
+            container.Register<IBodyCompositionService, BodyCompositionService>();
 
             //Verifies everything is registered correclty
             //TODO: Investigate possible effect (constructor calls?)

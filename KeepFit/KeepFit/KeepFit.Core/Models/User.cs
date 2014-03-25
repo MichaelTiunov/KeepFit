@@ -9,6 +9,8 @@ namespace KeepFit.Core.Models
     {
         public User()
         {
+            PasswordChanges = new List<PasswordChange>();
+            BodyCompositions = new List<BodyComposition>();
         }
 
         public int UserId { get; set; }
@@ -29,5 +31,7 @@ namespace KeepFit.Core.Models
         }
 
         public virtual ICollection<PasswordChange> PasswordChanges { get; set; }
+
+        public virtual ICollection<BodyComposition> BodyCompositions { get; set; }
     }
 }
