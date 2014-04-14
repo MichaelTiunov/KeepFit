@@ -71,17 +71,13 @@ namespace KeepFit.Web.Controllers
 
         private void SetupPrincipal(User user, RoleType role, string securityToken, bool rememberMe = false, bool isPasswordExpired = false)
         {
-            IPrincipal principal = new KeepFitPrincipal(user.IndividualId, user.IndividualId, user.Username, user.Individual.FirstName, user.Individual.LastName, role, securityToken, isPasswordExpired, rememberMe);
+            IPrincipal principal = new KeepFitPrincipal(user.UserId, user.UserId, user.Username, user.Individual.FirstName, user.Individual.LastName, role, securityToken, isPasswordExpired, rememberMe);
 
             AuthenticateUser(principal, rememberMe);
         }
         private void SetRole(RoleType role, bool rememberMe = false)
         {
-            var principal = HttpContext.User;
-
             KeepFitIdentity.SetRole(role);
-
-            //AuthenticateUser(principal, rememberMe);
         }
         private void AuthenticateUser(IPrincipal principal, bool rememberMe = false)
         {

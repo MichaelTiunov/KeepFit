@@ -67,6 +67,10 @@
     <Compile Include="Migrations\201403250511281_BodyComposition.Designer.cs">
       <DependentUpon>201403250511281_BodyComposition.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201404140735459_ProgressPhoto.cs" />
+    <Compile Include="Migrations\201404140735459_ProgressPhoto.Designer.cs">
+      <DependentUpon>201404140735459_ProgressPhoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
@@ -89,11 +93,13 @@
     <Compile Include="Models\Mapping\IndividualMap.cs" />
     <Compile Include="Models\Mapping\IndividualRoleMap.cs" />
     <Compile Include="Models\Mapping\PasswordChangeMap.cs" />
+    <Compile Include="Models\Mapping\ProgressPhotoMap.cs" />
     <Compile Include="Models\Mapping\RoleMap.cs" />
     <Compile Include="Models\Mapping\StateMap.cs" />
     <Compile Include="Models\Mapping\UserMap.cs" />
     <Compile Include="Models\PasswordChange.cs" />
     <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\ProgressPhoto.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\RoleType.cs" />
     <Compile Include="Models\Site.cs" />
@@ -104,7 +110,9 @@
     <Compile Include="Services\BodyCompositionService.cs" />
     <Compile Include="Services\IAccountService.cs" />
     <Compile Include="Services\IBodyCompositionService.cs" />
+    <Compile Include="Services\IProgressPhotoService.cs" />
     <Compile Include="Services\ISecurityService.cs" />
+    <Compile Include="Services\ProgressPhotoService.cs" />
     <Compile Include="Services\SecurityService.cs" />
     <Compile Include="Utils\StringExtensions.cs" />
   </ItemGroup>
@@ -121,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201403250511281_BodyComposition.resx">
       <DependentUpon>201403250511281_BodyComposition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404140735459_ProgressPhoto.resx">
+      <DependentUpon>201404140735459_ProgressPhoto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Console", "KeepFit.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Web", "KeepFit.Web\KeepFit.Web.csproj", "{B5FE89E9-3E29-4201-B105-D35717717F5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeepFit.Core.Dto", "KeepFit.Core.Dto\KeepFit.Core.Dto.csproj", "{7ED8CB56-E92D-4161-9290-D5CF42867FCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,14 @@ Global
 		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Release|ARM.ActiveCfg = Release|Any CPU
 		{B5FE89E9-3E29-4201-B105-D35717717F5E}.Release|x86.ActiveCfg = Release|Any CPU
+		{7ED8CB56-E92D-4161-9290-D5CF42867FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED8CB56-E92D-4161-9290-D5CF42867FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED8CB56-E92D-4161-9290-D5CF42867FCA}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{7ED8CB56-E92D-4161-9290-D5CF42867FCA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7ED8CB56-E92D-4161-9290-D5CF42867FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED8CB56-E92D-4161-9290-D5CF42867FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED8CB56-E92D-4161-9290-D5CF42867FCA}.Release|ARM.ActiveCfg = Release|Any CPU
+		{7ED8CB56-E92D-4161-9290-D5CF42867FCA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
