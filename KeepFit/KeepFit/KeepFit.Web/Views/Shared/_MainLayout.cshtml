@@ -10,9 +10,10 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
-    <link rel="stylesheet" href="~/Content/skel-noscript.css" />
+    @*<link rel="stylesheet" href="~/Content/skel-noscript.css" />*@
     <link rel="stylesheet" href="~/Content/style.css" />
     <link rel="stylesheet" href="~/Content/style-desktop.css" />
+
 </head>
 <body>
 
@@ -35,11 +36,11 @@
     @Html.Partial("_Footer")
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", false)
     <script src="~/Scripts/template/config.js"></script>
     <script src="~/Scripts/template/skel.min.js"></script>
     <script src="~/Scripts/template/skel-panels.min.js"></script>
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 @*<body>
 

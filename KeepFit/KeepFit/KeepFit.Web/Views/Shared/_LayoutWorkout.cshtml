@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "_LayoutWorkout";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@section RightSideBar{
+    <div class="col-md-8">
+    @RenderBody()
+
+    @RenderSection("MainWorkout", true)
+</div>
+    <div class="col-md-4">
+
+    @RenderSection("WorkoutSidebar", true)
+</div>
+}
+@section scripts
+{
+    @RenderSection("WorkoutScripts", false)
+    <script>
+        $(function () {
+            $('body').addClass("right-sidebar");
+        });
+    </script>
+}
