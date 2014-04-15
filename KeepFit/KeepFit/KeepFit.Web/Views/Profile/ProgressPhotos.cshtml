@@ -1,0 +1,16 @@
+﻿@model KeepFit.Web.Models.Profile.ProgressPhotoModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutProfile.cshtml";
+}
+
+@section ProfileFeatures
+{
+    @Html.Partial("_ProfileProgressPhoto", Model)
+}
+
+@using (Html.BeginForm("UploadPhoto", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="file" />
+    <input type="submit" value="OK" />
+}

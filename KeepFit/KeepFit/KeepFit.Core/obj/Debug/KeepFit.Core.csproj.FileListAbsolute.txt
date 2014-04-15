@@ -11,9 +11,8 @@ E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.Enter
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Newtonsoft.Json.xml
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.init.resources
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.Improve.resources
+E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.BodyComposition.resources
+E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.ProgressPhoto.resources
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.csproj.GenerateResource.Cache
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.dll
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.pdb
-E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.csprojResolveAssemblyReference.cache
-E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.BodyComposition.resources
-E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.ProgressPhoto.resources

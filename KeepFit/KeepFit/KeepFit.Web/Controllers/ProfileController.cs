@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.IO;
+using System.Web;
+using System.Web.Mvc;
 using KeepFit.Core.Dto;
 using KeepFit.Core.Services;
 using KeepFit.Web.Models;
@@ -40,5 +43,31 @@ namespace KeepFit.Web.Controllers
             bodyCompositionService.SaveBodyComposition(model.Height, model.Weight, KeepFitIdentity.UserId);
             return View("Index");
         }
+
+
+        public ActionResult ProgressPhotos()
+        {
+            var photosModel = new ProgressPhotoModel
+            {
+                ProgressPhotos = progressPhotoService.GetProgressPhotos(KeepFitIdentity.UserId)
+            };
+            return View(photosModel);
+        }
+        [HttpPost]
+        public ActionResult UploadPhoto(HttpPostedFileBase file)
+        {
+            if (file != null && file.ContentLength > 0)
+            {
+                using (var binaryReader = new BinaryReader(file.InputStream))
+                {
+                    byte[] array = binaryReader.ReadBytes(file.ContentLength);
+                    var base64File = Convert.ToBase64String(array);
+                    progressPhotoService.SaveProgressPhoto(KeepFitIdentity.UserId, base64File);
+                }
+            }
+            // redirect back to the index action to show the form once again
+            return RedirectToAction("ProgressPhotos");
+        }
+
     }
 }

@@ -2,32 +2,35 @@
 
 @{
     ViewBag.Title = "title";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutProfile.cshtml";
 }
 
-
+@section ProfileFeatures
+{
+    @Html.Partial("_ProfileFeatures")
+}
 
 @*<ul class="nav nav-tabs">
-    <li class="active"><a href="#profileOverview" data-toggle="tab">Overview</a></li>
-    <li><a href="#profileProgressPhoto" data-toggle="tab">Progress Photo</a></li>
-    <li><a href="#profileWorkouts" data-toggle="tab">Workouts</a></li>
-    <li><a href="#profileNutrition" data-toggle="tab">Nutrition</a></li>
-</ul>*@
+        <li class="active"><a href="#profileOverview" data-toggle="tab">Overview</a></li>
+        <li><a href="#profileProgressPhoto" data-toggle="tab">Progress Photo</a></li>
+        <li><a href="#profileWorkouts" data-toggle="tab">Workouts</a></li>
+        <li><a href="#profileNutrition" data-toggle="tab">Nutrition</a></li>
+    </ul>*@
 
 <!-- Tab panes -->
 @*<div class="tab-content">
-    <div class="tab-pane active" id="profileOverview">
-        @Html.Partial("_ProfileOverview")
-    </div>
-    <div class="tab-pane" id="profileProgressPhoto">
-        @Html.Partial("_ProfileProgressPhoto", Model.ProgressPhoto)
-    </div>
-    <div class="tab-pane" id="profileWorkouts">
-        @Html.Partial("_ProfileWorkouts")
-    </div>
-    <div class="tab-pane" id="profileNutrition">
-        @Html.Partial("_ProfileNutrition")
-    </div>
-</div>*@
+        <div class="tab-pane active" id="profileOverview">
+            @Html.Partial("_ProfileOverview")
+        </div>
+        <div class="tab-pane" id="profileProgressPhoto">
+            @Html.Partial("_ProfileProgressPhoto", Model.ProgressPhoto)
+        </div>
+        <div class="tab-pane" id="profileWorkouts">
+            @Html.Partial("_ProfileWorkouts")
+        </div>
+        <div class="tab-pane" id="profileNutrition">
+            @Html.Partial("_ProfileNutrition")
+        </div>
+    </div>*@
 
 

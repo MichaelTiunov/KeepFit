@@ -3,11 +3,7 @@
 
 @foreach (var x in Model.ProgressPhotos)
 {
-    <div>@x.Photo</div>
-}
-
-
-@using (Html.BeginForm(""))
-{
-
+    <div class="3u">
+        <img src="data:image/png;base64,@x.Photo" width="100" height="100" />
+    </div>
 }

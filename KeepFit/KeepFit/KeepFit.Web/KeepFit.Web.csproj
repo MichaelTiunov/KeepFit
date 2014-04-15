@@ -178,6 +178,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CustomPrincipalSerializeModel.cs" />
     <Compile Include="Models\IdentityService.cs" />
@@ -192,12 +193,14 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\fullcalendar\fullcalendar.css" />
     <Content Include="Content\fullcalendar\fullcalendar.print.css" />
     <Content Include="Content\ie7.css" />
     <Content Include="Content\ie8.css" />
     <Content Include="Content\images\bg.jpg" />
     <Content Include="Content\images\bgshadow.png" />
+    <Content Include="Content\images\features-images.png" />
     <Content Include="Content\images\logo.jpg" />
     <Content Include="Content\images\mobileUI-site-nav-opener-bg.svg" />
     <Content Include="Content\menu.css" />
@@ -214,6 +217,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\font\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\KeepFit.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\fullcalendar\fullcalendar.js" />
@@ -229,6 +236,11 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\template\config.js" />
+    <Content Include="Scripts\template\html5shiv.js" />
+    <Content Include="Scripts\template\jquery.min.js" />
+    <Content Include="Scripts\template\skel-panels.min.js" />
+    <Content Include="Scripts\template\skel.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -240,7 +252,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -261,6 +272,15 @@
     <Content Include="Views\Profile\_ProfileProgressPhoto.cshtml" />
     <Content Include="Views\Profile\_ProfileWorkouts.cshtml" />
     <Content Include="Views\Profile\_ProfileNutrition.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Banner.cshtml" />
+    <Content Include="Views\Shared\_Features.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <Content Include="Views\Shared\_LayoutProfile.cshtml" />
+    <Content Include="Views\Profile\_ProfileFeatures.cshtml" />
+    <Content Include="Views\Profile\ProgressPhotos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

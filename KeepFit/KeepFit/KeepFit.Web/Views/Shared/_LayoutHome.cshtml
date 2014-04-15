@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@section Banner{
+    @Html.Partial("_Banner")
+}
+@section Features
+{
+    @*@Html.Partial("_Features")*@
+}
+
+@section LeftSidebar{ 
+    @RenderBody()
+}
+@section scripts
+{
+    <script>
+        $(function () {
+            $('body').addClass("homepage");
+        });
+    </script>
+}
