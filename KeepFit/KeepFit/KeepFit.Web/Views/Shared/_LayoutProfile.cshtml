@@ -18,9 +18,10 @@
 }
 @section scripts
 {
-    <script>
-        $(function () {
-            $('body').addClass("homepage");
-        });
-    </script>
+    @RenderSection("ProfileScripts", false)
+        <script>
+            $(function () {
+                $('body').addClass("homepage");
+            });
+        </script>
 }

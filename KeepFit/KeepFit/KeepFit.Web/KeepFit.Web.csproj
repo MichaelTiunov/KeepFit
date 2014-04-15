@@ -185,6 +185,7 @@
     <Compile Include="Models\IIdentityService.cs" />
     <Compile Include="Models\KeepFitIdentity.cs" />
     <Compile Include="Models\KeepFitPrincipal.cs" />
+    <Compile Include="Models\Profile\BodyWeightModel.cs" />
     <Compile Include="Models\Profile\ProfileModel.cs" />
     <Compile Include="Models\Profile\ProgressPhotoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +227,34 @@
     <Content Include="Scripts\fullcalendar\fullcalendar.js" />
     <Content Include="Scripts\fullcalendar\fullcalendar.min.js" />
     <Content Include="Scripts\fullcalendar\gcal.js" />
+    <Content Include="Scripts\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="Scripts\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="Scripts\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="Scripts\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="Scripts\highcharts\adapters\standalone-framework.js" />
+    <Content Include="Scripts\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="Scripts\highcharts\highcharts-all.js" />
+    <Content Include="Scripts\highcharts\highcharts-more.js" />
+    <Content Include="Scripts\highcharts\highcharts-more.src.js" />
+    <Content Include="Scripts\highcharts\highcharts.js" />
+    <Content Include="Scripts\highcharts\highcharts.src.js" />
+    <Content Include="Scripts\highcharts\modules\canvas-tools.js" />
+    <Content Include="Scripts\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="Scripts\highcharts\modules\data.js" />
+    <Content Include="Scripts\highcharts\modules\data.src.js" />
+    <Content Include="Scripts\highcharts\modules\drilldown.js" />
+    <Content Include="Scripts\highcharts\modules\drilldown.src.js" />
+    <Content Include="Scripts\highcharts\modules\exporting.js" />
+    <Content Include="Scripts\highcharts\modules\exporting.src.js" />
+    <Content Include="Scripts\highcharts\modules\funnel.js" />
+    <Content Include="Scripts\highcharts\modules\funnel.src.js" />
+    <Content Include="Scripts\highcharts\modules\no-data-to-display.js" />
+    <Content Include="Scripts\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="Scripts\highcharts\themes\dark-blue.js" />
+    <Content Include="Scripts\highcharts\themes\dark-green.js" />
+    <Content Include="Scripts\highcharts\themes\gray.js" />
+    <Content Include="Scripts\highcharts\themes\grid.js" />
+    <Content Include="Scripts\highcharts\themes\skies.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -281,6 +310,8 @@
     <Content Include="Views\Shared\_LayoutProfile.cshtml" />
     <Content Include="Views\Profile\_ProfileFeatures.cshtml" />
     <Content Include="Views\Profile\ProgressPhotos.cshtml" />
+    <Content Include="Views\Profile\BodyWeight.cshtml" />
+    <Content Include="Views\Profile\_BodyWeight.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

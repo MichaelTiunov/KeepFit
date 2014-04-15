@@ -38,12 +38,12 @@ namespace KeepFit.Web.Controllers
             return View(model);
         }
 
-        public ViewResult AddBodyComposition(BodyCompositionDto model)
+        [HttpPost]
+        public ActionResult AddBodyComposition(BodyCompositionDto model)
         {
             bodyCompositionService.SaveBodyComposition(model.Height, model.Weight, KeepFitIdentity.UserId);
-            return View("Index");
+            return RedirectToAction("BodyWeight");
         }
-
 
         public ActionResult ProgressPhotos()
         {
@@ -68,6 +68,17 @@ namespace KeepFit.Web.Controllers
             // redirect back to the index action to show the form once again
             return RedirectToAction("ProgressPhotos");
         }
+
+        public ActionResult BodyWeight()
+        {
+            var model = new BodyWeightModel
+            {
+                BodyComposition = new BodyCompositionDto(),
+                BodyCompositions = bodyCompositionService.GetBodyCompositions(KeepFitIdentity.UserId)
+            };
+            return View(model);
+        }
+
 
     }
 }

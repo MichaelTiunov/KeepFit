@@ -9,6 +9,7 @@ E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\EntityFramework.xml
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\EntityFramework.SqlServer.xml
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\Newtonsoft.Json.xml
+E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.csprojResolveAssemblyReference.cache
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.init.resources
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.Improve.resources
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.BodyComposition.resources

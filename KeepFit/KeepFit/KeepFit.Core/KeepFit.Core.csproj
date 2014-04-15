@@ -54,7 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dto\ProgressPhotoDto.cs" />
     <Compile Include="Extensions\UserExtensions.cs" />
     <Compile Include="Migrations\201403171844285_init.cs" />
     <Compile Include="Migrations\201403171844285_init.Designer.cs">

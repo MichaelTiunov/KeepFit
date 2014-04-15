@@ -1,0 +1,90 @@
+﻿@model KeepFit.Web.Models.Profile.BodyWeightModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_LayoutProfile.cshtml";
+}
+
+@section ProfileFeatures
+{
+    @Html.Partial("_BodyWeight", Model.BodyCompositions)
+}
+@Html.Partial("_AddBodyComposition", Model.BodyComposition)
+
+
+@section ProfileScripts
+{
+    <script src="~/Scripts/highcharts/highcharts.js"></script>
+    <script src="~/Scripts/highcharts/modules/exporting.js"></script>
+    <script>
+        $(function () {
+            var weightArray = @Html.Raw(Json.Encode(@Model.GetWeight(Model.BodyCompositions).ToArray()));
+            var dateArray = @Html.Raw(Json.Encode(@Model.GetDate(Model.BodyCompositions).ToArray()));
+
+            $('#container').highcharts({
+                chart: {
+                    //type: 'column'
+                },
+                title: {
+                    text: 'Weight management'
+                },
+                xAxis: {
+                    categories:dateArray
+                },
+                yAxis: {
+                    min:50,
+                    title: {
+                        text: 'Weight in kilo'
+                    },
+                    labels: {
+                        formatter: function () {
+                            return this.value;
+                        }
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y} kg</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    area: {
+                        pointStart: 0,
+                        marker: {
+                            enabled: false,
+                            symbol: 'circle',
+                            radius: 2,
+                            states: {
+                                hover: {
+                                    enabled: true
+                                }
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    type: 'column',
+                    name: 'Jane',
+                    data: weightArray
+                }, {
+                    type: 'column',
+                    name: 'John',
+                    data: weightArray
+                },
+                {
+                    type: 'spline',
+                    name: 'Average',
+                    data: weightArray,
+                    marker: {
+                        lineWidth: 2,
+                        lineColor: Highcharts.getOptions().colors[3],
+                        fillColor: 'white'
+                    }
+                }]
+            });
+        });
+    </script>
+}
