@@ -1,0 +1,9 @@
+﻿@model IEnumerable<KeepFit.Core.Models.ExcerciseCategory>
+
+
+@foreach (var category in Model)
+{
+    <div class="form-group">
+        <input type="checkbox" checked="checked" name="@category.Id" value="@category.Name" /> @category.Name
+    </div>
+}

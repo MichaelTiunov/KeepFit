@@ -173,6 +173,7 @@
     <Compile Include="CompositionRoot.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ExcerciseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\WorkoutController.cs" />
@@ -182,6 +183,7 @@
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CustomPrincipalSerializeModel.cs" />
+    <Compile Include="Models\ExcercisesModel.cs" />
     <Compile Include="Models\IdentityService.cs" />
     <Compile Include="Models\IIdentityService.cs" />
     <Compile Include="Models\KeepFitIdentity.cs" />
@@ -315,6 +317,9 @@
     <Content Include="Views\Profile\_BodyWeight.cshtml" />
     <Content Include="Views\Workout\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutWorkout.cshtml" />
+    <Content Include="Views\Excercise\Index.cshtml" />
+    <Content Include="Views\Excercise\_ExcercisesCategory.cshtml" />
+    <Content Include="Views\Excercise\_Excercises.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

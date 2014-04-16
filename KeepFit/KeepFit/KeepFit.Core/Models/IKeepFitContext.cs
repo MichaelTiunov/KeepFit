@@ -16,6 +16,8 @@ namespace KeepFit.Core.Models
         DbSet<State> States { get; set; }
         DbSet<Country> Countries { get; set; }
         DbSet<BodyComposition> BodyCompositions { get; set; }
-        DbSet<ProgressPhoto> ProgressPhotos { get; set; } 
+        DbSet<ProgressPhoto> ProgressPhotos { get; set; }
+        DbSet<Excercise> Excercises { get; set; }
+        DbSet<ExcerciseCategory> ExcerciseCategories { get; set; }
     }
 }
