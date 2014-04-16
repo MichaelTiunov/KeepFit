@@ -33,6 +33,7 @@ namespace KeepFit.Web
             container.Register<IBodyCompositionService, BodyCompositionService>();
             container.Register<IProgressPhotoService, ProgressPhotoService>();
             container.Register<IExcerciseService, ExcerciseService>();
+            container.Register<IWorkoutService, WorkoutService>();
 
             //Verifies everything is registered correclty
             //TODO: Investigate possible effect (constructor calls?)

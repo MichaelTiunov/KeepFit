@@ -191,6 +191,7 @@
     <Compile Include="Models\Profile\BodyWeightModel.cs" />
     <Compile Include="Models\Profile\ProfileModel.cs" />
     <Compile Include="Models\Profile\ProgressPhotoModel.cs" />
+    <Compile Include="Models\Workout\WorkoutModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -320,6 +321,7 @@
     <Content Include="Views\Excercise\Index.cshtml" />
     <Content Include="Views\Excercise\_ExcercisesCategory.cshtml" />
     <Content Include="Views\Excercise\_Excercises.cshtml" />
+    <Content Include="Views\Workout\_Workouts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

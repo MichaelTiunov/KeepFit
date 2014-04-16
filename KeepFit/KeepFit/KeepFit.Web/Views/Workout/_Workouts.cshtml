@@ -1,0 +1,9 @@
+﻿@model IEnumerable<KeepFit.Core.Models.Workout>
+
+
+@foreach (var workout in Model)
+{
+    <div class="form-control">
+        @workout.Name
+    </div>
+}

@@ -11,6 +11,7 @@ namespace KeepFit.Core.Models
             PasswordChanges = new List<PasswordChange>();
             BodyCompositions = new List<BodyComposition>();
             ProgressPhotos = new Collection<ProgressPhoto>();
+            Workouts = new List<Workout>();
         }
 
         public int UserId { get; set; }
@@ -35,5 +36,7 @@ namespace KeepFit.Core.Models
         public virtual ICollection<BodyComposition> BodyCompositions { get; set; }
 
         public virtual ICollection<ProgressPhoto> ProgressPhotos { get; set; }
+
+        public virtual ICollection<Workout> Workouts { get; set; }
     }
 }
