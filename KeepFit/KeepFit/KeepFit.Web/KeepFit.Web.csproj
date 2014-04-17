@@ -322,6 +322,7 @@
     <Content Include="Views\Excercise\_ExcercisesCategory.cshtml" />
     <Content Include="Views\Excercise\_Excercises.cshtml" />
     <Content Include="Views\Workout\_Workouts.cshtml" />
+    <Content Include="Views\Workout\_AddWorkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -20,3 +20,5 @@ E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.pdb
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.Excercises.resources
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.Workouts.resources
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.RepsSets.resources
+E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\KeepFit.Core.Dto.dll
+E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\KeepFit.Core.Dto.pdb

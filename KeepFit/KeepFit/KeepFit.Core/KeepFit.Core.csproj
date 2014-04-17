@@ -169,6 +169,12 @@
       <DependentUpon>201404171044064_RepsSets.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KeepFit.Core.Dto\KeepFit.Core.Dto.csproj">
+      <Project>{7ED8CB56-E92D-4161-9290-D5CF42867FCA}</Project>
+      <Name>KeepFit.Core.Dto</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

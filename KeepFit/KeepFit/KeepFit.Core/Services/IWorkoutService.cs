@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using KeepFit.Core.Dto;
 using KeepFit.Core.Models;
 
 namespace KeepFit.Core.Services
@@ -7,6 +8,6 @@ namespace KeepFit.Core.Services
     {
         IEnumerable<Workout> GetWorkouts(int userId);
         IEnumerable<Workout> GetWorkouts(bool isPublic = true);
-        void AddWorkout(Workout workout);
+        void AddWorkout(WorkoutDto workout);
     }
 }
