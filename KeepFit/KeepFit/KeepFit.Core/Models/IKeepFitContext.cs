@@ -19,7 +19,8 @@ namespace KeepFit.Core.Models
         DbSet<ProgressPhoto> ProgressPhotos { get; set; }
         DbSet<Excercise> Excercises { get; set; }
         DbSet<ExcerciseCategory> ExcerciseCategories { get; set; }
-
         DbSet<Workout> Workouts { get; set; }
+        DbSet<Set> Sets { get; set; }
+        DbSet<Reps> Repses { get; set; }
     }
 }

@@ -79,6 +79,10 @@
     <Compile Include="Migrations\201404161220423_Workouts.Designer.cs">
       <DependentUpon>201404161220423_Workouts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201404171044064_RepsSets.cs" />
+    <Compile Include="Migrations\201404171044064_RepsSets.Designer.cs">
+      <DependentUpon>201404171044064_RepsSets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
@@ -106,15 +110,19 @@
     <Compile Include="Models\Mapping\IndividualRoleMap.cs" />
     <Compile Include="Models\Mapping\PasswordChangeMap.cs" />
     <Compile Include="Models\Mapping\ProgressPhotoMap.cs" />
+    <Compile Include="Models\Mapping\RepsMap.cs" />
     <Compile Include="Models\Mapping\RoleMap.cs" />
+    <Compile Include="Models\Mapping\SetMap.cs" />
     <Compile Include="Models\Mapping\StateMap.cs" />
     <Compile Include="Models\Mapping\UserMap.cs" />
     <Compile Include="Models\Mapping\WorkoutMap.cs" />
     <Compile Include="Models\PasswordChange.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\ProgressPhoto.cs" />
+    <Compile Include="Models\Reps.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\RoleType.cs" />
+    <Compile Include="Models\Set.cs" />
     <Compile Include="Models\Site.cs" />
     <Compile Include="Models\State.cs" />
     <Compile Include="Models\User.cs" />
@@ -156,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201404161220423_Workouts.resx">
       <DependentUpon>201404161220423_Workouts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404171044064_RepsSets.resx">
+      <DependentUpon>201404171044064_RepsSets.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

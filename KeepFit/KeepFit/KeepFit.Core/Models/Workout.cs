@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace KeepFit.Core.Models
 {
     public class Workout : AuditableEntity
     {
+        public Workout()
+        {
+            Sets = new List<Set>();
+        }
         public override int Id
         {
             get { return WorkoutId; }
@@ -21,5 +26,7 @@ namespace KeepFit.Core.Models
         public int UserId { get; set; }
 
         public User User { get; set; }
-}
+
+        public virtual ICollection<Set> Sets { get; set; }
+    }
 }
