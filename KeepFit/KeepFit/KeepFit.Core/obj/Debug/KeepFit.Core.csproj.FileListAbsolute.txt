@@ -22,3 +22,5 @@ E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.W
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.RepsSets.resources
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\KeepFit.Core.Dto.dll
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\bin\Debug\KeepFit.Core.Dto.pdb
+E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.Products.resources
+E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core\obj\Debug\KeepFit.Core.Migrations.productsupdate.resources

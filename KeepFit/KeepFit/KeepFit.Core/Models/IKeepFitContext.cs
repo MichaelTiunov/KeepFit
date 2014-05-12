@@ -22,5 +22,7 @@ namespace KeepFit.Core.Models
         DbSet<Workout> Workouts { get; set; }
         DbSet<Set> Sets { get; set; }
         DbSet<Reps> Repses { get; set; }
+
+        DbSet<Product> Products { get; set; }
     }
 }

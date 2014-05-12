@@ -83,6 +83,14 @@
     <Compile Include="Migrations\201404171044064_RepsSets.Designer.cs">
       <DependentUpon>201404171044064_RepsSets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405121757437_Products.cs" />
+    <Compile Include="Migrations\201405121757437_Products.Designer.cs">
+      <DependentUpon>201405121757437_Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405121819034_productsupdate.cs" />
+    <Compile Include="Migrations\201405121819034_productsupdate.Designer.cs">
+      <DependentUpon>201405121819034_productsupdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
@@ -109,6 +117,7 @@
     <Compile Include="Models\Mapping\IndividualMap.cs" />
     <Compile Include="Models\Mapping\IndividualRoleMap.cs" />
     <Compile Include="Models\Mapping\PasswordChangeMap.cs" />
+    <Compile Include="Models\Mapping\ProductMap.cs" />
     <Compile Include="Models\Mapping\ProgressPhotoMap.cs" />
     <Compile Include="Models\Mapping\RepsMap.cs" />
     <Compile Include="Models\Mapping\RoleMap.cs" />
@@ -118,6 +127,7 @@
     <Compile Include="Models\Mapping\WorkoutMap.cs" />
     <Compile Include="Models\PasswordChange.cs" />
     <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProgressPhoto.cs" />
     <Compile Include="Models\Reps.cs" />
     <Compile Include="Models\Role.cs" />
@@ -134,9 +144,11 @@
     <Compile Include="Services\IAccountService.cs" />
     <Compile Include="Services\IBodyCompositionService.cs" />
     <Compile Include="Services\IExcerciseService.cs" />
+    <Compile Include="Services\IProductService.cs" />
     <Compile Include="Services\IProgressPhotoService.cs" />
     <Compile Include="Services\ISecurityService.cs" />
     <Compile Include="Services\IWorkoutService.cs" />
+    <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\ProgressPhotoService.cs" />
     <Compile Include="Services\SecurityService.cs" />
     <Compile Include="Services\WorkoutService.cs" />
@@ -167,6 +179,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201404171044064_RepsSets.resx">
       <DependentUpon>201404171044064_RepsSets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405121757437_Products.resx">
+      <DependentUpon>201405121757437_Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405121819034_productsupdate.resx">
+      <DependentUpon>201405121819034_productsupdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
