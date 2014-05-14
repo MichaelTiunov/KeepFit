@@ -13,7 +13,7 @@
     @*<link rel="stylesheet" href="~/Content/skel-noscript.css" />*@
     <link rel="stylesheet" href="~/Content/style.css" />
     <link rel="stylesheet" href="~/Content/style-desktop.css" />
-
+    <link href="~/Content/slidingpanel.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -22,6 +22,7 @@
 
     @RenderSection("Banner", false)
     @RenderSection("Features", false)
+    @Html.Partial("SlidingPanel")
     <div id="main-wrapper">
         <div class="container">
             <div class="row">
@@ -41,6 +42,15 @@
     <script src="~/Scripts/template/config.js"></script>
     <script src="~/Scripts/template/skel.min.js"></script>
     <script src="~/Scripts/template/skel-panels.min.js"></script>
+    <script>
+    $(function () {
+        $(".trigger").click(function () {
+            $(".sliding-panel").toggle("fast");
+            $(this).toggleClass("active");
+            return false;
+        });
+    });
+    </script>
 </body>
 @*<body>
 

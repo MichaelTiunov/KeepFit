@@ -1,4 +1,6 @@
-﻿namespace KeepFit.Core.Models
+﻿using System.Collections.Generic;
+
+namespace KeepFit.Core.Models
 {
     public class Product : AuditableEntity
     {
@@ -15,6 +17,8 @@
         public double Proteins { get; set; }
         public double Fats { get; set; }
         public double Carbohydrates { get; set; }
+
+        public virtual ICollection<Ingestion> Ingestions { get; set; } 
 
     }
 }

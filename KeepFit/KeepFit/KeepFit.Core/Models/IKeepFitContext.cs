@@ -24,5 +24,8 @@ namespace KeepFit.Core.Models
         DbSet<Reps> Repses { get; set; }
 
         DbSet<Product> Products { get; set; }
+
+        DbSet<Menu> Menus { get; set; }
+        DbSet<Ingestion> Ingestions { get; set; }
     }
 }

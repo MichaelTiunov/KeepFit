@@ -29,7 +29,7 @@ namespace KeepFit.Web.Models
 
         public KeepFitPrincipal(int userId, int individualId, string userName, string firstName, string lastName, RoleType roleType, string token, bool isPasswordExpired = false, bool rememberMe = false)
         {
-            _identity = new KeepFitIdentity(userId, individualId, userName, firstName, lastName, roleType, token, isPasswordExpired, rememberMe);
+            _identity = new KeepFitIdentity(userId, individualId, userName, firstName, lastName, roleType, token, 0, isPasswordExpired, rememberMe);
         }
 
         public bool IsInRole(string role)

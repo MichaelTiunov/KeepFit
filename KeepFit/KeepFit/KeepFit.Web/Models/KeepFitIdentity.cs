@@ -27,6 +27,7 @@ namespace KeepFit.Web.Models
         private string _lastName;
         private string _token;
         private RoleType _roleType;
+        private double bmr;
 
         public int UserId
         {
@@ -98,14 +99,17 @@ namespace KeepFit.Web.Models
 
         public bool RememberMe { get; set; }
 
+        public double BMR { get { return bmr; } }
+
         public KeepFitIdentity()
         {
+            bmr = 0;
             _userId = -1;
             _userName = null;
             _token = null;
         }
 
-        public KeepFitIdentity(int userId, int individualId, string userName, string firstName, string lastName, RoleType roleType, string token, bool isPasswordExpired = false, bool rememberMe = false)
+        public KeepFitIdentity(int userId, int individualId, string userName, string firstName, string lastName, RoleType roleType, string token, double bmr, bool isPasswordExpired = false, bool rememberMe = false)
         {
             _userId = userId;
             _individualId = individualId;
@@ -116,6 +120,12 @@ namespace KeepFit.Web.Models
             _firstName = firstName;
             _lastName = lastName;
             RememberMe = rememberMe;
+            this.bmr = bmr;
+        }
+
+        public void SetBmr(double bmr)
+        {
+            this.bmr = bmr;
         }
 
         public XmlSchema GetSchema()

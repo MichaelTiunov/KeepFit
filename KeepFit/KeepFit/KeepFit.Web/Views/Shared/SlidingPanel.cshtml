@@ -1,0 +1,10 @@
+﻿<div class="sliding-panel">
+    @{
+        Html.RenderAction("CaloriesCalculation","Home");
+    }
+</div>
+@{
+    var bmr = ViewBag.Bmr ?? "Расчёт калорийности";
+}
+<a class="trigger" href="#">@bmr</a>
+

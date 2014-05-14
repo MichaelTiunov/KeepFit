@@ -1,4 +1,5 @@
-﻿using System.Data.Entity.Migrations;
+﻿using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using KeepFit.Core.Models;
 
 namespace KeepFit.Core.Services
@@ -15,6 +16,11 @@ namespace KeepFit.Core.Services
         {
             keepFitContext.Products.AddOrUpdate(product);
             keepFitContext.SaveChanges();
+        }
+
+        public IEnumerable<Product> GetProducts()
+        {
+            return keepFitContext.Products;
         }
     }
 }

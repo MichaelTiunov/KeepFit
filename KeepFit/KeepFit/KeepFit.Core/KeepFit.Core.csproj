@@ -91,6 +91,10 @@
     <Compile Include="Migrations\201405121819034_productsupdate.Designer.cs">
       <DependentUpon>201405121819034_productsupdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405131642342_MenusIngestions.cs" />
+    <Compile Include="Migrations\201405131642342_MenusIngestions.Designer.cs">
+      <DependentUpon>201405131642342_MenusIngestions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
@@ -108,6 +112,7 @@
     <Compile Include="Models\IKeepFitContext.cs" />
     <Compile Include="Models\Individual.cs" />
     <Compile Include="Models\IndividualRole.cs" />
+    <Compile Include="Models\Ingestion.cs" />
     <Compile Include="Models\KeepFitContext.cs" />
     <Compile Include="Models\Mapping\AddressMap.cs" />
     <Compile Include="Models\Mapping\BodyCompositionMap.cs" />
@@ -116,6 +121,8 @@
     <Compile Include="Models\Mapping\ExcerciseMap.cs" />
     <Compile Include="Models\Mapping\IndividualMap.cs" />
     <Compile Include="Models\Mapping\IndividualRoleMap.cs" />
+    <Compile Include="Models\Mapping\IngestionMap.cs" />
+    <Compile Include="Models\Mapping\MenuMap.cs" />
     <Compile Include="Models\Mapping\PasswordChangeMap.cs" />
     <Compile Include="Models\Mapping\ProductMap.cs" />
     <Compile Include="Models\Mapping\ProgressPhotoMap.cs" />
@@ -125,6 +132,7 @@
     <Compile Include="Models\Mapping\StateMap.cs" />
     <Compile Include="Models\Mapping\UserMap.cs" />
     <Compile Include="Models\Mapping\WorkoutMap.cs" />
+    <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\PasswordChange.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Product.cs" />
@@ -185,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201405121819034_productsupdate.resx">
       <DependentUpon>201405121819034_productsupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405131642342_MenusIngestions.resx">
+      <DependentUpon>201405131642342_MenusIngestions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

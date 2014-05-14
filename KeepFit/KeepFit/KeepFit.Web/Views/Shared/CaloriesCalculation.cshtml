@@ -1,0 +1,14 @@
+﻿@model KeepFit.Web.Models.CaloriesCalculationModel
+
+
+@using (Html.BeginForm("CaloriesCalculation", "Home"))
+{
+    <div class="form-group">
+        <div class="form-control">
+            @Html.RadioButton("Gender", Model.Gender)
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="btn btn-primary">Calculate</button>
+    </div>
+}
