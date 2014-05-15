@@ -6,7 +6,8 @@ namespace KeepFit.Web.Controllers
 {
     public class HomeController : BaseController
     {
-        public HomeController(IAccountService accountService, IIdentityService identityService) : base(accountService, identityService)
+        public HomeController(IAccountService accountService, IIdentityService identityService)
+            : base(accountService, identityService)
         {
         }
 
@@ -66,9 +67,11 @@ namespace KeepFit.Web.Controllers
                         bmr *= 1.9;
                         break;
                 }
-                ViewBag.Bmr = bmr;
             }
-            return Json(new object());
+            return Json(new
+            {
+                bmr
+            });
         }
     }
 }

@@ -1,14 +1,102 @@
-﻿@model KeepFit.Web.Models.CaloriesCalculationModel
+﻿@using KeepFit.Web.Models
+@model CaloriesCalculationModel
 
 
-@using (Html.BeginForm("CaloriesCalculation", "Home"))
-{
-    <div class="form-group">
-        <div class="form-control">
-            @Html.RadioButton("Gender", Model.Gender)
-        </div>
-    </div>
-    <div class="button-container">
-        <button class="btn btn-primary">Calculate</button>
-    </div>
-}
+
+<div class="calories-calculation">
+    <form class="form-horizontal js-form-calculate-calories">
+        <fieldset>
+            <!-- Multiple Radios -->
+            <div class="form-group">
+                @Html.LabelFor(x => x.Gender, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    <div class="radio">
+                        <label for="radios-0">
+                            @Html.RadioButtonFor(x => x.Gender, (int)Gender.Male, new { @checked = "checked" })
+                            Male
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="radios-1">
+                            @Html.RadioButtonFor(x => x.Gender, (int)Gender.Female, new { @checked = "checked" })
+                            Female
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                @Html.LabelFor(x => x.Age, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(x => x.Age, new { @class = "form-control input-md" })
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                @Html.LabelFor(x => x.Height, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(x => x.Height, new { @class = "form-control input-md" })
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                @Html.LabelFor(x => x.Weight, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(x => x.Weight, new { @class = "form-control input-md" })
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                @Html.LabelFor(x => x.ActivityType, new { @class = "col-md-4 control-label" })
+                <div class="col-md-4">
+                    @Html.DropDownListFor(x => x.ActivityType,new SelectList(new List<int>()){})
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <div class="col-md-4">
+                    <button type="button" id="singlebutton" name="singlebutton"
+                            class="btn btn-primary ladda-button js-calculate-calories"
+                            data-style="expand-left">
+                        <span class="ladda-label">Calculate</span>
+                    </button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+<script>
+    $(function () {
+        $('.js-calculate-calories').on('click', function () {
+
+            var form = $('.js-form-calculate-calories');
+
+            if (form.validate().form()) {
+                var l = Ladda.create(this);
+                l.start();
+                var data = form.serialize();
+                $.ajax('@Url.Action("CaloriesCalculation", "Home")',
+                {
+                    type: 'POST',
+                    content: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify(data),
+                    success: function (result) {
+                        alert(result.bmr);
+                    },
+                    error: function (result) {
+                        alert('Error!');
+                    }
+                }).done(function () {
+                    l.stop();
+                });
+            }
+        });
+    });
+</script>

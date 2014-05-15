@@ -84,7 +84,6 @@ img {
     top: 80px;
     left: 0;
     display: none;
-    background: #000000;
     border: 1px solid #111111;
     -moz-border-radius-topright: 20px;
     -webkit-border-top-right-radius: 20px;
@@ -94,15 +93,15 @@ img {
     border-top-right-radius: 20px;
     -ms-border-bottom-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    width: 600px;
+    width: 250px;
     height: auto;
-    padding: 70px 30px;
     -webkit-filter: alpha(opacity=85);
     -moz-filter: alpha(opacity=85);
     -o-filter: alpha(opacity=85);
     filter: alpha(opacity=85);
     -ms-opacity: .85;
     opacity: .85;
+    background: #FFF
 }
 
 .sliding-panel p {
@@ -110,27 +109,16 @@ img {
         padding: 0;
         color: #cccccc;
     }
-
-    .sliding-panel a, .sliding-panel a:visited {
-        margin: 0;
-        padding: 0;
-        color: #9FC54E;
-        text-decoration: none;
-        border-bottom: 1px solid #9FC54E;
-    }
-
-        .sliding-panel a:hover, .sliding-panel a:visited:hover {
-            margin: 0;
-            padding: 0;
-            color: #ffffff;
-            text-decoration: none;
-            border-bottom: 1px solid #ffffff;
-        }
-
-a.trigger {
+.sliding-panel .calories-calculation {
+    padding-top: 90px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+button.trigger {
     position: absolute;
     text-decoration: none;
-    top: 80px;
+    top: 90px;
     left: 0;
     font-size: 16px;
     letter-spacing: -1px;
@@ -138,8 +126,6 @@ a.trigger {
     color: #fff;
     padding: 20px 40px 20px 15px;
     font-weight: 700;
-    background: #333333 url(images/plus.png) 85% 55% no-repeat;
-    border: 1px solid #444444;
     -moz-border-radius-topright: 20px;
     -webkit-border-top-right-radius: 20px;
     -moz-border-radius-bottomright: 20px;
@@ -151,32 +137,6 @@ a.trigger {
     -ms-border-bottom-right-radius: 20px;
     border-bottom-right-radius: 20px;
     display: block;
-}
-
-    a.trigger:hover {
-        position: fixed;
-        text-decoration: none;
-        top: 80px;
-        left: 0;
-        font-size: 16px;
-        letter-spacing: -1px;
-        font-family: verdana, helvetica, arial, sans-serif;
-        color: #fff;
-        padding: 20px 40px 20px 20px;
-        font-weight: 700;
-        background: #222222 url(images/plus.png) 85% 55% no-repeat;
-        border: 1px solid #444444;
-        -moz-border-radius-topright: 20px;
-        -webkit-border-top-right-radius: 20px;
-        -moz-border-radius-bottomright: 20px;
-        -webkit-border-bottom-right-radius: 20px;
-        -moz-border-radius-bottomleft: 0px;
-        -webkit-border-bottom-left-radius: 0px;
-        display: block;
-    }
-
-a.active.trigger {
-    background: #222222 url(images/minus.png) 85% 55% no-repeat;
 }
 
 .columns {

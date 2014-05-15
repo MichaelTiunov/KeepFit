@@ -199,6 +199,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
@@ -213,6 +215,10 @@
     <Content Include="Content\images\minus.png" />
     <Content Include="Content\images\mobileUI-site-nav-opener-bg.svg" />
     <Content Include="Content\images\plus.png" />
+    <Content Include="Content\ladda-themeless.css" />
+    <Content Include="Content\ladda-themeless.min.css" />
+    <Content Include="Content\ladda.css" />
+    <Content Include="Content\ladda.min.css" />
     <Content Include="Content\menu.css" />
     <Content Include="Content\rawberry.css" />
     <Content Include="Content\skel-noscript.css" />
@@ -226,14 +232,19 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\font\fontawesome-webfont.eot" />
     <Content Include="Content\font\fontawesome-webfont.ttf" />
     <Content Include="Content\font\fontawesome-webfont.woff" />
     <Content Include="Content\font\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
     <None Include="Properties\PublishProfiles\KeepFit.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\fullcalendar\fullcalendar.js" />
     <Content Include="Scripts\fullcalendar\fullcalendar.min.js" />
     <Content Include="Scripts\fullcalendar\gcal.js" />
@@ -272,9 +283,13 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\ladda.js" />
+    <Content Include="Scripts\ladda.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\spin.js" />
+    <Content Include="Scripts\spin.min.js" />
     <Content Include="Scripts\template\config.js" />
     <Content Include="Scripts\template\html5shiv.js" />
     <Content Include="Scripts\template\jquery.min.js" />
@@ -342,9 +357,6 @@
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
