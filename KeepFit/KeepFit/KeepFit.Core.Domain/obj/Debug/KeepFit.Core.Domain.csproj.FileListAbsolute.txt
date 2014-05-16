@@ -10,6 +10,6 @@ E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domai
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\KeepFit.Core.Domain.pdb
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.csprojResolveAssemblyReference.cache
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.dll
 E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.pdb
-E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Core.Domain\obj\Debug\KeepFit.Core.Domain.csprojResolveAssemblyReference.cache

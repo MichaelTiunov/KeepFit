@@ -1,9 +1,29 @@
 ﻿<div class="sliding-panel">
     @{
-        Html.RenderAction("CaloriesCalculation","Home");
+        Html.RenderAction("CaloriesCalculation", "Home");
     }
 </div>
 @{
-    var bmr = ViewBag.Bmr ?? "Расчёт калорийности";
+    var bmr = "";
+    if (Session["BMR"] == null)
+    {
+        bmr = "Расчёт Калорийности:";
+    }
+    else
+    {
+        bmr = string.Format("BMR: {0}", Session["BMR"]);
+    }
+    var imt = "";
+    if (Session["IMt"] != null)
+    {
+        imt = string.Format("IMT: {0}", Session["IMT"]);
+    }
 }
-<button class="button trigger">@bmr</button>
+<button class="button trigger js-calculate">
+    <div class="js-calculate-bmr">
+        @bmr
+    </div>
+    <div class="js-calculate-imt">
+        @imt
+    </div>
+</button>

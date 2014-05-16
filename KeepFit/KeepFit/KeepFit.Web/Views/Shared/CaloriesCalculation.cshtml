@@ -1,4 +1,5 @@
-﻿@using KeepFit.Web.Models
+﻿@using KeepFit.Web.Helpers
+@using KeepFit.Web.Models
 @model CaloriesCalculationModel
 
 
@@ -9,17 +10,17 @@
             <!-- Multiple Radios -->
             <div class="form-group">
                 @Html.LabelFor(x => x.Gender, new { @class = "col-md-4 control-label" })
-                <div class="col-md-4">
+                <div class="col-md-8">
                     <div class="radio">
                         <label for="radios-0">
                             @Html.RadioButtonFor(x => x.Gender, (int)Gender.Male, new { @checked = "checked" })
-                            Male
+                            @EnumLocalizationHelper.GetLocalizedName(Gender.Male)
                         </label>
                     </div>
                     <div class="radio">
                         <label for="radios-1">
                             @Html.RadioButtonFor(x => x.Gender, (int)Gender.Female, new { @checked = "checked" })
-                            Female
+                            @EnumLocalizationHelper.GetLocalizedName(Gender.Female)
                         </label>
                     </div>
                 </div>
@@ -28,7 +29,7 @@
             <!-- Text input-->
             <div class="form-group">
                 @Html.LabelFor(x => x.Age, new { @class = "col-md-4 control-label" })
-                <div class="col-md-4">
+                <div class="col-md-8">
                     @Html.TextBoxFor(x => x.Age, new { @class = "form-control input-md" })
                 </div>
             </div>
@@ -36,7 +37,7 @@
             <!-- Text input-->
             <div class="form-group">
                 @Html.LabelFor(x => x.Height, new { @class = "col-md-4 control-label" })
-                <div class="col-md-4">
+                <div class="col-md-8">
                     @Html.TextBoxFor(x => x.Height, new { @class = "form-control input-md" })
                 </div>
             </div>
@@ -44,7 +45,7 @@
             <!-- Text input-->
             <div class="form-group">
                 @Html.LabelFor(x => x.Weight, new { @class = "col-md-4 control-label" })
-                <div class="col-md-4">
+                <div class="col-md-8">
                     @Html.TextBoxFor(x => x.Weight, new { @class = "form-control input-md" })
                 </div>
             </div>
@@ -52,8 +53,8 @@
             <!-- Select Basic -->
             <div class="form-group">
                 @Html.LabelFor(x => x.ActivityType, new { @class = "col-md-4 control-label" })
-                <div class="col-md-4">
-                    @Html.DropDownListFor(x => x.ActivityType,new SelectList(new List<int>()){})
+                <div class="col-md-8">
+                    @Html.EnumDropDownListFor(x => x.ActivityType, null, new { @class = "form-control" })
                 </div>
             </div>
 
@@ -84,11 +85,10 @@
                 $.ajax('@Url.Action("CaloriesCalculation", "Home")',
                 {
                     type: 'POST',
-                    content: "application/json; charset=utf-8",
-                    dataType: "json",
-                    data: JSON.stringify(data),
+                    data: data,
                     success: function (result) {
-                        alert(result.bmr);
+                        $('.js-calculate .js-calculate-bmr').text("BMR: " + result.bmr);
+                        $('.js-calculate .js-calculate-imt').text("IMT: " + result.imt);
                     },
                     error: function (result) {
                         alert('Error!');

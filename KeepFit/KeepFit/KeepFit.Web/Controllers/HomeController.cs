@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using KeepFit.Core.Services;
 using KeepFit.Web.Models;
 
@@ -39,6 +40,7 @@ namespace KeepFit.Web.Controllers
         public JsonResult CaloriesCalculation(CaloriesCalculationModel model)
         {
             double bmr = 0;
+            double imt = 0;
             if (ModelState.IsValid)
             {
                 if (model.Gender == Gender.Male)
@@ -67,11 +69,45 @@ namespace KeepFit.Web.Controllers
                         bmr *= 1.9;
                         break;
                 }
+
+                double r = model.Height / 100;
+
+                imt = model.Weight / Math.Pow(r, 2);
+                imt = Math.Round(imt, 2);
+                string z = "";
+                if (imt < 15)
+                {
+                    z = "Îñòðûé äåôèöèò âåñà";
+                }
+                if ((imt >= 15) && (imt < 20))
+                {
+                    z = "Äåôèöèò âåñà";
+                }
+                if ((imt >= 20) && (imt < 25))
+                {
+                    z = "Íîðìàëüíûé âåñ";
+                }
+                if ((imt >= 25) && (imt <= 30))
+                {
+                    z = "Èçáûòî÷íûé âåñ";
+                }
+                if (imt > 30)
+                {
+                    z = "Îæèðåíèå";
+                }
+               var znach = z;
+
+                Session["BMR"] = Math.Round(bmr);
+                Session["IMT"] = Math.Round(imt, 1);
+
+                return Json(new
+                {
+                    bmr = Math.Round(bmr),
+                    imt = Math.Round(imt, 1)
+                });
             }
-            return Json(new
-            {
-                bmr
-            });
+            return Json(new { });
+
         }
     }
 }
