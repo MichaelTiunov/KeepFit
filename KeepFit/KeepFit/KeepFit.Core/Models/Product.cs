@@ -18,6 +18,8 @@ namespace KeepFit.Core.Models
         public double Fats { get; set; }
         public double Carbohydrates { get; set; }
 
+        public int ProductTypeId { get; set; }
+        public ProductType ProductType { get; set; }
         public virtual ICollection<Ingestion> Ingestions { get; set; } 
 
     }

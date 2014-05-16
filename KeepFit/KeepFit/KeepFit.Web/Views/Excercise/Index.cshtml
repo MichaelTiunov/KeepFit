@@ -1,18 +1,9 @@
 ﻿@model KeepFit.Web.Models.ExcercisesModel
 @{
 
-    Layout = "~/Views/Shared/_LayoutWorkout.cshtml";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-@section MainWorkout
-{
-    <!-- Content -->
-    <div id="content">
-        @Html.Partial("_Excercises", Model.Excercises)
-    </div>
-}
+@Html.Partial("_Excercises", Model.Excercises)
 
-@section WorkoutSidebar
-{
-    @Html.Partial("_ExcercisesCategory", Model.ExcerciseCategories)
-}
+@Html.Partial("_ExcercisesCategory", Model.ExcerciseCategories)

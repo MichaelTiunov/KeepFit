@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Web.Mvc;
+using KeepFit.Core.Models;
 using KeepFit.Core.Services;
 using KeepFit.Web.Models;
 using KeepFit.Web.Models.Nutrition;
@@ -26,6 +29,24 @@ namespace KeepFit.Web.Controllers
         public ActionResult Menu()
         {
             return View();
+        }
+
+        public ActionResult Products()
+        {
+            var types = productService.GetProductTypes();
+            var productTypes = types as IList<ProductType> ?? types.ToList();
+            var productModel = new ProductsModel
+            {
+                ProductTypes = productTypes,
+                Products = productService.GetProductsByType(productTypes.First().ProductTypeId)
+            };
+            return View(productModel);
+        }
+        [HttpPost]
+        public JsonResult GetProducts(int typeId)
+        {
+            var products = productService.GetProductsByType(typeId);
+            return Json(products);
         }
     }
 }

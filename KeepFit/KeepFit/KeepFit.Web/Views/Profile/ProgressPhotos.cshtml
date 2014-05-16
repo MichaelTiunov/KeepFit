@@ -1,13 +1,10 @@
 ﻿@model KeepFit.Web.Models.Profile.ProgressPhotoModel
 
 @{
-    Layout = "~/Views/Shared/_LayoutProfile.cshtml";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-@section ProfileFeatures
-{
-    @Html.Partial("_ProfileProgressPhoto", Model)
-}
+@Html.Partial("_ProfileProgressPhoto", Model)
 
 @using (Html.BeginForm("UploadPhoto", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {

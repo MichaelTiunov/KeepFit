@@ -11,6 +11,9 @@ namespace KeepFit.Core.Models.Mapping
             Property(x => x.Proteins);
             Property(x => x.Carbohydrates);
             Property(x => x.Fats);
+            HasRequired(x => x.ProductType)
+                .WithMany(x => x.Products)
+                .HasForeignKey(x => x.ProductTypeId);
         }
     }
 }

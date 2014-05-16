@@ -11,14 +11,17 @@ namespace KeepFit.Web.Controllers
     public class ExcerciseController : BaseController
     {
         private readonly IExcerciseService excerciseService;
+        private readonly IProductService productService;
         public ExcerciseController(IAccountService accountService, IIdentityService identityService, IExcerciseService excerciseService, IProductService productService)
             : base(accountService, identityService)
         {
             this.excerciseService = excerciseService;
+            this.productService = productService;
         }
 
         public ActionResult Index()
         {
+            //Get();
             var model = new ExcercisesModel
             {
                 ExcerciseCategories = excerciseService.GetCategories(),
@@ -50,13 +53,15 @@ namespace KeepFit.Web.Controllers
         //                double carbohydrates = 0;
         //                double proteins = 0;
         //                double fats = 0;
+        //                int typeId = 0;
         //                var product = new Product
         //                {
         //                    Name = reader[2].ToString(),
         //                    CaloricValue = double.TryParse(reader[3].ToString(), out caloricVal) ? caloricVal : 0,
         //                    Carbohydrates = double.TryParse(reader[6].ToString(), out carbohydrates) ? carbohydrates : 0,
         //                    Fats = double.TryParse(reader[4].ToString(), out fats) ? fats : 0,
-        //                    Proteins = double.TryParse(reader[5].ToString(), out proteins) ? proteins : 0
+        //                    Proteins = double.TryParse(reader[5].ToString(), out proteins) ? proteins : 0,
+        //                    ProductTypeId = int.TryParse(reader[1].ToString(), out typeId) ? typeId : 1
         //                };
         //                productService.AddProduct(product);
         //            }

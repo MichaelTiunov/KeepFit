@@ -95,6 +95,10 @@
     <Compile Include="Migrations\201405131642342_MenusIngestions.Designer.cs">
       <DependentUpon>201405131642342_MenusIngestions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405161007206_ProductType.cs" />
+    <Compile Include="Migrations\201405161007206_ProductType.Designer.cs">
+      <DependentUpon>201405161007206_ProductType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
@@ -125,6 +129,7 @@
     <Compile Include="Models\Mapping\MenuMap.cs" />
     <Compile Include="Models\Mapping\PasswordChangeMap.cs" />
     <Compile Include="Models\Mapping\ProductMap.cs" />
+    <Compile Include="Models\Mapping\ProductTypeMap.cs" />
     <Compile Include="Models\Mapping\ProgressPhotoMap.cs" />
     <Compile Include="Models\Mapping\RepsMap.cs" />
     <Compile Include="Models\Mapping\RoleMap.cs" />
@@ -136,6 +141,7 @@
     <Compile Include="Models\PasswordChange.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductType.cs" />
     <Compile Include="Models\ProgressPhoto.cs" />
     <Compile Include="Models\Reps.cs" />
     <Compile Include="Models\Role.cs" />
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201405131642342_MenusIngestions.resx">
       <DependentUpon>201405131642342_MenusIngestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405161007206_ProductType.resx">
+      <DependentUpon>201405161007206_ProductType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

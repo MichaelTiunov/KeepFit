@@ -173,6 +173,7 @@
     <Compile Include="CompositionRoot.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CalculationController.cs" />
     <Compile Include="Controllers\ExcerciseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NutritionController.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="Models\KeepFitIdentity.cs" />
     <Compile Include="Models\KeepFitPrincipal.cs" />
     <Compile Include="Models\Nutrition\NutritionModel.cs" />
+    <Compile Include="Models\Nutrition\ProductsModel.cs" />
     <Compile Include="Models\Profile\BodyWeightModel.cs" />
     <Compile Include="Models\Profile\ProfileModel.cs" />
     <Compile Include="Models\Profile\ProgressPhotoModel.cs" />
@@ -202,6 +204,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Calculation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\Enums.Designer.cs">
       <DependentUpon>Enums.resx</DependentUpon>
@@ -232,18 +239,17 @@
     <Content Include="Content\ladda.css" />
     <Content Include="Content\ladda.min.css" />
     <Content Include="Content\menu.css" />
+    <Content Include="Content\Modules.css" />
     <Content Include="Content\rawberry.css" />
     <Content Include="Content\skel-noscript.css" />
     <Content Include="Content\slidingpanel.css" />
     <Content Include="Content\style-1000px.css" />
     <Content Include="Content\style-desktop.css" />
     <Content Include="Content\style-mobile.css" />
-    <Content Include="Content\style.css" />
     <Content Include="Content\wicket-modal.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Content\font\fontawesome-webfont.eot" />
     <Content Include="Content\font\fontawesome-webfont.ttf" />
     <Content Include="Content\font\fontawesome-webfont.woff" />
@@ -288,9 +294,12 @@
     <Content Include="Scripts\highcharts\themes\gray.js" />
     <Content Include="Scripts\highcharts\themes\grid.js" />
     <Content Include="Scripts\highcharts\themes\skies.js" />
+    <Content Include="Scripts\isotope.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.infinitescroll.js" />
+    <Content Include="Scripts\jquery.loadTemplate-1.4.3.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -343,30 +352,28 @@
     <Content Include="Views\Shared\_Features.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
-    <Content Include="Views\Shared\_LayoutHome.cshtml" />
-    <Content Include="Views\Shared\_LayoutProfile.cshtml" />
     <Content Include="Views\Profile\_ProfileFeatures.cshtml" />
     <Content Include="Views\Profile\ProgressPhotos.cshtml" />
     <Content Include="Views\Profile\BodyWeight.cshtml" />
     <Content Include="Views\Profile\_BodyWeight.cshtml" />
     <Content Include="Views\Workout\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutWorkout.cshtml" />
     <Content Include="Views\Excercise\Index.cshtml" />
     <Content Include="Views\Excercise\_ExcercisesCategory.cshtml" />
     <Content Include="Views\Excercise\_Excercises.cshtml" />
     <Content Include="Views\Workout\_Workouts.cshtml" />
     <Content Include="Views\Workout\_AddWorkout.cshtml" />
-    <Content Include="Views\Shared\_LayoutNutrition.cshtml" />
     <Content Include="Views\Nutrition\Index.cshtml" />
     <Content Include="Views\Nutrition\_Nutrition.cshtml" />
     <Content Include="Views\Nutrition\Menu.cshtml" />
     <Content Include="Views\Nutrition\MenuCreation.cshtml" />
     <Content Include="Views\Shared\SlidingPanel.cshtml" />
     <Content Include="Views\Shared\CaloriesCalculation.cshtml" />
+    <Content Include="Views\Nutrition\Products.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Calculation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -386,6 +393,10 @@
     <EmbeddedResource Include="Resources\Calculation.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Calculation.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Enums.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -1,59 +1,37 @@
 ﻿<!DOCTYPE html>
+<!--[if IE 8]><html class="js-ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
 <html>
+<!--<![endif]-->
 <head>
-    <title></title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Oleo+Script:400" rel="stylesheet" type="text/css" />
+    <style>
+        .bootstrap-dialog-title {
+            font-weight: bold;
+        }
+    </style>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
     <link href="~/Content/ladda-themeless.css" rel="stylesheet" />
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
-    @*<link rel="stylesheet" href="~/Content/skel-noscript.css" />*@
-    <link rel="stylesheet" href="~/Content/style.css" />
-    <link rel="stylesheet" href="~/Content/style-desktop.css" />
     <link href="~/Content/slidingpanel.css" rel="stylesheet" />
+    <link href="~/Content/Modules.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", false)
-    <script src="~/Scripts/template/config.js"></script>
-    <script src="~/Scripts/template/skel.min.js"></script>
-    <script src="~/Scripts/template/skel-panels.min.js"></script>
     <script src="~/Scripts/spin.js"></script>
     <script src="~/Scripts/ladda.js"></script>
+    <script src="~/Scripts/isotope.js"></script>
+    <script src="~/Scripts/jquery.loadTemplate-1.4.3.js"></script>
 </head>
 <body>
-
-    <!-- Header Wrapper -->
     @Html.Partial("_Header")
-
-    @RenderSection("Banner", false)
-    @RenderSection("Features", false)
-    @Html.Partial("SlidingPanel")
-    <div id="main-wrapper">
-        <div class="container">
-            <div class="row">
-                @RenderSection("NoSidebar", false)
-                @RenderSection("LeftSidebar", false)
-                @RenderSection("RightSidebar", false)
-                @RenderBody()
-            </div>
-        </div>
+    <div class="container">
+        @RenderBody()
     </div>
-    <!-- Footer Wrapper -->
     @Html.Partial("_Footer")
-    <script>
-        $(function () {
-            $(".trigger").click(function () {
-                $(".sliding-panel").toggle("fast");
-                $(this).toggleClass("active");
-                return false;
-            });
-        });
-    </script>
 </body>
 </html>
