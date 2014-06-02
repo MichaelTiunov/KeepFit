@@ -3,75 +3,85 @@
 @model CaloriesCalculationModel
 
 
-
-<div class="calories-calculation">
-    <form class="form-horizontal js-form-calculate-calories">
-        <fieldset>
-            <!-- Multiple Radios -->
-            <div class="form-group">
-                @Html.LabelFor(x => x.Gender, new { @class = "col-md-4 control-label" })
-                <div class="col-md-8">
-                    <div class="radio">
-                        <label for="radios-0">
-                            @Html.RadioButtonFor(x => x.Gender, (int)Gender.Male, new { @checked = "checked" })
-                            @EnumLocalizationHelper.GetLocalizedName(Gender.Male)
-                        </label>
+<div class="col-md-8">
+    <div class="calories-calculation">
+        <form class="form-horizontal js-form-calculate-calories">
+            <fieldset>
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Gender, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label for="radios-0">
+                                @Html.RadioButtonFor(x => x.Gender, (int)Gender.Male, new { @checked = "checked" })
+                                @EnumLocalizationHelper.GetLocalizedName(Gender.Male)
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="radios-1">
+                                @Html.RadioButtonFor(x => x.Gender, (int)Gender.Female, new { @checked = "checked" })
+                                @EnumLocalizationHelper.GetLocalizedName(Gender.Female)
+                            </label>
+                        </div>
                     </div>
-                    <div class="radio">
-                        <label for="radios-1">
-                            @Html.RadioButtonFor(x => x.Gender, (int)Gender.Female, new { @checked = "checked" })
-                            @EnumLocalizationHelper.GetLocalizedName(Gender.Female)
-                        </label>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Age, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-6">
+                        @Html.TextBoxFor(x => x.Age, new { @class = "form-control input-md" })
                     </div>
                 </div>
-            </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                @Html.LabelFor(x => x.Age, new { @class = "col-md-4 control-label" })
-                <div class="col-md-8">
-                    @Html.TextBoxFor(x => x.Age, new { @class = "form-control input-md" })
+                <!-- Text input-->
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Height, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-6">
+                        @Html.TextBoxFor(x => x.Height, new { @class = "form-control input-md" })
+                    </div>
                 </div>
-            </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                @Html.LabelFor(x => x.Height, new { @class = "col-md-4 control-label" })
-                <div class="col-md-8">
-                    @Html.TextBoxFor(x => x.Height, new { @class = "form-control input-md" })
+                <!-- Text input-->
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Weight, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-6">
+                        @Html.TextBoxFor(x => x.Weight, new { @class = "form-control input-md" })
+                    </div>
                 </div>
-            </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                @Html.LabelFor(x => x.Weight, new { @class = "col-md-4 control-label" })
-                <div class="col-md-8">
-                    @Html.TextBoxFor(x => x.Weight, new { @class = "form-control input-md" })
+                <!-- Select Basic -->
+                <div class="form-group">
+                    @Html.LabelFor(x => x.ActivityType, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-6">
+                        @Html.EnumDropDownListFor(x => x.ActivityType, null, new { @class = "form-control" })
+                    </div>
                 </div>
-            </div>
 
-            <!-- Select Basic -->
-            <div class="form-group">
-                @Html.LabelFor(x => x.ActivityType, new { @class = "col-md-4 control-label" })
-                <div class="col-md-8">
-                    @Html.EnumDropDownListFor(x => x.ActivityType, null, new { @class = "form-control" })
+                <!-- Button -->
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <button type="button" id="singlebutton" name="singlebutton"
+                                class="btn btn-primary ladda-button js-calculate-calories"
+                                data-style="expand-left">
+                            <span class="ladda-label">Расчитать</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </fieldset>
+        </form>
+    </div>
 
-            <!-- Button -->
-            <div class="form-group">
-                <div class="col-md-4">
-                    <button type="button" id="singlebutton" name="singlebutton"
-                            class="btn btn-primary ladda-button js-calculate-calories"
-                            data-style="expand-left">
-                        <span class="ladda-label">Calculate</span>
-                    </button>
-                </div>
-            </div>
-
-        </fieldset>
-    </form>
 </div>
+<div class="col-md-4 js-calories">
+
+</div>
+<script id="caloriesTemplate" type="text/x-jquery-tmpl">
+    <div class="alert alert alert-dismissable alert-info">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Ежедневное потребление килокалорий:</strong> <span  class="label label-success">${calories}</span>.
+    </div>
+</script>
 <script>
     $(function () {
         $('.js-calculate-calories').on('click', function () {
@@ -82,16 +92,17 @@
                 var l = Ladda.create(this);
                 l.start();
                 var data = form.serialize();
-                $.ajax('@Url.Action("CaloriesCalculation", "Home")',
+                $.ajax('@Url.Action("CaloriesCalculation", "Calculation")',
                 {
                     type: 'POST',
                     data: data,
                     success: function (result) {
-                        $('.js-calculate .js-calculate-bmr').text("BMR: " + result.bmr);
-                        $('.js-calculate .js-calculate-imt').text("IMT: " + result.imt);
+                        $('.js-calories').empty();
+                        $('#caloriesTemplate').tmpl({ calories: result.bmr }).appendTo($('.js-calories'));
                     },
                     error: function (result) {
                         alert('Error!');
+                        l.stop();
                     }
                 }).done(function () {
                     l.stop();

@@ -190,6 +190,7 @@
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\EnumLocalizationHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CalculationModel.cs" />
     <Compile Include="Models\CaloriesCalculationModel.cs" />
     <Compile Include="Models\CustomPrincipalSerializeModel.cs" />
     <Compile Include="Models\ExcercisesModel.cs" />
@@ -391,11 +392,11 @@
     <Content Include="Views\Shared\SlidingPanel.cshtml" />
     <Content Include="Views\Shared\CaloriesCalculation.cshtml" />
     <Content Include="Views\Nutrition\Products.cshtml" />
+    <Content Include="Views\Calculation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\Calculation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

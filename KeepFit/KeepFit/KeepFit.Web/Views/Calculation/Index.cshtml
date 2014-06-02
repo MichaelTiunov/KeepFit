@@ -1,0 +1,27 @@
+﻿@model KeepFit.Web.Models.CalculationModel
+
+@{
+    ViewBag.Title = "Расчёт";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+            <li class="active"><a href="#caloriesCalculation" data-toggle="tab">Расчёт килокалорий</a></li>
+            <li><a href="#imt" data-toggle="tab">ИМТ</a></li>
+            <li><a href="#weightControl" data-toggle="tab">Контроль веса</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="caloriesCalculation">
+                @Html.Partial("CaloriesCalculation", Model.CaloriesCalculationModel)
+            </div>
+            <div class="tab-pane fade" id="imt">
+                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+            </div>
+            <div class="tab-pane fade" id="weightControl">
+                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+            </div>
+        </div>
+    </div>
+</div>
