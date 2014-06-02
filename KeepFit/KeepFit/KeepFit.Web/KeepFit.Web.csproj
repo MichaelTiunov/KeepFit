@@ -393,6 +393,7 @@
     <Content Include="Views\Shared\CaloriesCalculation.cshtml" />
     <Content Include="Views\Nutrition\Products.cshtml" />
     <Content Include="Views\Calculation\Index.cshtml" />
+    <Content Include="Views\Shared\IMTCalculation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,79 @@
+﻿@using KeepFit.Web.Helpers
+@using KeepFit.Web.Models
+@model CaloriesCalculationModel
+
+
+<div class="col-md-8">
+    <div class="calories-calculation">
+        <form class="form-horizontal js-form-calculate-imt">
+            <fieldset>
+                <!-- Text input-->
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Height, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-6">
+                        @Html.TextBoxFor(x => x.Height, new { @class = "form-control input-md" })
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Weight, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-6">
+                        @Html.TextBoxFor(x => x.Weight, new { @class = "form-control input-md" })
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <button type="button" id="singlebutton" name="singlebutton"
+                                class="btn btn-primary ladda-button js-calculate-imt"
+                                data-style="expand-left">
+                            <span class="ladda-label">Расчитать</span>
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+</div>
+<div class="col-md-4 js-calories">
+
+</div>
+<script id="imtTemplate" type="text/x-jquery-tmpl">
+    <div class="alert alert alert-dismissable alert-info">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Индекс массы тела:</strong> <span class="label label-success">${calories}</span>.
+        <span>${result}</span>.
+    </div>
+</script>
+<script>
+    $(function () {
+        $('.js-calculate-imt').on('click', function () {
+
+            var form = $('.js-form-calculate-imt');
+
+            if (form.validate().form()) {
+                var l = Ladda.create(this);
+                l.start();
+                var data = form.serialize();
+                $.ajax('@Url.Action("ImtCalculation", "Calculation")',
+                {
+                    type: 'POST',
+                    data: data,
+                    success: function (result) {
+                        $('.js-calories').empty();
+                        $('#imtTemplate').tmpl({ calories: result.imt, result: result.result }).appendTo($('.js-calories'));
+                    },
+                    error: function (result) {
+                        alert('Error!');
+                        l.stop();
+                    }
+                }).done(function () {
+                    l.stop();
+                });
+            }
+        });
+    });
+</script>

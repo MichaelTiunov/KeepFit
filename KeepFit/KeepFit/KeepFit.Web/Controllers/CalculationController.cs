@@ -24,10 +24,9 @@ namespace KeepFit.Web.Controllers
         [HttpPost]
         public JsonResult CaloriesCalculation(CaloriesCalculationModel model)
         {
-            double bmr = 0;
-            double imt = 0;
             if (ModelState.IsValid)
             {
+                double bmr;
                 if (model.Gender == Gender.Male)
                 {
                     bmr = 88.36 + (13.4 * model.Weight) + (4.8 * model.Height) - (5.7 * model.Age);
@@ -57,38 +56,61 @@ namespace KeepFit.Web.Controllers
 
                 double r = model.Height / 100;
 
-                imt = model.Weight / Math.Pow(r, 2);
-                imt = Math.Round(imt, 2);
-                string z = "";
-                if (imt < 15)
-                {
-                    z = "Îñòðûé äåôèöèò âåñà";
-                }
-                if ((imt >= 15) && (imt < 20))
-                {
-                    z = "Äåôèöèò âåñà";
-                }
-                if ((imt >= 20) && (imt < 25))
-                {
-                    z = "Íîðìàëüíûé âåñ";
-                }
-                if ((imt >= 25) && (imt <= 30))
-                {
-                    z = "Èçáûòî÷íûé âåñ";
-                }
-                if (imt > 30)
-                {
-                    z = "Îæèðåíèå";
-                }
-                var znach = z;
 
                 Session["BMR"] = Math.Round(bmr);
-                Session["IMT"] = Math.Round(imt, 1);
 
                 return Json(new
                 {
-                    bmr = Math.Round(bmr),
-                    imt = Math.Round(imt, 1)
+                    bmr = Math.Round(bmr)
+                });
+            }
+            return Json(new { });
+
+        }
+
+        [HttpPost]
+        public JsonResult ImtCalculation(CaloriesCalculationModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                double r = model.Height / 100;
+                double imt = model.Weight / Math.Pow(r, 2);
+                imt = Math.Round(imt, 2);
+                string z = "";
+                if (imt <= 16)
+                {
+                    z = "Выраженный дефицит массы тела";
+                }
+                if ((imt >= 16) && (imt < 18.5))
+                {
+                    z = "Недостаточная (дефицит) масса тела";
+                }
+                if ((imt >= 18.5) && (imt < 25))
+                {
+                    z = "Норма";
+                }
+                if ((imt >= 25) && (imt <= 30))
+                {
+                    z = "Избыточная масса тела (предожирение)";
+                }
+                if ((imt >= 30) && (imt <= 35))
+                {
+                    z = "Ожирение первой степени";
+                }
+                if ((imt >= 35) && (imt <= 40))
+                {
+                    z = "Ожирение второй степени";
+                }
+                if (imt > 40)
+                {
+                    z = "Ожирение третьей степени (морбидное)";
+                }
+                var znach = z;
+
+                return Json(new
+                {
+                    imt = Math.Round(imt, 1),
+                    result = znach
                 });
             }
             return Json(new { });
