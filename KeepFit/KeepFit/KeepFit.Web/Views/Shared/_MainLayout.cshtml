@@ -13,6 +13,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
     <link href="~/Content/ladda-themeless.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-editable.css" rel="stylesheet" />
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -21,11 +22,13 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
+    <link href="~/Content/bootstrap-extensions.css" rel="stylesheet" />
     @RenderSection("scripts", false)
     <script src="~/Scripts/spin.js"></script>
     <script src="~/Scripts/ladda.js"></script>
     <script src="~/Scripts/isotope.js"></script>
     <script src="~/Scripts/jquery.loadTemplate-1.4.3.js"></script>
+    <script src="~/Scripts/bootstrap-editable.js"></script>
 </head>
 <body>
     @Html.Partial("_Header")

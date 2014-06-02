@@ -22,14 +22,14 @@ namespace KeepFit.Web.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Common {
+    public class Breadcrumbs {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Common() {
+        internal Breadcrumbs() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace KeepFit.Web.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KeepFit.Web.Resources.Common", typeof(Common).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KeepFit.Web.Resources.Breadcrumbs", typeof(Breadcrumbs).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,83 +61,29 @@ namespace KeepFit.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Keep Fit.
+        ///   Looks up a localized string similar to Главная.
         /// </summary>
-        public static string Brand {
+        public static string Home {
             get {
-                return ResourceManager.GetString("Brand", resourceCulture);
+                return ResourceManager.GetString("Home", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Углеводы.
+        ///   Looks up a localized string similar to Молочные продукты.
         /// </summary>
-        public static string Carbohydrates {
+        public static string MilkProducts {
             get {
-                return ResourceManager.GetString("Carbohydrates", resourceCulture);
+                return ResourceManager.GetString("MilkProducts", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Каталог.
+        ///   Looks up a localized string similar to Продукты питания.
         /// </summary>
-        public static string Catalog {
+        public static string Products {
             get {
-                return ResourceManager.GetString("Catalog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Упражнения.
-        /// </summary>
-        public static string Excercises {
-            get {
-                return ResourceManager.GetString("Excercises", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Жиры.
-        /// </summary>
-        public static string Fats {
-            get {
-                return ResourceManager.GetString("Fats", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Питание.
-        /// </summary>
-        public static string Nutrition {
-            get {
-                return ResourceManager.GetString("Nutrition", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Профиль.
-        /// </summary>
-        public static string Profile {
-            get {
-                return ResourceManager.GetString("Profile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Белки.
-        /// </summary>
-        public static string Proteins {
-            get {
-                return ResourceManager.GetString("Proteins", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Поиск.
-        /// </summary>
-        public static string Search {
-            get {
-                return ResourceManager.GetString("Search", resourceCulture);
+                return ResourceManager.GetString("Products", resourceCulture);
             }
         }
     }

@@ -25,7 +25,8 @@ namespace KeepFit.Web
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/iconmoon/style.css"));
         }
     }
 }

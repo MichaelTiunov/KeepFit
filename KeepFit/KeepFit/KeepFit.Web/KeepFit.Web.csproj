@@ -182,7 +182,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Filters\CurrentUserToViewBagResultFilter.cs" />
+    <Compile Include="Helpers\Filters\CustomGlobalFilters.cs" />
     <Compile Include="Helpers\HtmlHelper.cs" />
+    <Compile Include="Helpers\SimpleInjectorExtensionsForMvcFilters.cs" />
+    <Compile Include="Helpers\SimpleInjectorMvcFilterCollection.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\EnumLocalizationHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -200,6 +204,11 @@
     <Compile Include="Models\Profile\ProgressPhotoModel.cs" />
     <Compile Include="Models\Workout\WorkoutModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Breadcrumbs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Breadcrumbs.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Calculation.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -218,13 +227,20 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-editable.css" />
+    <Content Include="Content\bootstrap-extensions.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font\fontawesome-webfont.svg" />
     <Content Include="Content\fullcalendar\fullcalendar.css" />
     <Content Include="Content\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Content\iconmoon\demo-files\demo.css" />
+    <Content Include="Content\iconmoon\demo-files\demo.js" />
+    <Content Include="Content\iconmoon\demo.html" />
+    <Content Include="Content\iconmoon\fonts\icomoon.svg" />
+    <Content Include="Content\iconmoon\Read Me.txt" />
+    <Content Include="Content\iconmoon\style.css" />
     <Content Include="Content\ie7.css" />
     <Content Include="Content\ie8.css" />
     <Content Include="Content\images\bg.jpg" />
@@ -259,8 +275,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\iconmoon\fonts\icomoon.eot" />
+    <Content Include="Content\iconmoon\fonts\icomoon.ttf" />
+    <Content Include="Content\iconmoon\fonts\icomoon.woff" />
+    <Content Include="Content\iconmoon\selection.json" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\PublishProfiles\KeepFit.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap-editable.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\fullcalendar\fullcalendar.js" />
@@ -390,6 +412,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Breadcrumbs.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Breadcrumbs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Calculation.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Calculation.Designer.cs</LastGenOutput>
@@ -397,6 +423,7 @@
     <EmbeddedResource Include="Resources\Common.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Common.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Enums.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

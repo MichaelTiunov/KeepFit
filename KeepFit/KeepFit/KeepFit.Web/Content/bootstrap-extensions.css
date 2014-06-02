@@ -1,0 +1,60 @@
+﻿.navbar-custom {
+    background-color: #E1E8E4;
+}
+
+    .navbar-custom .navbar-nav > .active > a,
+    .navbar-custom .navbar-nav > .active > a:hover,
+    .navbar-custom .navbar-nav > .active > a:focus {
+        background-color: #93c910;
+    }
+
+
+.panel .panel-heading.header {
+    background-color: #ffffff;
+    text-align: center;
+    color: #6db3e7;
+    font-size: 22px;
+}
+
+.panel-custom .well {
+    background-color: #fff;
+}
+
+.breadcrumb > li + li.active-breadcrumb {
+    color: #93c910;
+    font-size: 16px;
+}
+
+.breadcrumb > li > a {
+    color: #6db3e7;
+}
+
+.breadcrumb.breadcrumb-custom > li + li:before {
+    content: "> ";
+    padding: 0 5px;
+}
+
+.icon.icon-search.icon-search-custom {
+    color: #6db3e7;
+}
+
+.form-control.custom-input {
+    border-color: #6db3e7;
+    -ms-border-radius: 4px;
+    border-radius: 4px !important;
+}
+
+.input-group-addon.custom-addon {
+    background-color: #fff;
+    border: 0 none;
+}
+
+.catalog-name {
+    background-color: #6db3e7;
+    color: #fff;
+}
+
+
+.field-validation-error {
+    color: red;
+}

@@ -2,6 +2,8 @@
 using System.Web.Mvc;
 using KeepFit.Core.Models;
 using KeepFit.Core.Services;
+using KeepFit.Web.Helpers;
+using KeepFit.Web.Helpers.Filters;
 using KeepFit.Web.Models;
 using SimpleInjector;
 using SimpleInjector.Integration.Web.Mvc;
@@ -22,7 +24,10 @@ namespace KeepFit.Web
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());
             container.RegisterMvcAttributeFilterProvider();
 
-
+            foreach (var filterWithOrder in CustomGlobalFilters.FiltersWithOrders)
+            {
+                container.RegisterGlobalMvcFilter(filterWithOrder.Key, filterOrder: filterWithOrder.Value);
+            }
             //container.Register<IKeepFitContext>(() => new KeepFitContext(container.GetInstance<IIdentityAuditProvider>()));
             //container.Register<IDaikinContext, DaikinContext>();
             //TODO: REMOVEME

@@ -5,8 +5,8 @@ namespace KeepFit.Core.Models
     public enum RoleType
     {
         [Description("None")]
-        Admin = 0,
+        Admin = 1,
         [Description("Sales Representative")]
-        User = 1
+        User = 2
     }
 }

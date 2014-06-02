@@ -23,6 +23,10 @@ namespace KeepFit.Core.Models.Mapping
             Property(t => t.UpdatedDate)
                 .IsRequired();
 
+            HasRequired(t => t.User)
+               .WithMany(t => t.Ingestions)
+               .HasForeignKey(d => d.UserId);
+
         }
     }
 }

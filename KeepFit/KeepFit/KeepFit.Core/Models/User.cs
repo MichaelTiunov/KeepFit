@@ -13,6 +13,7 @@ namespace KeepFit.Core.Models
             ProgressPhotos = new Collection<ProgressPhoto>();
             Workouts = new List<Workout>();
             Menus = new List<Menu>();
+            Ingestions = new List<Ingestion>();
         }
 
         public int UserId { get; set; }
@@ -39,6 +40,8 @@ namespace KeepFit.Core.Models
         public virtual ICollection<ProgressPhoto> ProgressPhotos { get; set; }
 
         public virtual ICollection<Workout> Workouts { get; set; }
+
+        public virtual ICollection<Ingestion> Ingestions { get; set; } 
 
         public virtual ICollection<Menu> Menus { get; set; } 
     }

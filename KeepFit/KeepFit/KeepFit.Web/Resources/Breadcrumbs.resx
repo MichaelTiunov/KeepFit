@@ -117,31 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Brand" xml:space="preserve">
-    <value>Keep Fit</value>
+  <data name="Home" xml:space="preserve">
+    <value>Главная</value>
   </data>
-  <data name="Carbohydrates" xml:space="preserve">
-    <value>Углеводы</value>
+  <data name="MilkProducts" xml:space="preserve">
+    <value>Молочные продукты</value>
   </data>
-  <data name="Catalog" xml:space="preserve">
-    <value>Каталог</value>
-  </data>
-  <data name="Excercises" xml:space="preserve">
-    <value>Упражнения</value>
-  </data>
-  <data name="Fats" xml:space="preserve">
-    <value>Жиры</value>
-  </data>
-  <data name="Nutrition" xml:space="preserve">
-    <value>Питание</value>
-  </data>
-  <data name="Profile" xml:space="preserve">
-    <value>Профиль</value>
-  </data>
-  <data name="Proteins" xml:space="preserve">
-    <value>Белки</value>
-  </data>
-  <data name="Search" xml:space="preserve">
-    <value>Поиск</value>
+  <data name="Products" xml:space="preserve">
+    <value>Продукты питания</value>
   </data>
 </root>

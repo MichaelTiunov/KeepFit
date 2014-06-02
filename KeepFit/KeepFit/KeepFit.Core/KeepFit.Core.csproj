@@ -99,6 +99,10 @@
     <Compile Include="Migrations\201405161007206_ProductType.Designer.cs">
       <DependentUpon>201405161007206_ProductType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405280438007_useringestions.cs" />
+    <Compile Include="Migrations\201405280438007_useringestions.Designer.cs">
+      <DependentUpon>201405280438007_useringestions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
@@ -205,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201405161007206_ProductType.resx">
       <DependentUpon>201405161007206_ProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405280438007_useringestions.resx">
+      <DependentUpon>201405280438007_useringestions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,38 +1,91 @@
-﻿@using KeepFit.Core.Models
+﻿@using System.Web.Mvc.Html
+@using KeepFit.Core.Models
+@using KeepFit.Web.Resources
 @model  KeepFit.Web.Models.Nutrition.ProductsModel
 <style>
     .item {
-        background: none repeat scroll 0 0 #888888;
-        color: #262524;
         float: left;
-        height: 100px;
         margin: 5px;
         padding: 10px;
         position: relative;
-        width: 150px;
+        width: 270px;
+        height: 300px;
         -ms-border-radius: 5px;
         border-radius: 5px;
+        border: 1px solid #5BC0DE;
     }
 
     .iso-container {
-        height: 300px;
-        overflow-y: auto;
+        margin-top: 50px;
     }
 </style>
-<div id="filters" class="button-filter-group js-radio-button-group">
-    @foreach (ProductType type in Model.ProductTypes)
-    {
-        <button class="ladda-button button-filter" data-style="expand-left" data-filter="@type.ProductTypeId">@type.Name</button>
-    }
-</div>
-<div class="iso-container">
-    @foreach (Product product in Model.Products)
-    {
-        <div class="item @product.ProductTypeId" data-category="@product.ProductTypeId">
-            @product.Name
+
+<div class="row">
+    <div class="col-md-3">
+
+        <div id="filters" class="button-filter-group js-radio-button-group">
+            <div class="well catalog-name">
+                @Common.Catalog
+            </div>
+            @foreach (ProductType type in Model.ProductTypes)
+            {
+                <button class="ladda-button button-filter btn btn-info btn-sm btn-block" data-style="expand-left" data-filter="@type.ProductTypeId">
+                    @type.Name<span></span>
+                </button>
+            }
         </div>
-    }
+    </div>
+    <div class="col-md-9">
+        <div class="col-md-8">
+            <ul class="breadcrumb breadcrumb-custom" style="margin-bottom: 5px;">
+                <li>@Html.ActionLink(Breadcrumbs.Home, "Index", "Home")</li>
+                <li>@Html.ActionLink(Breadcrumbs.Products, "Products", "Nutrition")</li>
+                <li class="active active-breadcrumb js-dynamic-breadcrumb">@Breadcrumbs.MilkProducts</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon custom-addon">
+                        <span class="icon icon-search icon-search-custom"></span>
+                    </span>
+                    <input id="prependedcheckbox" name="prependedcheckbox" class="form-control custom-input" type="text" placeholder="@Common.Search">
+                </div>
+            </div>
+        </div>
+        <div class="iso-container">
+            @foreach (Product product in Model.Products)
+            {
+                <div class="item panel panel-custom panel-default @product.ProductTypeId" data-category="@product.ProductTypeId">
+                    <div class="panel-heading header">
+                        @product.Name
+                        @if (Request.IsAuthenticated && (RoleType)ViewBag.CurrentUser.RoleType == RoleType.Admin)
+                        {
+                            <span class="icon icon-pencil icon-clickable js-product-edit"></span>
+                        }
+                    </div>
+                    <div class="panel-body">
+                        <div class="well">
+
+                        </div>
+                        <ul>
+                            <li>
+                                @Common.Proteins <span class="badge">@product.Proteins</span>
+                            </li>
+                            <li>
+                                @Common.Fats <span class="badge">@product.Fats</span>
+                            </li>
+                            <li>
+                                @Common.Carbohydrates <span class="badge">@product.Carbohydrates</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
 </div>
+
 
 <script src="~/Scripts/jquery.infinitescroll.js"></script>
 <script>
@@ -46,14 +99,19 @@
                 easing: 'linear',
                 queue: false,
             }
-        });
+        }).isotope('insert');
 
         $('.button-filter-group').on('click', 'button', function () {
+            $('.js-dynamic-breadcrumb').text($(this).text());
+
             var filterValue = $(this).attr('data-filter');
             var l = Ladda.create(this);
             getProducts(filterValue, l);
         });
 
+        $('body').on('click', '.js-product-edit', function () {
+            alert();
+        });
         function getProducts(typeId, l) {
             l.start();
 
