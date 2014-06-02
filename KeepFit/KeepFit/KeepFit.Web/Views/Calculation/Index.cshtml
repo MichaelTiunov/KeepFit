@@ -10,7 +10,16 @@
         <ul class="nav nav-tabs" style="margin-bottom: 15px;">
             <li class="active"><a href="#caloriesCalculation" data-toggle="tab">Расчёт килокалорий</a></li>
             <li><a href="#imt" data-toggle="tab">ИМТ</a></li>
-            <li><a href="#weightControl" data-toggle="tab">Контроль веса</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Контроль веса <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#weightEnter" data-toggle="tab">Ввести вес</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#weightStatistic" data-toggle="tab">Диаграмма веса</a></li>
+                </ul>
+            </li>
         </ul>
         <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade active in" id="caloriesCalculation">
@@ -19,9 +28,74 @@
             <div class="tab-pane fade" id="imt">
                 @Html.Partial("IMTCalculation", Model.CaloriesCalculationModel)
             </div>
-            <div class="tab-pane fade" id="weightControl">
-                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+            <div class="tab-pane fade" id="weightEnter">
+                @Html.Partial("_AddBodyComposition", Model.BodyComposition)
+            </div>
+            <div class="tab-pane fade" id="weightStatistic">
+                @Html.Partial("_BodyWeight", Model.BodyCompositions)
             </div>
         </div>
     </div>
 </div>
+
+
+
+<script src="~/Scripts/highcharts/highcharts.js"></script>
+<script src="~/Scripts/highcharts/modules/exporting.js"></script>
+<script>
+    $(function () {
+        var weightArray = @Html.Raw(Json.Encode(@Model.GetWeight(Model.BodyCompositions).ToArray()));
+        var dateArray = @Html.Raw(Json.Encode(@Model.GetDate(Model.BodyCompositions).ToArray()));
+
+        $('#container').highcharts({
+            chart: {
+                //type: 'column'
+            },
+            title: {
+                text: 'Контроль веса'
+            },
+            xAxis: {
+                categories:dateArray
+            },
+            yAxis: {
+                min:50,
+                title: {
+                    text: 'Вес в килограммах'
+                },
+                labels: {
+                    formatter: function () {
+                        return this.value;
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y} kg</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                area: {
+                    pointStart: 0,
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                type: 'column',
+                name: 'Вес',
+                data: weightArray
+            }]
+        });
+    });
+</script>

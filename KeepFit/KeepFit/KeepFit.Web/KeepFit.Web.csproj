@@ -365,7 +365,7 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Profile\_AddBodyComposition.cshtml" />
+    <Content Include="Views\Shared\_AddBodyComposition.cshtml" />
     <Content Include="Views\Profile\_ProfileOverview.cshtml" />
     <Content Include="Views\Profile\_ProfileProgressPhoto.cshtml" />
     <Content Include="Views\Profile\_ProfileWorkouts.cshtml" />
@@ -378,7 +378,7 @@
     <Content Include="Views\Profile\_ProfileFeatures.cshtml" />
     <Content Include="Views\Profile\ProgressPhotos.cshtml" />
     <Content Include="Views\Profile\BodyWeight.cshtml" />
-    <Content Include="Views\Profile\_BodyWeight.cshtml" />
+    <Content Include="Views\Shared\_BodyWeight.cshtml" />
     <Content Include="Views\Workout\Index.cshtml" />
     <Content Include="Views\Excercise\Index.cshtml" />
     <Content Include="Views\Excercise\_ExcercisesCategory.cshtml" />

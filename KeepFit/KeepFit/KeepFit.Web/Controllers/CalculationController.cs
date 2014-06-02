@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using KeepFit.Core.Dto;
 using KeepFit.Core.Services;
 using KeepFit.Web.Models;
 
@@ -7,17 +8,20 @@ namespace KeepFit.Web.Controllers
 {
     public class CalculationController : BaseController
     {
-        // GET: Calculation
-        public CalculationController(IAccountService accountService, IIdentityService identityService)
+        private readonly IBodyCompositionService bodyCompositionService;
+        public CalculationController(IAccountService accountService, IIdentityService identityService, IBodyCompositionService bodyCompositionService)
             : base(accountService, identityService)
         {
+            this.bodyCompositionService = bodyCompositionService;
         }
 
         public ActionResult Index()
         {
             var model = new CalculationModel
             {
-                CaloriesCalculationModel = new CaloriesCalculationModel()
+                CaloriesCalculationModel = new CaloriesCalculationModel(),
+                BodyComposition = new BodyCompositionDto(),
+                BodyCompositions = bodyCompositionService.GetBodyCompositions(KeepFitIdentity.UserId)
             };
             return View(model);
         }
@@ -53,9 +57,6 @@ namespace KeepFit.Web.Controllers
                         bmr *= 1.9;
                         break;
                 }
-
-                double r = model.Height / 100;
-
 
                 Session["BMR"] = Math.Round(bmr);
 
