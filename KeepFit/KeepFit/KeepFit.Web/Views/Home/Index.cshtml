@@ -2,3 +2,28 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
     ViewBag.Title = "Home Page";
 }
+<link href="~/Content/carousel/style.css" rel="stylesheet" />
+<div class="row">
+    @Html.Partial("_Carousel")
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <blockquote>
+            <p>@Html.ActionLink("Расчёт", "Index", "Calculation")</p>
+            <small>Расчитайте свою суточную норму килокалорий.</small>
+        </blockquote>
+    </div>
+    <div class="col-md-4">
+        <blockquote>
+            <p>@Html.ActionLink("Питание", "Products", "Nutrition")</p>
+            <small>Найдите полузные продукты для составления меню</small>
+        </blockquote>
+    </div>
+    <div class="col-md-4">
+        <blockquote>
+            <p>@Html.ActionLink("Упражнения", "Index", "Workout")</p>
+            <small>Выберите упражнения которые вам подходят</small>
+        </blockquote>
+    </div>
+</div>

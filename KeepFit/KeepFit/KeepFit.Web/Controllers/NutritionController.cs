@@ -31,6 +31,14 @@ namespace KeepFit.Web.Controllers
             return View();
         }
 
+        public ActionResult EditProduct(int id)
+        {
+            return View();
+        }
+        public ActionResult Product(int id)
+        {
+            return View();
+        }
         public ActionResult Products()
         {
             var types = productService.GetProductTypes();

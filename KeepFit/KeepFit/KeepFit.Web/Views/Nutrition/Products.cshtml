@@ -61,7 +61,7 @@
                         @product.Name
                         @if (Request.IsAuthenticated && (RoleType)ViewBag.CurrentUser.RoleType == RoleType.Admin)
                         {
-                            <span class="icon icon-pencil icon-clickable js-product-edit"></span>
+                            <span class="icon icon-pencil icon-clickable js-product-edit" data-productid="@product.Id"></span>
                         }
                     </div>
                     <div class="panel-body">
@@ -110,7 +110,6 @@
         });
 
         $('body').on('click', '.js-product-edit', function () {
-            alert();
         });
         function getProducts(typeId, l) {
             l.start();
@@ -125,10 +124,17 @@
 
 
                     $.each(result, function (i, v) {
-                        $('#productsTmpl').tmpl({ productName: v.Name, productType: v.ProductTypeId }).appendTo(container);
+                        $('#productsTmpl').tmpl(
+                            {
+                                productName: v.Name,
+                                productTypeId: v.ProductTypeId,
+                                protein: v.Proteins,
+                                fat: v.Fats,
+                                carbohydrates: v.Carbohydrates
+                            }
+                        ).appendTo(container);
                     });
                     $container.empty().append(container.html()).isotope('insert', container.html());
-
                 },
                 error: function (result) {
                     alert('Error!');
@@ -140,8 +146,31 @@
     });
 </script>
 <script id="productsTmpl" type="text/x-jquery-tmpl">
-    <div class="item" data-category="${productType}">
-        ${productName}
+    <div class="item panel panel-custom panel-default" data-category="${productTypeId}">
+        <div class="panel-heading header">
+            ${productName}
+            @if (Request.IsAuthenticated && (RoleType)ViewBag.CurrentUser.RoleType == RoleType.Admin)
+            {
+                <span class="icon icon-pencil icon-clickable js-product-edit"></span>
+            }
+        </div>
+        <div class="panel-body">
+            <div class="well">
+
+            </div>
+            <ul>
+                <li>
+                    @Common.Proteins <span class="badge">${protein}</span>
+                </li>
+                <li>
+                    @Common.Fats <span class="badge">${fat}</span>
+                </li>
+                <li>
+                    @Common.Carbohydrates <span class="badge">${carbohydrates}</span>
+                </li>
+            </ul>
+        </div>
     </div>
+
 </script>
 
