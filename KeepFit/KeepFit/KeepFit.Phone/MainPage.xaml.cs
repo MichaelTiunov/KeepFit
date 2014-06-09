@@ -44,5 +44,10 @@ namespace KeepFit.Phone
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
+
+        private void clickMeButton_Click(object sender, RoutedEventArgs e)
+        {
+            resultTextBlock.Text = "Hello World!";
+        }
     }
 }
