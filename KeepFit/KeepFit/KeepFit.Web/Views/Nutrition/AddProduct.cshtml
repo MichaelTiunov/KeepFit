@@ -1,0 +1,57 @@
+﻿@using Products = KeepFit.Web.Resources.Products
+@model KeepFit.Core.Dto.ProductDto
+
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddProduct", "Nutrition", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CaloricValue, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.CaloricValue, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CaloricValue)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Proteins, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Proteins, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Proteins)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Carbohydrates, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Carbohydrates, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Carbohydrates)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Fats, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Fats, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Fats)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ProductTypeId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.ProductTypeId, new SelectList(Model.ProductTypes, "ProductTypeId", "Name"), new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ProductTypeId)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="@Products.AddProduct" class="btn btn-default" />
+        </div>
+    </div>
+}

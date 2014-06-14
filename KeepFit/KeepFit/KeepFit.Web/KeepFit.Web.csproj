@@ -199,6 +199,7 @@
     <Compile Include="Models\KeepFitIdentity.cs" />
     <Compile Include="Models\KeepFitPrincipal.cs" />
     <Compile Include="Models\Nutrition\NutritionModel.cs" />
+    <Compile Include="Models\Nutrition\ProductModel.cs" />
     <Compile Include="Models\Nutrition\ProductsModel.cs" />
     <Compile Include="Models\Profile\BodyWeightModel.cs" />
     <Compile Include="Models\Profile\ProfileModel.cs" />
@@ -224,6 +225,11 @@
       <DependentUpon>Enums.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Products.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Products.resx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -406,6 +412,7 @@
     <Content Include="Views\Nutrition\Product.cshtml" />
     <Content Include="Views\Nutrition\EditProduct.cshtml" />
     <Content Include="Views\Shared\_Carousel.cshtml" />
+    <Content Include="Views\Nutrition\AddProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -442,6 +449,10 @@
     <EmbeddedResource Include="Resources\Enums.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Enums.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Products.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Products.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

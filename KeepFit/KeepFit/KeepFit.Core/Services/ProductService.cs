@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using KeepFit.Core.Dto;
 using KeepFit.Core.Models;
 
 namespace KeepFit.Core.Services
@@ -14,8 +14,17 @@ namespace KeepFit.Core.Services
         {
             this.keepFitContext = keepFitContext;
         }
-        public void AddProduct(Product product)
+        public void AddProduct(ProductDto productDto)
         {
+            var product = new Product
+            {
+                Name = productDto.Name,
+                CaloricValue = productDto.CaloricValue,
+                Proteins = productDto.Proteins,
+                Carbohydrates = productDto.Carbohydrates,
+                Fats = productDto.Fats,
+                ProductTypeId = productDto.ProductTypeId
+            };
             keepFitContext.Products.AddOrUpdate(product);
             keepFitContext.SaveChanges();
         }

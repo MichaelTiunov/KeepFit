@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using KeepFit.Core.Dto;
 using KeepFit.Core.Models;
 using KeepFit.Core.Services;
 using KeepFit.Web.Models;
@@ -38,6 +40,24 @@ namespace KeepFit.Web.Controllers
         public ActionResult Product(int id)
         {
             return View();
+        }
+
+        public ViewResult AddProduct()
+        {
+            var productDto = new ProductDto
+            {
+                ProductTypes = productService.GetProductTypes()
+            };
+            return View(productDto);
+        }
+        [HttpPost]
+        public ActionResult AddProduct(ProductDto product)
+        {
+            if (ModelState.IsValid)
+            {
+                productService.AddProduct(product);
+            }
+            return RedirectToAction("Products");
         }
         public ActionResult Products()
         {

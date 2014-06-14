@@ -36,12 +36,17 @@
         </div>
     </div>
     <div class="col-md-9">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <ul class="breadcrumb breadcrumb-custom" style="margin-bottom: 5px;">
                 <li>@Html.ActionLink(Breadcrumbs.Home, "Index", "Home")</li>
                 <li>@Html.ActionLink(Breadcrumbs.Products, "Products", "Nutrition")</li>
                 <li class="active active-breadcrumb js-dynamic-breadcrumb">@Breadcrumbs.MilkProducts</li>
             </ul>
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-info js-add-product">
+                +
+            </button>
         </div>
         <div class="col-md-4">
             <div class="form-group">
@@ -90,6 +95,10 @@
 <script src="~/Scripts/jquery.infinitescroll.js"></script>
 <script>
     $(function () {
+        $('.js-add-product').on('click', function () {
+            window.location.href = '@Url.Action("AddProduct","Nutrition")';
+        });
+
         var $container = $('.iso-container').isotope({
             itemSelector: '.item',
             layoutMode: 'fitRows',

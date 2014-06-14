@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="KeepFit.SPA.MvcApplication" Language="C#" %>
