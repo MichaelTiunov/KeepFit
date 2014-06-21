@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using KeepFit.Core.Dto;
@@ -50,6 +49,7 @@ namespace KeepFit.Web.Controllers
             };
             return View(productDto);
         }
+
         [HttpPost]
         public ActionResult AddProduct(ProductDto product)
         {
@@ -59,6 +59,20 @@ namespace KeepFit.Web.Controllers
             }
             return RedirectToAction("Products");
         }
+        public ViewResult AddProductType()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddProductType(ProductTypeDto productType)
+        {
+            if (ModelState.IsValid)
+            {
+                productService.AddProductType(productType);
+            }
+            return RedirectToAction("Products");
+        }
+
         public ActionResult Products()
         {
             var types = productService.GetProductTypes();

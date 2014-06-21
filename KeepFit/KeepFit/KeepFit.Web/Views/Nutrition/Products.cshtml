@@ -27,6 +27,7 @@
             <div class="well catalog-name">
                 @Common.Catalog
             </div>
+            <button class="btn btn-info btn-block js-add-category">Добавить категорию</button>
             @foreach (ProductType type in Model.ProductTypes)
             {
                 <button class="ladda-button button-filter btn btn-info btn-sm btn-block" data-style="expand-left" data-filter="@type.ProductTypeId">
@@ -97,6 +98,10 @@
     $(function () {
         $('.js-add-product').on('click', function () {
             window.location.href = '@Url.Action("AddProduct","Nutrition")';
+        });
+
+        $('.js-add-category').on('click',function() {
+            window.location.href = '@Url.Action("AddProductType","Nutrition")';
         });
 
         var $container = $('.iso-container').isotope({

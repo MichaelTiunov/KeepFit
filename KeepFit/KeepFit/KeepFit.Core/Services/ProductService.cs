@@ -29,9 +29,15 @@ namespace KeepFit.Core.Services
             keepFitContext.SaveChanges();
         }
 
-        public void AddProductType(ProductType product)
+        public void AddProductType(ProductTypeDto productTypeDto)
         {
-            keepFitContext.ProductTypes.AddOrUpdate(product);
+            var productType = new ProductType
+            {
+                Name = productTypeDto.Name,
+                Description = productTypeDto.Description
+            };
+
+            keepFitContext.ProductTypes.AddOrUpdate(productType);
             keepFitContext.SaveChanges();
         }
 

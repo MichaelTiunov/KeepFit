@@ -30,11 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -54,6 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\BodyCompositionDto.cs" />
+    <Compile Include="Dto\ProductDto.cs" />
+    <Compile Include="Dto\ProductTypeDto.cs" />
+    <Compile Include="Dto\WorkoutDto.cs" />
     <Compile Include="Extensions\UserExtensions.cs" />
     <Compile Include="Migrations\201403171844285_init.cs" />
     <Compile Include="Migrations\201403171844285_init.Designer.cs">
@@ -102,6 +108,14 @@
     <Compile Include="Migrations\201405280438007_useringestions.cs" />
     <Compile Include="Migrations\201405280438007_useringestions.Designer.cs">
       <DependentUpon>201405280438007_useringestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406140830353_ProductTypeDescription.cs" />
+    <Compile Include="Migrations\201406140830353_ProductTypeDescription.Designer.cs">
+      <DependentUpon>201406140830353_ProductTypeDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406140848369_test.cs" />
+    <Compile Include="Migrations\201406140848369_test.Designer.cs">
+      <DependentUpon>201406140848369_test.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -213,12 +227,12 @@
     <EmbeddedResource Include="Migrations\201405280438007_useringestions.resx">
       <DependentUpon>201405280438007_useringestions.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KeepFit.Core.Dto\KeepFit.Core.Dto.csproj">
-      <Project>{7ED8CB56-E92D-4161-9290-D5CF42867FCA}</Project>
-      <Name>KeepFit.Core.Dto</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Migrations\201406140830353_ProductTypeDescription.resx">
+      <DependentUpon>201406140830353_ProductTypeDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406140848369_test.resx">
+      <DependentUpon>201406140848369_test.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,7 +2,7 @@
 
 namespace KeepFit.Core.Models
 {
-    public class ProductType:AuditableEntity
+    public class ProductType : AuditableEntity
     {
         public ProductType()
         {
@@ -15,6 +15,9 @@ namespace KeepFit.Core.Models
         public int ProductTypeId { get; set; }
 
         public string Name { get; set; }
-        public virtual ICollection<Product> Products { get; set; } 
+
+        public string Description { get; set; }
+
+        public virtual ICollection<Product> Products { get; set; }
     }
 }
