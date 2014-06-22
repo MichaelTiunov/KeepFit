@@ -6,8 +6,9 @@ namespace KeepFit.Core.Services
 {
     public interface IProductService
     {
-        void AddProduct(ProductDto product);
+        void AddOrUpdateProduct(ProductDto product);
         void AddProductType(ProductTypeDto product);
+        ProductDto GetProduct(int productId);
         IEnumerable<Product> GetProducts();
         IEnumerable<ProductType> GetProductTypes();
         IEnumerable<Product> GetProductsByType(int typeId);

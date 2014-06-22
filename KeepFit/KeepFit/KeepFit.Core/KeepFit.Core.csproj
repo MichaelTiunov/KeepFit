@@ -49,6 +49,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -117,6 +118,14 @@
     <Compile Include="Migrations\201406140848369_test.Designer.cs">
       <DependentUpon>201406140848369_test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201406210827144_Pictures.cs" />
+    <Compile Include="Migrations\201406210827144_Pictures.Designer.cs">
+      <DependentUpon>201406210827144_Pictures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406220740594_ProductPhoto.cs" />
+    <Compile Include="Migrations\201406220740594_ProductPhoto.Designer.cs">
+      <DependentUpon>201406220740594_ProductPhoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
@@ -146,6 +155,7 @@
     <Compile Include="Models\Mapping\IngestionMap.cs" />
     <Compile Include="Models\Mapping\MenuMap.cs" />
     <Compile Include="Models\Mapping\PasswordChangeMap.cs" />
+    <Compile Include="Models\Mapping\PictureMap.cs" />
     <Compile Include="Models\Mapping\ProductMap.cs" />
     <Compile Include="Models\Mapping\ProductTypeMap.cs" />
     <Compile Include="Models\Mapping\ProgressPhotoMap.cs" />
@@ -157,6 +167,7 @@
     <Compile Include="Models\Mapping\WorkoutMap.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\PasswordChange.cs" />
+    <Compile Include="Models\Picture.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductType.cs" />
@@ -232,6 +243,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201406140848369_test.resx">
       <DependentUpon>201406140848369_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406210827144_Pictures.resx">
+      <DependentUpon>201406210827144_Pictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406220740594_ProductPhoto.resx">
+      <DependentUpon>201406220740594_ProductPhoto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

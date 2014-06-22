@@ -19,6 +19,7 @@ namespace KeepFit.Core.Models
         public int ExcerciseCategoryId { get; set; }
         public ExcerciseCategory ExcerciseCategory { get; set; }
 
-        public virtual ICollection<Reps> Repses { get; set; } 
+        public virtual ICollection<Reps> Repses { get; set; }
+        public virtual ICollection<Picture> Pictures { get; set; }
     }
 }

@@ -63,7 +63,7 @@ namespace KeepFit.Web.Controllers
         //                    Proteins = double.TryParse(reader[5].ToString(), out proteins) ? proteins : 0,
         //                    ProductTypeId = int.TryParse(reader[1].ToString(), out typeId) ? typeId : 1
         //                };
-        //                productService.AddProduct(product);
+        //                productService.AddOrUpdateProduct(product);
         //            }
         //        }
         //        catch (Exception ex)

@@ -29,5 +29,7 @@ namespace KeepFit.Core.Models
         DbSet<Ingestion> Ingestions { get; set; }
 
         DbSet<ProductType> ProductTypes { get; set; }
+
+        DbSet<Picture> Pictures { get; set; }
     }
 }

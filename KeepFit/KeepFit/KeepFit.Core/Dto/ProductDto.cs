@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web;
 using KeepFit.Core.Models;
 
 namespace KeepFit.Core.Dto
 {
     public class ProductDto
     {
+        public int ProductId { get; set; }
         [Display(Name = "Название продукта")]
         public string Name { get; set; }
 
@@ -19,6 +21,10 @@ namespace KeepFit.Core.Dto
         public double Carbohydrates { get; set; }
         [Display(Name = "Категория")]
         public int ProductTypeId { get; set; }
+
+        [Display(Name = "Фото")]
+        [DataType(DataType.Upload)]
+        public HttpPostedFileBase ProductPhoto { get; set; }
 
         public IEnumerable<ProductType> ProductTypes { get; set; } 
     }

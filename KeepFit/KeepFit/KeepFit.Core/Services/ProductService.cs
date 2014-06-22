@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity.Migrations;
+using System.IO;
 using System.Linq;
 using KeepFit.Core.Dto;
 using KeepFit.Core.Models;
@@ -14,17 +16,27 @@ namespace KeepFit.Core.Services
         {
             this.keepFitContext = keepFitContext;
         }
-        public void AddProduct(ProductDto productDto)
+        public void AddOrUpdateProduct(ProductDto productDto)
         {
             var product = new Product
             {
+                ProductId = productDto.ProductId,
                 Name = productDto.Name,
                 CaloricValue = productDto.CaloricValue,
                 Proteins = productDto.Proteins,
                 Carbohydrates = productDto.Carbohydrates,
                 Fats = productDto.Fats,
-                ProductTypeId = productDto.ProductTypeId
+                ProductTypeId = productDto.ProductTypeId,
             };
+            if (productDto.ProductPhoto != null && productDto.ProductPhoto.ContentLength > 0)
+            {
+                using (var binaryReader = new BinaryReader(productDto.ProductPhoto.InputStream))
+                {
+                    byte[] array = binaryReader.ReadBytes(productDto.ProductPhoto.ContentLength);
+                    var base64File = Convert.ToBase64String(array);
+                    product.ProductPhoto = base64File;
+                }
+            }
             keepFitContext.Products.AddOrUpdate(product);
             keepFitContext.SaveChanges();
         }
@@ -39,6 +51,20 @@ namespace KeepFit.Core.Services
 
             keepFitContext.ProductTypes.AddOrUpdate(productType);
             keepFitContext.SaveChanges();
+        }
+
+        public ProductDto GetProduct(int productId)
+        {
+            return keepFitContext.Products.Where(x => x.ProductId == productId).Select(x => new ProductDto
+            {
+                ProductId = x.ProductId,
+                Name = x.Name,
+                CaloricValue = x.CaloricValue,
+                Proteins = x.Proteins,
+                Carbohydrates = x.Carbohydrates,
+                Fats = x.Fats,
+                ProductTypeId = x.ProductTypeId,
+            }).FirstOrDefault();
         }
 
         public IEnumerable<Product> GetProducts()

@@ -68,5 +68,14 @@ namespace KeepFit.Web.Resources {
                 return ResourceManager.GetString("AddProduct", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Редактировать.
+        /// </summary>
+        public static string EditProduct {
+            get {
+                return ResourceManager.GetString("EditProduct", resourceCulture);
+            }
+        }
     }
 }

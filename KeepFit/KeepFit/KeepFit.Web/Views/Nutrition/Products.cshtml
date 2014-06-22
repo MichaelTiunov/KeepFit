@@ -18,6 +18,14 @@
     .iso-container {
         margin-top: 50px;
     }
+
+        .iso-container img {
+            background: none;
+            width: 125px;
+            height: 125px;
+            float: none;
+            margin-left: 45px;
+        }
 </style>
 
 <div class="row">
@@ -71,20 +79,28 @@
                         }
                     </div>
                     <div class="panel-body">
-                        <div class="well">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @if (!string.IsNullOrEmpty(product.ProductPhoto))
+                                {
+                                    @Html.Raw("<img src=\"data:image/jpeg;base64," + product.ProductPhoto + "\" />")
+                                }
+                            </div>
+                        </div>
+                        <div class="row">
+                            <ul>
+                                <li>
+                                    @Common.Proteins <span class="badge">@product.Proteins</span>
+                                </li>
+                                <li>
+                                    @Common.Fats <span class="badge">@product.Fats</span>
+                                </li>
+                                <li>
+                                    @Common.Carbohydrates <span class="badge">@product.Carbohydrates</span>
+                                </li>
+                            </ul>
 
                         </div>
-                        <ul>
-                            <li>
-                                @Common.Proteins <span class="badge">@product.Proteins</span>
-                            </li>
-                            <li>
-                                @Common.Fats <span class="badge">@product.Fats</span>
-                            </li>
-                            <li>
-                                @Common.Carbohydrates <span class="badge">@product.Carbohydrates</span>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             }
@@ -100,7 +116,7 @@
             window.location.href = '@Url.Action("AddProduct","Nutrition")';
         });
 
-        $('.js-add-category').on('click',function() {
+        $('.js-add-category').on('click', function () {
             window.location.href = '@Url.Action("AddProductType","Nutrition")';
         });
 
@@ -124,6 +140,8 @@
         });
 
         $('body').on('click', '.js-product-edit', function () {
+            var productId = $(this).data().productid;
+            window.location.href = '@Url.Action("EditProduct","Nutrition")' + '/' + productId;
         });
         function getProducts(typeId, l) {
             l.start();
@@ -140,11 +158,13 @@
                     $.each(result, function (i, v) {
                         $('#productsTmpl').tmpl(
                             {
+                                productId: v.ProductId,
                                 productName: v.Name,
                                 productTypeId: v.ProductTypeId,
                                 protein: v.Proteins,
                                 fat: v.Fats,
-                                carbohydrates: v.Carbohydrates
+                                carbohydrates: v.Carbohydrates,
+                                productPhoto: v.ProductPhoto
                             }
                         ).appendTo(container);
                     });
@@ -165,26 +185,29 @@
             ${productName}
             @if (Request.IsAuthenticated && (RoleType)ViewBag.CurrentUser.RoleType == RoleType.Admin)
             {
-                <span class="icon icon-pencil icon-clickable js-product-edit"></span>
+                <span class="icon icon-pencil icon-clickable js-product-edit" data-productid="${productId}"></span>
             }
         </div>
         <div class="panel-body">
-            <div class="well">
-
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="data:image/jpeg;base64,${productPhoto}" />
+                </div>
             </div>
-            <ul>
-                <li>
-                    @Common.Proteins <span class="badge">${protein}</span>
-                </li>
-                <li>
-                    @Common.Fats <span class="badge">${fat}</span>
-                </li>
-                <li>
-                    @Common.Carbohydrates <span class="badge">${carbohydrates}</span>
-                </li>
-            </ul>
+            <div class="col-md-12">
+                <ul>
+                    <li>
+                        @Common.Proteins <span class="badge">${protein}</span>
+                    </li>
+                    <li>
+                        @Common.Fats <span class="badge">${fat}</span>
+                    </li>
+                    <li>
+                        @Common.Carbohydrates <span class="badge">${carbohydrates}</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-
 </script>
 

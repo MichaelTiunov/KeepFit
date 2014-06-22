@@ -20,7 +20,11 @@ namespace KeepFit.Core.Models
 
         public int ProductTypeId { get; set; }
         public ProductType ProductType { get; set; }
-        public virtual ICollection<Ingestion> Ingestions { get; set; } 
+        public virtual ICollection<Ingestion> Ingestions { get; set; }
+
+        public virtual ICollection<Picture> Pictures { get; set; }
+
+        public string ProductPhoto { get; set; }
 
     }
 }

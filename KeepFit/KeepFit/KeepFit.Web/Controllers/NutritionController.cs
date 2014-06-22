@@ -34,7 +34,18 @@ namespace KeepFit.Web.Controllers
 
         public ActionResult EditProduct(int id)
         {
-            return View();
+            var product = productService.GetProduct(id);
+            product.ProductTypes = productService.GetProductTypes();
+            return View(product);
+        }
+        [HttpPost]
+        public ActionResult EditProduct(ProductDto product)
+        {
+            if (ModelState.IsValid)
+            {
+                productService.AddOrUpdateProduct(product);
+            }
+            return RedirectToAction("Products");
         }
         public ActionResult Product(int id)
         {
@@ -55,7 +66,7 @@ namespace KeepFit.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                productService.AddProduct(product);
+                productService.AddOrUpdateProduct(product);
             }
             return RedirectToAction("Products");
         }
@@ -87,7 +98,7 @@ namespace KeepFit.Web.Controllers
         [HttpPost]
         public JsonResult GetProducts(int typeId)
         {
-            var products = productService.GetProductsByType(typeId);
+            var products = productService.GetProductsByType(typeId).ToList();
             return Json(products);
         }
     }
