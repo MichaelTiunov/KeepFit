@@ -7,13 +7,13 @@ namespace KeepFit.Core.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class ExcercisePhoto : IMigrationMetadata
+    public sealed partial class init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ExcercisePhoto));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201406220845263_ExcercisePhoto"; }
+            get { return "201406221742454_init"; }
         }
         
         string IMigrationMetadata.Source

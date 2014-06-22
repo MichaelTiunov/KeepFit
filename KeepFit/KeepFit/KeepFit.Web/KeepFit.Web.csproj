@@ -392,7 +392,6 @@
     <Content Include="Views\Profile\_ProfileProgressPhoto.cshtml" />
     <Content Include="Views\Profile\_ProfileWorkouts.cshtml" />
     <Content Include="Views\Profile\_ProfileNutrition.cshtml" />
-    <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Banner.cshtml" />
     <Content Include="Views\Shared\_Features.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
@@ -424,6 +423,7 @@
     <Content Include="Views\Excercise\AddExcerciseCategory.cshtml" />
     <Content Include="Views\Excercise\AddExcercise.cshtml" />
     <Content Include="Views\Excercise\EditExcercise.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

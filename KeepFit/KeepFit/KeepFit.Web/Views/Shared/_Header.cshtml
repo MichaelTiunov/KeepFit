@@ -1,0 +1,20 @@
+﻿<div class="navbar">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">KeepFit</a>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+            <li>@Html.ActionLink("Продукты","Products","Nutrition")</li>
+            <li>@Html.ActionLink("Упражнения", "Index", "Excercise")</li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            @Html.Partial("_LoginPartial")
+        </ul>
+    </div>
+</div>

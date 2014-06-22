@@ -4,8 +4,6 @@ namespace KeepFit.Core.Models
 {
     public interface IKeepFitContext : IDatabaseContext
     {
-        DbSet<Blog> Blogs { get; set; }
-        DbSet<Post> Posts { get; set; }
         DbSet<User> Users { get; set; }
         DbSet<Role> Roles { get; set; }
 
@@ -14,7 +12,6 @@ namespace KeepFit.Core.Models
         DbSet<Individual> Individuals { get; set; }
         DbSet<PasswordChange> PasswordChanges { get; set; }
         DbSet<State> States { get; set; }
-        DbSet<Country> Countries { get; set; }
         DbSet<BodyComposition> BodyCompositions { get; set; }
         DbSet<ProgressPhoto> ProgressPhotos { get; set; }
         DbSet<Excercise> Excercises { get; set; }
