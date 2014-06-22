@@ -1,8 +1,6 @@
-﻿using System;
-using System.Data.Entity;
-using System.Data.OleDb;
+﻿using System.Linq;
 using System.Web.Mvc;
-using KeepFit.Core.Models;
+using KeepFit.Core.Dto;
 using KeepFit.Core.Services;
 using KeepFit.Web.Models;
 
@@ -30,6 +28,61 @@ namespace KeepFit.Web.Controllers
             return View(model);
         }
 
+        public ViewResult AddExcerciseCategory()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddExcerciseCategory(ExcerciseCategoryDto productType)
+        {
+            if (ModelState.IsValid)
+            {
+                excerciseService.AddOrUpdateExcerciseCategory(productType);
+            }
+            return RedirectToAction("Index");
+        }
+
+        public ViewResult AddExcercise()
+        {
+            var excerciseDto = new ExcerciseDto
+            {
+                ExcerciseCategories = excerciseService.GetCategories()
+            };
+            return View(excerciseDto);
+        }
+
+        [HttpPost]
+        public ActionResult AddExcercise(ExcerciseDto product)
+        {
+            if (ModelState.IsValid)
+            {
+                excerciseService.AddOrUpdateExcercise(product);
+            }
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult EditExcercise(int id)
+        {
+            var excercise = excerciseService.GetExcercise(id);
+            excercise.ExcerciseCategories = excerciseService.GetCategories();
+            return View(excercise);
+        }
+        [HttpPost]
+        public ActionResult EditExcercise(ExcerciseDto excerciseDto)
+        {
+            if (ModelState.IsValid)
+            {
+                excerciseService.AddOrUpdateExcercise(excerciseDto);
+            }
+            return RedirectToAction("Index");
+        }
+
+        public JsonResult GetExcercises(int typeId)
+        {
+            var products = excerciseService.GetExcercises(typeId).ToList();
+            return Json(products);
+        }
+
         //private void Get()
         //{
         //    string connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\Work\KeepFit\KeepFit\KeepFit\KeepFit.Web\App_Data\baz.mdb";
@@ -54,7 +107,7 @@ namespace KeepFit.Web.Controllers
         //                double proteins = 0;
         //                double fats = 0;
         //                int typeId = 0;
-        //                var product = new Product
+        //                var excerciseDto = new Product
         //                {
         //                    Name = reader[2].ToString(),
         //                    CaloricValue = double.TryParse(reader[3].ToString(), out caloricVal) ? caloricVal : 0,
@@ -63,7 +116,7 @@ namespace KeepFit.Web.Controllers
         //                    Proteins = double.TryParse(reader[5].ToString(), out proteins) ? proteins : 0,
         //                    ProductTypeId = int.TryParse(reader[1].ToString(), out typeId) ? typeId : 1
         //                };
-        //                productService.AddOrUpdateProduct(product);
+        //                productService.AddOrUpdateProduct(excerciseDto);
         //            }
         //        }
         //        catch (Exception ex)

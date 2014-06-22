@@ -21,5 +21,7 @@ namespace KeepFit.Core.Models
 
         public virtual ICollection<Reps> Repses { get; set; }
         public virtual ICollection<Picture> Pictures { get; set; }
+
+        public string ExcercisePhoto { get; set; }
     }
 }

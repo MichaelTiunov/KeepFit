@@ -1,0 +1,44 @@
+﻿@using KeepFit.Web.Resources
+@model KeepFit.Core.Dto.ExcerciseDto
+
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("EditExcercise", "Excercise", FormMethod.Post, new { @class = "form-horizontal", @enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.ExcerciseId)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Description)
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.ExcerciseCategoryId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.ExcerciseCategoryId, new SelectList(Model.ExcerciseCategories, "ExcerciseCategoryId", "Name"), new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ExcerciseCategoryId)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ExcercisePhoto, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            <input type="file" name="ExcercisePhoto" id="ExcercisePhoto" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="@Excercises.EditExcercise" class="btn btn-default" />
+        </div>
+    </div>
+}

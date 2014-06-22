@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dto\BodyCompositionDto.cs" />
+    <Compile Include="Dto\ExcerciseCategoryDto.cs" />
+    <Compile Include="Dto\ExcerciseDto.cs" />
     <Compile Include="Dto\ProductDto.cs" />
     <Compile Include="Dto\ProductTypeDto.cs" />
     <Compile Include="Dto\WorkoutDto.cs" />
@@ -125,6 +127,10 @@
     <Compile Include="Migrations\201406220740594_ProductPhoto.cs" />
     <Compile Include="Migrations\201406220740594_ProductPhoto.Designer.cs">
       <DependentUpon>201406220740594_ProductPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406220845263_ExcercisePhoto.cs" />
+    <Compile Include="Migrations\201406220845263_ExcercisePhoto.Designer.cs">
+      <DependentUpon>201406220845263_ExcercisePhoto.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201406220740594_ProductPhoto.resx">
       <DependentUpon>201406220740594_ProductPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406220845263_ExcercisePhoto.resx">
+      <DependentUpon>201406220845263_ExcercisePhoto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

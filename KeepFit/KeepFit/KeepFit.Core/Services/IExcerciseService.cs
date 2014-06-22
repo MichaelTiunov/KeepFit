@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using KeepFit.Core.Dto;
 using KeepFit.Core.Models;
 
 namespace KeepFit.Core.Services
@@ -7,11 +8,14 @@ namespace KeepFit.Core.Services
     {
         IEnumerable<ExcerciseCategory> GetCategories();
 
-        void SaveCategory(ExcerciseCategory category);
+        void AddOrUpdateExcerciseCategory(ExcerciseCategoryDto category);
+
+        void AddOrUpdateExcercise(ExcerciseDto category);
         IEnumerable<Excercise> GetExcercises(int categoryId);
 
         IEnumerable<Excercise> GetExcercises();
 
+        ExcerciseDto GetExcercise(int excerciseId);
         void SaveExcercise(Excercise excercise);
     }
 }

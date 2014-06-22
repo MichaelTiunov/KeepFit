@@ -228,6 +228,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Resources\Excercises.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Excercises.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Products.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -416,6 +421,9 @@
     <Content Include="Views\Shared\_Carousel.cshtml" />
     <Content Include="Views\Nutrition\AddProduct.cshtml" />
     <Content Include="Views\Nutrition\AddProductType.cshtml" />
+    <Content Include="Views\Excercise\AddExcerciseCategory.cshtml" />
+    <Content Include="Views\Excercise\AddExcercise.cshtml" />
+    <Content Include="Views\Excercise\EditExcercise.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -448,6 +456,10 @@
     <EmbeddedResource Include="Resources\Enums.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Enums.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Excercises.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Excercises.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Products.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

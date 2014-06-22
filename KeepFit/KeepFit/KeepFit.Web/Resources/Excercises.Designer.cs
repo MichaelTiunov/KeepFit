@@ -22,14 +22,14 @@ namespace KeepFit.Web.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Breadcrumbs {
+    public class Excercises {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Breadcrumbs() {
+        internal Excercises() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace KeepFit.Web.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KeepFit.Web.Resources.Breadcrumbs", typeof(Breadcrumbs).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KeepFit.Web.Resources.Excercises", typeof(Excercises).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,47 +61,29 @@ namespace KeepFit.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Упражнения.
+        ///   Looks up a localized string similar to Добавить категорию.
         /// </summary>
-        public static string Excercises {
+        public static string AddCategory {
             get {
-                return ResourceManager.GetString("Excercises", resourceCulture);
+                return ResourceManager.GetString("AddCategory", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Главная.
+        ///   Looks up a localized string similar to Добавить упражнение.
         /// </summary>
-        public static string Home {
+        public static string AddExcercise {
             get {
-                return ResourceManager.GetString("Home", resourceCulture);
+                return ResourceManager.GetString("AddExcercise", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Молочные продукты.
+        ///   Looks up a localized string similar to Редактировать упражнение.
         /// </summary>
-        public static string MilkProducts {
+        public static string EditExcercise {
             get {
-                return ResourceManager.GetString("MilkProducts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Упражнения на шею.
-        /// </summary>
-        public static string NeckExcercise {
-            get {
-                return ResourceManager.GetString("NeckExcercise", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Продукты питания.
-        /// </summary>
-        public static string Products {
-            get {
-                return ResourceManager.GetString("Products", resourceCulture);
+                return ResourceManager.GetString("EditExcercise", resourceCulture);
             }
         }
     }

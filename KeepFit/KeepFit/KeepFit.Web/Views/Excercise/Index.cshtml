@@ -1,9 +1,192 @@
-﻿@model KeepFit.Web.Models.ExcercisesModel
-@{
+﻿@using System.Web.Mvc.Html
+@using KeepFit.Core.Models
+@using KeepFit.Web.Resources
+@model  KeepFit.Web.Models.ExcercisesModel
+<style>
+    .item {
+        float: left;
+        margin: 5px;
+        padding: 10px;
+        position: relative;
+        width: 270px;
+        height: 300px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #5BC0DE;
+    }
 
-    Layout = "~/Views/Shared/_MainLayout.cshtml";
-}
+    .iso-container {
+        margin-top: 50px;
+    }
 
-@Html.Partial("_Excercises", Model.Excercises)
+        .iso-container img {
+            background: none;
+            width: 125px;
+            height: 125px;
+            float: none;
+            margin-left: 45px;
+        }
+</style>
 
-@Html.Partial("_ExcercisesCategory", Model.ExcerciseCategories)
+<div class="row">
+    <div class="col-md-3">
+
+        <div id="filters" class="button-filter-group js-radio-button-group">
+            <div class="well catalog-name">
+                @Common.Catalog
+            </div>
+            <button class="btn btn-info btn-block js-add-category">Добавить категорию</button>
+            @foreach (ExcerciseCategory type in Model.ExcerciseCategories)
+            {
+                <button class="ladda-button button-filter btn btn-info btn-sm btn-block" data-style="expand-left" data-filter="@type.ExcerciseCategoryId">
+                    @type.Name<span></span>
+                </button>
+            }
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="col-md-7">
+            <ul class="breadcrumb breadcrumb-custom" style="margin-bottom: 5px;">
+                <li>@Html.ActionLink(Breadcrumbs.Home, "Index", "Home")</li>
+                <li>@Html.ActionLink(Breadcrumbs.Excercises, "Index", "Excercise")</li>
+                <li class="active active-breadcrumb js-dynamic-breadcrumb">@Breadcrumbs.NeckExcercise</li>
+            </ul>
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-info js-add-product">
+                +
+            </button>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon custom-addon">
+                        <span class="icon icon-search icon-search-custom"></span>
+                    </span>
+                    <input id="prependedcheckbox" name="prependedcheckbox" class="form-control custom-input" type="text" placeholder="@Common.Search">
+                </div>
+            </div>
+        </div>
+        <div class="iso-container">
+            @foreach (Excercise excercise in Model.Excercises)
+            {
+                <div class="item panel panel-custom panel-default @excercise.ExcerciseId" data-category="@excercise.ExcerciseCategoryId">
+                    <div class="panel-heading header">
+                        @excercise.Name
+                        @if (Request.IsAuthenticated && (RoleType)ViewBag.CurrentUser.RoleType == RoleType.Admin)
+                        {
+                            <span class="icon icon-pencil icon-clickable js-excercise-edit" data-productid="@excercise.Id"></span>
+                        }
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @if (!string.IsNullOrEmpty(excercise.ExcercisePhoto))
+                                {
+                                    @Html.Raw("<img src=\"data:image/jpeg;base64," + excercise.ExcercisePhoto + "\" />")
+                                }
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                @excercise.Description
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Scripts/jquery.infinitescroll.js"></script>
+<script>
+    $(function () {
+        $('.js-add-product').on('click', function () {
+            window.location.href = '@Url.Action("AddExcercise","Excercise")';
+        });
+
+        $('.js-add-category').on('click', function () {
+            window.location.href = '@Url.Action("AddExcerciseCategory", "Excercise")';
+        });
+
+        var $container = $('.iso-container').isotope({
+            itemSelector: '.item',
+            layoutMode: 'fitRows',
+            transitionDuration: '0.6s',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false,
+            }
+        }).isotope('insert');
+
+        $('.button-filter-group').on('click', 'button', function () {
+            $('.js-dynamic-breadcrumb').text($(this).text());
+
+            var filterValue = $(this).attr('data-filter');
+            var l = Ladda.create(this);
+            getProducts(filterValue, l);
+        });
+
+        $('body').on('click', '.js-excercise-edit', function () {
+            var productId = $(this).data().productid;
+            window.location.href = '@Url.Action("EditExcercise","Excercise")' + '/' + productId;
+        });
+        function getProducts(typeId, l) {
+            l.start();
+
+            $.ajax('@Url.Action("GetExcercises", "Excercise")',
+            {
+                type: 'POST',
+                dataType: 'json',
+                data: { typeId: typeId },
+                success: function (result) {
+                    var container = $('<div/>');
+
+
+                    $.each(result, function (i, v) {
+                        $('#productsTmpl').tmpl(
+                            {
+                                Id: v.ExcerciseId,
+                                Name:v.Name,
+                                Description: v.Description,
+                                CategoryId: v.ExcerciseCategoryId,
+                                Photo: v.ExcercisePhoto
+                            }
+                        ).appendTo(container);
+                    });
+                    $container.empty().append(container.html()).isotope('insert', container.html());
+                },
+                error: function (result) {
+                    alert('Error!');
+                }
+            }).done(function () {
+                l.stop();
+            });
+        }
+    });
+</script>
+<script id="productsTmpl" type="text/x-jquery-tmpl">
+    <div class="item panel panel-custom panel-default" data-category="${productTypeId}">
+        <div class="panel-heading header">
+            ${Name}
+            @if (Request.IsAuthenticated && (RoleType)ViewBag.CurrentUser.RoleType == RoleType.Admin)
+            {
+                <span class="icon icon-pencil icon-clickable js-excercise-edit" data-productid="${Id}"></span>
+            }
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="data:image/jpeg;base64,${Photo}" />
+                </div>
+            </div>
+            <div class="col-md-12">
+                ${Description}
+            </div>
+        </div>
+    </div>
+</script>
+

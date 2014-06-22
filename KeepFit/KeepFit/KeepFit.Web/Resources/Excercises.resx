@@ -117,19 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Excercises" xml:space="preserve">
-    <value>Упражнения</value>
+  <data name="AddCategory" xml:space="preserve">
+    <value>Добавить категорию</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Главная</value>
+  <data name="AddExcercise" xml:space="preserve">
+    <value>Добавить упражнение</value>
   </data>
-  <data name="MilkProducts" xml:space="preserve">
-    <value>Молочные продукты</value>
-  </data>
-  <data name="NeckExcercise" xml:space="preserve">
-    <value>Упражнения на шею</value>
-  </data>
-  <data name="Products" xml:space="preserve">
-    <value>Продукты питания</value>
+  <data name="EditExcercise" xml:space="preserve">
+    <value>Редактировать упражнение</value>
   </data>
 </root>
