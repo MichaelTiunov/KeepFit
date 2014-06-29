@@ -28,6 +28,11 @@ namespace KeepFit.Web.Controllers
             return View(model);
         }
 
+        public ActionResult Workout()
+        {
+            return View();
+        }
+
         public ViewResult AddExcerciseCategory()
         {
             return View();

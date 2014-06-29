@@ -424,6 +424,8 @@
     <Content Include="Views\Excercise\AddExcercise.cshtml" />
     <Content Include="Views\Excercise\EditExcercise.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Excercise\Workout.cshtml" />
+    <Content Include="Views\Shared\_Calendar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

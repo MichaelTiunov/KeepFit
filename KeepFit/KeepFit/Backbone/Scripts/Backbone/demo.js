@@ -1,39 +1,17 @@
 ﻿var Todo = Backbone.Model.extend({
     defaults: {
         title: '',
-        checked: false
+        completed: false
     }
 });
-
-var TodoView = Backbone.View.extend({
-    tagName: 'li',
-    todoTpl: _.template($('#item-template').html()),
-    events: {
-        'dbclick label': 'edit',
-        'keypress .edit': 'updateOnEnter',
-        'blur .edit': 'close'
-    },
-    initialize: function () {
-        this.$el = $('#todo');
-    },
-    render: function () {
-        this.$el.html(this.todoTpl(this.model.toJSON()));
-        this.input = this.$('.edit');
-        return this;
-    },
-    edit: function () {
-
-    },
-    close: function () {
-
-    },
-    updateOnEnter: function () {
-
-    }
+var TodosCollection = Backbone.Collection.extend({
+    model: Todo
 });
-
-var myTodo = new Todo({
-    title: 'Check attribute'
-});
-
-var todoView = new TodoView({ model: myTodo });
+var myTodo = new Todo({ title: 'Bla', id: 2 });
+var b = new Todo({ title: 'sdf', id: 2 });
+var c = new Todo({ title: 'sdfsdf', id: 3 });
+var todos = new TodosCollection([myTodo, b]);
+todos.add(c);
+console.log(todos.length);
+todos.remove([myTodo, b, c]);
+console.log(todos.length);

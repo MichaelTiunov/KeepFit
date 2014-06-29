@@ -159,14 +159,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\base.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\bg.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\backbone.js" />
+    <Content Include="Scripts\backbone.localstorage.js" />
     <Content Include="Scripts\backbone.min.js" />
+    <Content Include="Scripts\Backbone\app.js" />
+    <Content Include="Scripts\Backbone\views\app-view.js" />
+    <Content Include="Scripts\Backbone\collections\todos.js" />
     <Content Include="Scripts\Backbone\demo.js" />
+    <Content Include="Scripts\Backbone\models\todo.js" />
+    <Content Include="Scripts\Backbone\routers\router.js" />
+    <Content Include="Scripts\Backbone\views\todo-view.js" />
+    <Content Include="Scripts\base.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
