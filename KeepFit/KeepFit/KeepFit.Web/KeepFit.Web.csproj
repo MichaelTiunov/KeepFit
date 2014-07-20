@@ -187,15 +187,12 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="CompositionRoot.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\api\BaseWebApiController.cs" />
-    <Compile Include="Controllers\api\ManagementController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CalculationController.cs" />
     <Compile Include="Controllers\ExcerciseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NutritionController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
-    <Compile Include="Controllers\api\TestController.cs" />
     <Compile Include="Controllers\WorkoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -212,10 +209,6 @@
     <Compile Include="Models\CaloriesCalculationModel.cs" />
     <Compile Include="Models\CustomPrincipalSerializeModel.cs" />
     <Compile Include="Models\ExcercisesModel.cs" />
-    <Compile Include="Models\IdentityService.cs" />
-    <Compile Include="Models\IIdentityService.cs" />
-    <Compile Include="Models\KeepFitIdentity.cs" />
-    <Compile Include="Models\KeepFitPrincipal.cs" />
     <Compile Include="Models\Nutrition\NutritionModel.cs" />
     <Compile Include="Models\Nutrition\ProductModel.cs" />
     <Compile Include="Models\Nutrition\ProductsModel.cs" />
@@ -455,6 +448,10 @@
     <ProjectReference Include="..\KeepFit.Core\KeepFit.Core.csproj">
       <Project>{094006E8-9020-4DBF-877F-875BB52CECE3}</Project>
       <Name>KeepFit.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeepFit.Web.Identity\KeepFit.Web.Identity.csproj">
+      <Project>{330E1C99-8456-421E-8558-A7B1B6BF2706}</Project>
+      <Name>KeepFit.Web.Identity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

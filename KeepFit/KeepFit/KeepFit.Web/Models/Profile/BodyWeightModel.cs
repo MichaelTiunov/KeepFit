@@ -9,7 +9,7 @@ namespace KeepFit.Web.Models.Profile
 {
     public class BodyWeightModel
     {
-        public IEnumerable<BodyComposition> BodyCompositions { get; set; }
+        public IEnumerable<BodyCompositionDto> BodyCompositions { get; set; }
 
         public BodyCompositionDto BodyComposition { get; set; }
 

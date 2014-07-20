@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.Mvc;
 using KeepFit.Core.Dto;
 using KeepFit.Core.Services;
+using KeepFit.Web.Identity;
 using KeepFit.Web.Models;
 using KeepFit.Web.Models.Profile;
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using KeepFit.Core.Dto;
 using KeepFit.Core.Models;
 
 namespace KeepFit.Core.Services
@@ -12,9 +13,13 @@ namespace KeepFit.Core.Services
             this.keepFitContext = keepFitContext;
         }
 
-        public IEnumerable<BodyComposition> GetBodyCompositions(int userId)
+        public IEnumerable<BodyCompositionDto> GetBodyCompositions(int userId)
         {
-            return keepFitContext.BodyCompositions.Where(x => x.UserId == userId);
+            return keepFitContext.BodyCompositions.Where(x => x.UserId == userId).Select(x => new BodyCompositionDto
+            {
+                Weight = x.Weight,
+                Height = x.Height
+            });
         }
 
         public void SaveBodyComposition(double height, double weight, int userId)

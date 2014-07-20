@@ -8,6 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Xml.Serialization;
+using KeepFit.Web.Identity;
 using KeepFit.Web.Models;
 
 namespace KeepFit.Web

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace KeepFit.Core.Models
 {
@@ -16,10 +15,8 @@ namespace KeepFit.Core.Models
 
         public int StateId { get; set; }
 
-        [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
-        [JsonProperty(PropertyName = "abbreviation")]
         public string ShortName { get; set; }
 
         public int CountryId { get; set; }

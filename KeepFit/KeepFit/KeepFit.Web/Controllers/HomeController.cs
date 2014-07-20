@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 using KeepFit.Core.Services;
+using KeepFit.Web.Identity;
 using KeepFit.Web.Models;
 
 namespace KeepFit.Web.Controllers

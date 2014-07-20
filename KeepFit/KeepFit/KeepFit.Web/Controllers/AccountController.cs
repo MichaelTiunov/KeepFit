@@ -11,6 +11,7 @@ using System.Web.Security;
 using System.Xml.Serialization;
 using KeepFit.Core.Models;
 using KeepFit.Core.Services;
+using KeepFit.Web.Identity;
 using KeepFit.Web.Models;
 
 namespace KeepFit.Web.Controllers

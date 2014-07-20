@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using KeepFit.Web.Identity;
 using KeepFit.Web.Models;
 
 namespace KeepFit.Web.Helpers.Filters

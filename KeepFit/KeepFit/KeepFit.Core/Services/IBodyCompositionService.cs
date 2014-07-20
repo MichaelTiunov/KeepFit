@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using KeepFit.Core.Models;
+using KeepFit.Core.Dto;
 
 namespace KeepFit.Core.Services
 {
     public interface IBodyCompositionService
     {
-        IEnumerable<BodyComposition> GetBodyCompositions(int userId); 
+        IEnumerable<BodyCompositionDto> GetBodyCompositions(int userId); 
         void SaveBodyComposition(double height, double weight, int userId);
     }
 }

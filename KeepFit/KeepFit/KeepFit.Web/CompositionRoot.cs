@@ -4,6 +4,7 @@ using KeepFit.Core.Models;
 using KeepFit.Core.Services;
 using KeepFit.Web.Helpers;
 using KeepFit.Web.Helpers.Filters;
+using KeepFit.Web.Identity;
 using KeepFit.Web.Models;
 using SimpleInjector;
 using SimpleInjector.Integration.Web.Mvc;

@@ -12,7 +12,7 @@ namespace KeepFit.Web.Models
 
         public BodyCompositionDto BodyComposition { get; set; }
 
-        public IEnumerable<BodyComposition> BodyCompositions { get; set; }
+        public IEnumerable<BodyCompositionDto> BodyCompositions { get; set; }
 
         public IEnumerable<double> GetWeight(IEnumerable<BodyComposition> bodyCompositions)
         {

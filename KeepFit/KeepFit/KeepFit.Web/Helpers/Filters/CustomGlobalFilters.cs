@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace KeepFit.Web.Helpers.Filters
 {
-    public static class CustomGlobalFilters
+    internal static class CustomGlobalFilters
     {
         public static readonly Dictionary<Type, int?> FiltersWithOrders = new Dictionary<Type, int?>
         {
