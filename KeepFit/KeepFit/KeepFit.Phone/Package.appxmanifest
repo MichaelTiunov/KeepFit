@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
 
-  <Identity Name="e0f2bf7f-6c5d-4d0e-be12-4c225e9db02c"
-            Publisher="CN=mtiunov"
+  <Identity Name="978bf8b3-7d0b-4d46-a344-472b98b1f221"
+            Publisher="CN=Michael"
             Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="e0f2bf7f-6c5d-4d0e-be12-4c225e9db02c" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="978bf8b3-7d0b-4d46-a344-472b98b1f221" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>KeepFit.Phone</DisplayName>
-    <PublisherDisplayName>mtiunov</PublisherDisplayName>
+    <PublisherDisplayName>Michael</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -35,7 +35,6 @@
             BackgroundColor="transparent">
             <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"/>
             <m3:SplashScreen Image="Assets\SplashScreen.png"/>
-            <m3:ApplicationView MinWidth="width320"/> <!--Used in XAML Designer. DO NOT REMOVE-->
         </m3:VisualElements>
     </Application>
   </Applications>

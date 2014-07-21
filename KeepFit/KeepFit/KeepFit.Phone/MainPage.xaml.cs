@@ -1,27 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
 namespace KeepFit.Phone
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
+        private const string url = "http://keepfit.ihb.by/api/management";
         public MainPage()
         {
             this.InitializeComponent();
@@ -29,25 +22,46 @@ namespace KeepFit.Phone
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
 
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.
-        /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            // TODO: Prepare page for display here.
 
-            // TODO: If your application contains multiple pages, ensure that you are
-            // handling the hardware Back button by registering for the
-            // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
-            // If you are using the NavigationHelper provided by some templates,
-            // this event is handled for you.
         }
 
-        private void clickMeButton_Click(object sender, RoutedEventArgs e)
+        private async void GetJsonButton_OnClick(object sender, RoutedEventArgs e)
         {
-            resultTextBlock.Text = "Hello World!";
+            var client = new HttpClient();
+            await TryRequestAsync(client, CreateBasicCredentials("tiunovmike@gmail.com", "xf3z54dlc"));
         }
+        async Task TryRequestAsync(HttpClient client, AuthenticationHeaderValue authorization)
+        {
+            using (var request = new HttpRequestMessage(HttpMethod.Get, url))
+            {
+                request.Headers.Authorization = authorization;
+                using (HttpResponseMessage response = await client.SendAsync(request))
+                {
+                    if (response.StatusCode != HttpStatusCode.OK)
+                    {
+                        return;
+                    }
+
+                    JsonTextBlock.Text = await response.Content.ReadAsStringAsync();
+                }
+            }
+        }
+
+        static AuthenticationHeaderValue CreateBasicCredentials(string userName, string password)
+        {
+            string toEncode = userName + ":" + password;
+            // The current HTTP specification says characters here are ISO-8859-1.
+            // However, the draft specification for the next version of HTTP indicates this encoding is infrequently
+            // used in practice and defines behavior only for ASCII.
+            Encoding encoding = Encoding.GetEncoding("iso-8859-1");
+            byte[] toBase64 = encoding.GetBytes(toEncode);
+            string parameter = Convert.ToBase64String(toBase64);
+
+            return new AuthenticationHeaderValue("Basic", parameter);
+        }
+
+
     }
 }

@@ -2,14 +2,20 @@
     x:Class="KeepFit.Phone.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeepFit.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="clickMeButton" Content="Click Me" HorizontalAlignment="Left" Margin="50,88,0,0" VerticalAlignment="Top" Click="clickMeButton_Click"/>
-        <TextBlock x:Name="resultTextBlock" HorizontalAlignment="Left" Margin="50,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="GetJsonButton" Click="GetJsonButton_OnClick" Grid.Row="0"></Button>
+        <TextBlock x:Name="JsonTextBlock" Grid.Row="1"></TextBlock>
 
     </Grid>
 </Page>
