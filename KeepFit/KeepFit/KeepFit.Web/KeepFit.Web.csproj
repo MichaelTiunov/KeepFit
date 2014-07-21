@@ -279,15 +279,12 @@
     <Content Include="Content\ladda-themeless.min.css" />
     <Content Include="Content\ladda.css" />
     <Content Include="Content\ladda.min.css" />
-    <Content Include="Content\menu.css" />
     <Content Include="Content\Modules.css" />
-    <Content Include="Content\rawberry.css" />
     <Content Include="Content\skel-noscript.css" />
     <Content Include="Content\slidingpanel.css" />
     <Content Include="Content\style-1000px.css" />
     <Content Include="Content\style-desktop.css" />
     <Content Include="Content\style-mobile.css" />
-    <Content Include="Content\wicket-modal.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
