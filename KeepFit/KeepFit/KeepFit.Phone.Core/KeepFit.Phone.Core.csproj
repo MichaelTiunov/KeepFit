@@ -87,6 +87,7 @@
     <Compile Include="ApiConnectorService.cs" />
     <Compile Include="ApiResources.cs" />
     <Compile Include="IApiConnector.cs" />
+    <Compile Include="Models\BodyComposition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
